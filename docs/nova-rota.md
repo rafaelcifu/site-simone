@@ -87,7 +87,7 @@ Rode `npm run verify`. Ele reprova a página se faltar `<h1>`, canonical, JSON-L
 
 | Caso | O que muda |
 |---|---|
-| Rota dinâmica `[slug]` | `generateMetadata` + `generateStaticParams`. Veja `app/servicos/[slug]/page.js` |
+| Rota dinâmica `[slug]` | `dynamicParams = false` + `generateMetadata` + `generateStaticParams`. Veja `app/servicos/[slug]/page.js` |
 | Página biográfica | `webPageSchema({ ..., type: "AboutPage" })` |
 | Página de contato | `type: "ContactPage"` |
 | Listagem | `type: "CollectionPage"` + um `ItemList`. Veja `app/servicos/page.js` |

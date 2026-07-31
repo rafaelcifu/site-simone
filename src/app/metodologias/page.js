@@ -1,4 +1,9 @@
-import { etapas, metodologias, metodologiasPage } from "@/content/metodologias";
+import {
+  etapas,
+  metodologias,
+  metodologiasPage,
+  metodologiasSections,
+} from "@/content/metodologias";
 import { pageSeo } from "@/content/seo";
 import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
@@ -53,7 +58,7 @@ export default function MetodologiasPage() {
       </Section>
 
       <Section tone="muted">
-        <SectionHeading eyebrow="Processo" title="Passo a passo" />
+        <SectionHeading {...metodologiasSections.process} />
 
         <Stagger as="ol" className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {etapas.map((item) => (

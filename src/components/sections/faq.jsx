@@ -1,4 +1,4 @@
-import { faq } from "@/content/home";
+import { faq, homeSections } from "@/content/home";
 import { Section } from "@/components/atoms/section";
 import { SectionHeading } from "@/components/atoms/section-heading";
 import { Reveal } from "@/components/motion/reveal";
@@ -12,7 +12,7 @@ import {
 export function Faq() {
   return (
     <Section tone="muted">
-      <SectionHeading eyebrow="Duvidas" title="Perguntas frequentes" />
+      <SectionHeading {...homeSections.faq} />
 
       <Reveal className="mt-10 max-w-3xl">
         <Accordion type="single" collapsible className="w-full">

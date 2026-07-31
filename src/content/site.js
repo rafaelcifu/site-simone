@@ -68,3 +68,38 @@ export const primaryCta = {
   label: "Fale comigo",
   href: "/contato",
 };
+
+/** Copy compartilhada pela estrutura global do site. */
+export const siteUi = {
+  accessibility: {
+    skipToContent: "Pular para o conteudo",
+  },
+  header: {
+    navigationLabel: "Principal",
+    mobileNavigationLabel: "Principal (mobile)",
+    openMenuLabel: "Abrir menu",
+  },
+  footer: {
+    navigationLabel: "Rodape",
+    navigationTitle: "Navegacao",
+    contactTitle: "Contato",
+    copyrightSymbol: "©",
+    rights: "Todos os direitos reservados.",
+  },
+  ctaBand: {
+    title: "Pronto para comecar?",
+    description: "Frase curta reforcando o proximo passo.",
+  },
+  notFound: {
+    code: "404",
+    title: "Pagina nao encontrada",
+    description: "O endereco que voce tentou acessar nao existe ou foi movido.",
+    ctaLabel: "Voltar para o inicio",
+    ctaHref: "/",
+  },
+  socialCard: {
+    description:
+      "Branding estrategico, neurociencia aplicada ao consumo e Jobs to be Done.",
+    stats: "+30 anos · +700 projetos entregues",
+  },
+};

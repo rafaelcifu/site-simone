@@ -1,4 +1,10 @@
-import { bio, formacoes, sobrePage, valores } from "@/content/sobre";
+import {
+  bio,
+  formacoes,
+  sobrePage,
+  sobreSections,
+  valores,
+} from "@/content/sobre";
 import { pageSeo } from "@/content/seo";
 import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
@@ -41,7 +47,7 @@ export default function SobrePage() {
       </Section>
 
       <Section tone="muted">
-        <SectionHeading eyebrow="Valores" title="No que eu acredito" />
+        <SectionHeading {...sobreSections.values} />
         <Stagger className="mt-10 grid gap-8 sm:grid-cols-3">
           {valores.map((item) => (
             <StaggerItem key={item.title} className="flex flex-col gap-3">
@@ -56,7 +62,7 @@ export default function SobrePage() {
       </Section>
 
       <Section>
-        <SectionHeading eyebrow="Trajetoria" title="Formacao" />
+        <SectionHeading {...sobreSections.education} />
         <Stagger as="ul" className="mt-10 max-w-2xl divide-y">
           {formacoes.map((item) => (
             <StaggerItem

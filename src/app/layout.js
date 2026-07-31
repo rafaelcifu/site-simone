@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 
-import { site } from "@/content/site";
-import { person } from "@/content/seo";
+import { site, siteUi } from "@/content/site";
+import { pageSeo, person } from "@/content/seo";
 import { servicos } from "@/content/servicos";
 import {
   businessSchema,
@@ -38,7 +38,7 @@ const display = Inter({
 export const metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} | Branding Estrategico e Neurociencia do Consumo`,
+    default: pageSeo.home.title,
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -55,7 +55,7 @@ export const metadata = {
     type: "website",
     locale: site.ogLocale,
     siteName: site.name,
-    title: `${site.name} | Branding Estrategico e Neurociencia do Consumo`,
+    title: pageSeo.home.title,
     description: site.description,
     url: site.url,
   },
@@ -110,7 +110,7 @@ export default function RootLayout({ children }) {
           href="#conteudo"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"
         >
-          Pular para o conteudo
+          {siteUi.accessibility.skipToContent}
         </a>
 
         <Header />

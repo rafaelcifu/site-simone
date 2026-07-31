@@ -33,3 +33,10 @@ export const etapas = [
   { step: "03", title: "Plano de acao", body: "O que acontece nessa etapa." },
   { step: "04", title: "Acompanhamento", body: "O que acontece nessa etapa." },
 ];
+
+export const metodologiasSections = {
+  process: {
+    eyebrow: "Processo",
+    title: "Passo a passo",
+  },
+};

@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-import { site } from "@/content/site";
+import { site, siteUi } from "@/content/site";
 import { person } from "@/content/seo";
 
 /**
@@ -63,13 +63,12 @@ export default function OpengraphImage() {
               lineHeight: 1.4,
             }}
           >
-            Branding estrategico, neurociencia aplicada ao consumo e Jobs to be
-            Done.
+            {siteUi.socialCard.description}
           </div>
         </div>
 
         <div style={{ display: "flex", fontSize: 24, color: "#a3a3a3" }}>
-          +30 anos · +700 projetos entregues
+          {siteUi.socialCard.stats}
         </div>
       </div>
     ),

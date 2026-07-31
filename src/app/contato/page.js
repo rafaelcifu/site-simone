@@ -1,4 +1,4 @@
-import { contatoPage, horarios } from "@/content/contato";
+import { contatoPage, contatoUi, horarios } from "@/content/contato";
 import { contact } from "@/content/site";
 import { pageSeo } from "@/content/seo";
 import { buildMetadata } from "@/lib/seo";
@@ -64,7 +64,7 @@ export default function ContatoPage() {
           </ul>
 
           <div>
-            <p className="text-sm font-medium">Horarios</p>
+            <p className="text-sm font-medium">{contatoUi.scheduleTitle}</p>
             <ul className="mt-3 flex flex-col gap-2">
               {horarios.map((item) => (
                 <li

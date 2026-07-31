@@ -27,3 +27,14 @@ export const valores = [
   { title: "Valor dois", body: "Descricao curta.", icon: "ShieldCheck" },
   { title: "Valor tres", body: "Descricao curta.", icon: "Handshake" },
 ];
+
+export const sobreSections = {
+  values: {
+    eyebrow: "Valores",
+    title: "No que eu acredito",
+  },
+  education: {
+    eyebrow: "Trajetoria",
+    title: "Formacao",
+  },
+};

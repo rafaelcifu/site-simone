@@ -37,3 +37,14 @@ export const faq = [
   { question: "Pergunta frequente um?", answer: "Resposta." },
   { question: "Pergunta frequente dois?", answer: "Resposta." },
 ];
+
+export const homeSections = {
+  testimonials: {
+    eyebrow: "Depoimentos",
+    title: "O que dizem",
+  },
+  faq: {
+    eyebrow: "Duvidas",
+    title: "Perguntas frequentes",
+  },
+};

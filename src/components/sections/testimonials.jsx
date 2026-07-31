@@ -1,6 +1,6 @@
 "use client";
 
-import { depoimentos } from "@/content/home";
+import { depoimentos, homeSections } from "@/content/home";
 import { Section } from "@/components/atoms/section";
 import { SectionHeading } from "@/components/atoms/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
@@ -20,11 +20,7 @@ import {
 export function Testimonials() {
   return (
     <Section>
-      <SectionHeading
-        eyebrow="Depoimentos"
-        title="O que dizem"
-        align="center"
-      />
+      <SectionHeading {...homeSections.testimonials} align="center" />
 
       <Carousel
         opts={{ align: "start", loop: true }}

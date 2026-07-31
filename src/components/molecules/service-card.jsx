@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+import { servicosUi } from "@/content/servicos";
 import { cn } from "@/lib/utils";
 import { Icon } from "@/components/atoms/icon";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -36,7 +37,7 @@ export function ServiceCard({ slug, title, excerpt, icon, className }) {
       <CardContent className="flex flex-col gap-4">
         <p className="text-sm text-pretty text-muted-foreground">{excerpt}</p>
         <span className="inline-flex items-center gap-1.5 text-sm font-medium">
-          Saiba mais
+          {servicosUi.cardCtaLabel}
           <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
         </span>
       </CardContent>

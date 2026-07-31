@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { Check } from "lucide-react";
 
-import { getServico, servicos } from "@/content/servicos";
+import { getServico, servicos, servicosUi } from "@/content/servicos";
 import { buildMetadata } from "@/lib/seo";
 import {
   breadcrumbSchema,
@@ -15,6 +15,9 @@ import { SectionHeading } from "@/components/atoms/section-heading";
 import { Reveal } from "@/components/motion/reveal";
 import { Stagger, StaggerItem } from "@/components/motion/stagger";
 import { CtaBand } from "@/components/sections/cta-band";
+
+/** Slug fora de /content nao e gerado em runtime: retorna 404. */
+export const dynamicParams = false;
 
 /** Gera as paginas de servico no build (site 100% estatico). */
 export function generateStaticParams() {
@@ -62,7 +65,7 @@ export default async function ServicoPage({ params }) {
       <Section padding="lg">
         <SectionHeading
           as="h1"
-          eyebrow="Servico"
+          eyebrow={servicosUi.detailEyebrow}
           title={servico.hero.title}
           description={servico.hero.description}
         />

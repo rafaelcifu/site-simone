@@ -25,3 +25,12 @@ export const formFields = [
   { name: "telefone", label: "Telefone", type: "tel", required: false },
   { name: "mensagem", label: "Mensagem", type: "textarea", required: true },
 ];
+
+export const contatoUi = {
+  scheduleTitle: "Horarios",
+  form: {
+    emailSubject: "Contato pelo site",
+    submitLabel: "Enviar mensagem",
+    requiredMark: "*",
+  },
+};

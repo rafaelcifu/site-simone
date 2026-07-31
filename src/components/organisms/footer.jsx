@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { contact, mainNav, site, social } from "@/content/site";
+import { contact, mainNav, site, siteUi, social } from "@/content/site";
 import { Container } from "@/components/atoms/container";
 import { Separator } from "@/components/ui/separator";
 
@@ -19,8 +19,10 @@ export function Footer() {
           </div>
 
           <div className="grid grid-cols-2 gap-10 sm:gap-16">
-            <nav aria-label="Rodape">
-              <p className="text-sm font-semibold">Navegacao</p>
+            <nav aria-label={siteUi.footer.navigationLabel}>
+              <p className="text-sm font-semibold">
+                {siteUi.footer.navigationTitle}
+              </p>
               <ul className="mt-4 space-y-2.5">
                 {mainNav.map((item) => (
                   <li key={item.href}>
@@ -36,7 +38,7 @@ export function Footer() {
             </nav>
 
             <div>
-              <p className="text-sm font-semibold">Contato</p>
+              <p className="text-sm font-semibold">{siteUi.footer.contactTitle}</p>
               <ul className="mt-4 space-y-2.5">
                 <li>
                   <a
@@ -74,7 +76,7 @@ export function Footer() {
         <Separator className="my-10" />
 
         <p className="text-xs text-muted-foreground">
-          &copy; {year} {site.name}. Todos os direitos reservados.
+          {siteUi.footer.copyrightSymbol} {year} {site.name}. {siteUi.footer.rights}
         </p>
       </Container>
     </footer>

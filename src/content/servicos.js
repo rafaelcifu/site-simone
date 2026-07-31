@@ -11,6 +11,11 @@ export const servicosPage = {
   description: "Resumo em uma ou duas frases do que e oferecido.",
 };
 
+export const servicosUi = {
+  cardCtaLabel: "Saiba mais",
+  detailEyebrow: "Servico",
+};
+
 export const servicos = [
   {
     slug: "servico-um",

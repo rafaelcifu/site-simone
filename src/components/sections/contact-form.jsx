@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import { contact } from "@/content/site";
-import { formFields } from "@/content/contato";
+import { contatoUi, formFields } from "@/content/contato";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -36,7 +36,7 @@ export function ContactForm() {
       .join("\n");
 
     window.location.href = `mailto:${contact.email}?subject=${encodeURIComponent(
-      "Contato pelo site"
+      contatoUi.form.emailSubject
     )}&body=${encodeURIComponent(body)}`;
   }
 
@@ -47,7 +47,9 @@ export function ContactForm() {
           <Label htmlFor={field.name}>
             {field.label}
             {field.required ? (
-              <span className="text-muted-foreground">*</span>
+              <span className="text-muted-foreground">
+                {contatoUi.form.requiredMark}
+              </span>
             ) : null}
           </Label>
 
@@ -74,7 +76,7 @@ export function ContactForm() {
       ))}
 
       <Button type="submit" size="lg" className="self-start">
-        Enviar mensagem
+        {contatoUi.form.submitLabel}
       </Button>
     </form>
   );

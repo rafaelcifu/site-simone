@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { mainNav, primaryCta, site } from "@/content/site";
+import { mainNav, primaryCta, site, siteUi } from "@/content/site";
 import { Container } from "@/components/atoms/container";
 import { NavLink } from "@/components/molecules/nav-link";
 import { Button } from "@/components/ui/button";
@@ -50,7 +50,10 @@ export function Header() {
           {site.shortName}
         </Link>
 
-        <nav aria-label="Principal" className="hidden items-center gap-8 md:flex">
+        <nav
+          aria-label={siteUi.header.navigationLabel}
+          className="hidden items-center gap-8 md:flex"
+        >
           {mainNav.map((item) => (
             <NavLink key={item.href} href={item.href}>
               {item.label}
@@ -66,7 +69,11 @@ export function Header() {
 
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" aria-label="Abrir menu">
+            <Button
+              variant="ghost"
+              size="icon"
+              aria-label={siteUi.header.openMenuLabel}
+            >
               <Menu />
             </Button>
           </SheetTrigger>
@@ -78,7 +85,10 @@ export function Header() {
               </SheetTitle>
             </SheetHeader>
 
-            <nav aria-label="Principal (mobile)" className="flex flex-col gap-1 px-4">
+            <nav
+              aria-label={siteUi.header.mobileNavigationLabel}
+              className="flex flex-col gap-1 px-4"
+            >
               {mainNav.map((item) => (
                 <SheetClose asChild key={item.href}>
                   <NavLink href={item.href} className="py-3 text-base">

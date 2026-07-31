@@ -1,14 +1,14 @@
 import Link from "next/link";
 
-import { primaryCta } from "@/content/site";
+import { primaryCta, siteUi } from "@/content/site";
 import { Section } from "@/components/atoms/section";
 import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
 
 /** Faixa de conversao. Repetida no fim das paginas internas. */
 export function CtaBand({
-  title = "Pronto para comecar?",
-  description = "Frase curta reforcando o proximo passo.",
+  title = siteUi.ctaBand.title,
+  description = siteUi.ctaBand.description,
 }) {
   return (
     <Section tone="inverted" padding="base">
