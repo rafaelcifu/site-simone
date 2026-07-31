@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# site-simone
 
-## Getting Started
+Site institucional estático, multi-página.
 
-First, run the development server:
+**Stack:** Next.js 16 (App Router) · React 19 · Tailwind CSS v4 · shadcn/ui · Motion · JavaScript
+**Deploy:** Vercel, região `gru1` (São Paulo)
+
+## Rodando
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Comando | O quê |
+|---|---|
+| `npm run dev` | Dev server com Turbopack |
+| `npm run build` | Build de produção |
+| `npm run start` | Serve o build localmente |
+| `npm run lint` | ESLint |
+| `npx shadcn@latest add <nome>` | Adiciona componente do shadcn/ui |
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Estrutura
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/          Rotas. Páginas montam seções, não contêm markup solto.
+├── components/
+│   ├── ui/       shadcn/ui (gerado pelo CLI — não editar)
+│   ├── atoms/    Container, Section, SectionHeading, Icon
+│   ├── molecules/ NavLink, ServiceCard
+│   ├── organisms/ Header, Footer
+│   ├── sections/ Hero, ServicesGrid, Testimonials, Faq, CtaBand
+│   └── motion/   Reveal, Stagger, StaggerItem
+├── content/      Textos e dados (sem JSX)
+└── lib/          utils, variants de animação, mapa de ícones
+```
 
-## Learn More
+## Rotas
 
-To learn more about Next.js, take a look at the following resources:
+`/` · `/sobre` · `/servicos` · `/servicos/[slug]` · `/metodologias` · `/contato`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+As páginas de serviço são geradas a partir de `src/content/servicos.js` — adicionar um objeto no array cria a rota.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Documentação
 
-## Deploy on Vercel
+- **[AGENTS.md](./AGENTS.md)** — arquitetura, convenções e regras do projeto. **Leitura obrigatória** antes de codar.
+- **[CLAUDE.md](./CLAUDE.md)** — mesmas regras, formato resumido para agentes de IA.
+- **[docs/figma-workflow.md](./docs/figma-workflow.md)** — como transformar o layout do Figma em componentes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Pendências antes do deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] Substituir tokens de cor em `src/app/globals.css` pelos valores do Figma
+- [ ] Trocar as fontes placeholder (`Inter`) em `src/app/layout.js`
+- [ ] Substituir todo o conteúdo placeholder em `src/content/`
+- [ ] Definir `site.url` em `src/content/site.js` com o domínio final
+- [ ] Adicionar favicon e imagem de Open Graph
+- [ ] Decidir o destino do formulário de contato (hoje é `mailto:`)

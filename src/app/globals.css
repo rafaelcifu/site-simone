@@ -1,26 +1,164 @@
-@import "tailwindcss";
+/* ============================================================================
+ * globals.css — ARQUIVO PROTEGIDO
+ * ----------------------------------------------------------------------------
+ * Leia o AGENTS.md (secao "Regra do CSS global") antes de editar.
+ *
+ * PERMITIDO aqui:
+ *   1. Definir/ajustar TOKENS em :root (cores, fontes, raios, durations).
+ *   2. Mapear tokens para o Tailwind dentro de @theme inline.
+ *   3. Reset minimo e acessibilidade dentro de @layer base.
+ *
+ * PROIBIDO aqui:
+ *   - Estilizar componentes ou secoes especificas (.hero, .card, .btn...).
+ *   - Seletores de elemento com aparencia (h1, p, a, button, section...)
+ *     fora do reset minimo. Isso sobrescreve classes Tailwind e gera o
+ *     classico "meu Tailwind nao aplica".
+ *   - !important.
+ *   - Regras soltas fora de @layer (ficam com especificidade maior que as
+ *     utilities do Tailwind e vencem sem querer).
+ *
+ * Estilo de componente vive no componente, via className do Tailwind.
+ * ========================================================================== */
 
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ----------------------------------------------------------------------------
+ * 1. TOKENS
+ * Fonte da verdade de cor/espaco/tipografia. Ao importar o layout do Figma,
+ * traga as variaveis do Figma (get_variable_defs) para CA, e nao para dentro
+ * dos componentes.
+ * -------------------------------------------------------------------------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Raio base — o resto deriva daqui */
+  --radius: 0.625rem;
+
+  /* --- Paleta neutra (shadcn/neutral). Substituir pelos valores do Figma --- */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+
+  /* Cor principal da marca (CTA, links, destaques) */
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+
+  /* Apoio (fundos de secao alternada, chips) */
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+
+  /* Texto/fundo de baixa enfase */
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+
+  /* Hover de itens interativos neutros */
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+
+  --destructive: oklch(0.577 0.245 27.325);
+
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+
+  /* --- Motion: duracoes e easings compartilhados --- */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 450ms;
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* ----------------------------------------------------------------------------
+ * 2. MAPEAMENTO PARA O TAILWIND
+ * Cada token vira utility: --color-primary  ->  bg-primary / text-primary
+ * -------------------------------------------------------------------------- */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Fontes: as variaveis vem do next/font em src/app/layout.js */
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+
+  /* Animacoes usadas pelos componentes de UI (accordion, etc.) */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ----------------------------------------------------------------------------
+ * 3. BASE
+ * So o essencial. Nada aqui pode "decidir" a aparencia de um componente.
+ * -------------------------------------------------------------------------- */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Compensa o header fixo ao navegar por ancora (#servicos) */
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  /* Respeita quem desativou animacoes no sistema operacional.
+     Obrigatorio: o site usa bastante motion. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
