@@ -3,7 +3,11 @@ import Link from "next/link";
 import { Section } from "@/components/atoms/section";
 import { Button } from "@/components/ui/button";
 
-export const metadata = { title: "Pagina nao encontrada" };
+// 404 nunca deve ser indexada.
+export const metadata = {
+  title: "Pagina nao encontrada",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (

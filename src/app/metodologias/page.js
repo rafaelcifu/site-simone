@@ -1,4 +1,8 @@
 import { etapas, metodologias, metodologiasPage } from "@/content/metodologias";
+import { pageSeo } from "@/content/seo";
+import { buildMetadata } from "@/lib/seo";
+import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/atoms/json-ld";
 import { Section } from "@/components/atoms/section";
 import { SectionHeading } from "@/components/atoms/section-heading";
 import { Icon } from "@/components/atoms/icon";
@@ -6,14 +10,18 @@ import { Stagger, StaggerItem } from "@/components/motion/stagger";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CtaBand } from "@/components/sections/cta-band";
 
-export const metadata = {
-  title: "Metodologias",
-  description: metodologiasPage.description,
-};
+export const metadata = buildMetadata(pageSeo.metodologias);
 
 export default function MetodologiasPage() {
+  const pageGraph = graph(
+    webPageSchema(pageSeo.metodologias),
+    breadcrumbSchema([{ name: "Metodologias", path: "/metodologias" }])
+  );
+
   return (
     <>
+      <JsonLd data={pageGraph} />
+
       <Section padding="lg">
         <SectionHeading
           as="h1"

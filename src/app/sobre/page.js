@@ -1,4 +1,8 @@
 import { bio, formacoes, sobrePage, valores } from "@/content/sobre";
+import { pageSeo } from "@/content/seo";
+import { buildMetadata } from "@/lib/seo";
+import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/atoms/json-ld";
 import { Section } from "@/components/atoms/section";
 import { SectionHeading } from "@/components/atoms/section-heading";
 import { Icon } from "@/components/atoms/icon";
@@ -6,14 +10,19 @@ import { Reveal } from "@/components/motion/reveal";
 import { Stagger, StaggerItem } from "@/components/motion/stagger";
 import { CtaBand } from "@/components/sections/cta-band";
 
-export const metadata = {
-  title: "Sobre",
-  description: sobrePage.description,
-};
+export const metadata = buildMetadata({ ...pageSeo.sobre, type: "profile" });
 
 export default function SobrePage() {
+  const pageGraph = graph(
+    // AboutPage sinaliza ao Google que esta e a pagina biografica da entidade.
+    webPageSchema({ ...pageSeo.sobre, type: "AboutPage" }),
+    breadcrumbSchema([{ name: "Sobre", path: "/sobre" }])
+  );
+
   return (
     <>
+      <JsonLd data={pageGraph} />
+
       <Section padding="lg">
         <SectionHeading
           as="h1"

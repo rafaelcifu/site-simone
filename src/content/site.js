@@ -1,34 +1,57 @@
 /**
  * Dados globais do site: identidade, contato, navegacao e redes.
- * PLACEHOLDER — substituir pelos dados reais ao importar o layout do Figma.
+ *
+ * Este arquivo alimenta metadata, JSON-LD, sitemap e llms.txt.
+ * Errar um dado aqui propaga para o SEO inteiro — confira antes de commitar.
  */
 
 export const site = {
-  name: "Simone",
-  shortName: "Simone",
-  // Usado em metadata, sitemap e og:url. Trocar pelo dominio final.
-  url: "https://www.exemplo.com.br",
+  name: "Simone Moura",
+  shortName: "Simone Moura",
+  /** Dominio canonico. Sem barra no final. */
+  url: "https://www.simonemoura.com.br",
+  /** 150-160 caracteres. Aparece no Google e nos previews de link. */
   description:
-    "Descricao curta do site (150-160 caracteres). Aparece no Google e nos previews de link.",
+    "Simone Moura une branding estrategico, neurociencia aplicada ao consumo e Jobs to be Done para reposicionar marcas e destravar crescimento. +30 anos, +700 projetos.",
+  /** Frase curta de posicionamento. Usada em OG e llms.txt. */
+  tagline:
+    "Crio estrategias para empresas com foco nas pessoas, na inovacao e na transformacao de mercados",
   locale: "pt-BR",
+  ogLocale: "pt_BR",
 };
 
 export const contact = {
-  email: "contato@exemplo.com.br",
-  phone: "+55 11 90000-0000",
-  phoneDisplay: "(11) 90000-0000",
-  whatsapp: "5511900000000",
+  // TODO: substituir pelos dados reais antes do deploy.
+  email: "contato@simonemoura.com.br",
+  phone: "+55 85 90000-0000",
+  phoneDisplay: "(85) 90000-0000",
+  whatsapp: "5585900000000",
   address: {
-    street: "Rua Exemplo, 123",
-    city: "Sao Paulo",
-    state: "SP",
-    zip: "00000-000",
+    street: "",
+    city: "Fortaleza",
+    state: "CE",
+    stateName: "Ceara",
+    zip: "",
+    country: "BR",
   },
 };
 
+/**
+ * Perfis oficiais. Alimentam o `sameAs` do JSON-LD — e o `sameAs` e um dos
+ * sinais mais fortes para o Google e para LLMs ligarem o site a uma entidade
+ * conhecida. Preencha com as URLs REAIS; link errado atrapalha mais que ajuda.
+ */
 export const social = [
-  { label: "Instagram", href: "https://instagram.com/", icon: "instagram" },
-  { label: "LinkedIn", href: "https://linkedin.com/", icon: "linkedin" },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/simonemoura",
+    icon: "instagram",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/simonemoura",
+    icon: "linkedin",
+  },
 ];
 
 /** Navegacao principal (header e footer). */

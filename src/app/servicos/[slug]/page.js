@@ -2,6 +2,14 @@ import { notFound } from "next/navigation";
 import { Check } from "lucide-react";
 
 import { getServico, servicos } from "@/content/servicos";
+import { buildMetadata } from "@/lib/seo";
+import {
+  breadcrumbSchema,
+  graph,
+  serviceSchema,
+  webPageSchema,
+} from "@/lib/schema";
+import { JsonLd } from "@/components/atoms/json-ld";
 import { Section } from "@/components/atoms/section";
 import { SectionHeading } from "@/components/atoms/section-heading";
 import { Reveal } from "@/components/motion/reveal";
@@ -20,10 +28,11 @@ export async function generateMetadata({ params }) {
 
   if (!servico) return {};
 
-  return {
+  return buildMetadata({
     title: servico.title,
-    description: servico.excerpt,
-  };
+    description: servico.hero?.description || servico.excerpt,
+    path: `/servicos/${servico.slug}`,
+  });
 }
 
 export default async function ServicoPage({ params }) {
@@ -32,8 +41,24 @@ export default async function ServicoPage({ params }) {
 
   if (!servico) notFound();
 
+  const path = `/servicos/${servico.slug}`;
+  const pageGraph = graph(
+    webPageSchema({
+      path,
+      title: servico.title,
+      description: servico.hero?.description || servico.excerpt,
+    }),
+    serviceSchema(servico),
+    breadcrumbSchema([
+      { name: "Servicos", path: "/servicos" },
+      { name: servico.title, path },
+    ])
+  );
+
   return (
     <>
+      <JsonLd data={pageGraph} />
+
       <Section padding="lg">
         <SectionHeading
           as="h1"

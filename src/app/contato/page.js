@@ -1,19 +1,27 @@
 import { contatoPage, horarios } from "@/content/contato";
 import { contact } from "@/content/site";
+import { pageSeo } from "@/content/seo";
+import { buildMetadata } from "@/lib/seo";
+import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/atoms/json-ld";
 import { Section } from "@/components/atoms/section";
 import { SectionHeading } from "@/components/atoms/section-heading";
 import { Icon } from "@/components/atoms/icon";
 import { Reveal } from "@/components/motion/reveal";
 import { ContactForm } from "@/components/sections/contact-form";
 
-export const metadata = {
-  title: "Contato",
-  description: contatoPage.description,
-};
+export const metadata = buildMetadata(pageSeo.contato);
 
 export default function ContatoPage() {
+  const pageGraph = graph(
+    webPageSchema({ ...pageSeo.contato, type: "ContactPage" }),
+    breadcrumbSchema([{ name: "Contato", path: "/contato" }])
+  );
+
   return (
     <Section padding="lg">
+      <JsonLd data={pageGraph} />
+
       <SectionHeading
         as="h1"
         eyebrow={contatoPage.eyebrow}
