@@ -79,7 +79,8 @@ if (arquivos.length === 0) {
 
 /** Converte caminho de arquivo em rota. */
 function rotaDe(arquivo) {
-  const r = arquivo
+  const normalized = arquivo.replace(/\\/g, "/");
+  const r = normalized
     .replace(`${APP_DIR}/`, "")
     .replace(/\.html$/, "")
     .replace(/^index$/, "");

@@ -33,39 +33,49 @@
   /* Raio base — o resto deriva daqui */
   --radius: 0.625rem;
 
-  /* --- Paleta neutra (shadcn/neutral). Substituir pelos valores do Figma --- */
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  /* --- Paleta do Figma [Website] - Simone --- */
+  --brand-red: #E3504D;
+  --brand-purple: #4A249E;
+  --brand-dark: #141417;
+  --brand-darker: #1F1433;
+  --brand-text-dark: #292D32;
+  --brand-text-muted: #737380;
+  --brand-text-light: #CCCCD1;
+  --brand-light: #F7F7FA;
+  --brand-gray: #D9D9D9;
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-
-  /* Cor principal da marca (CTA, links, destaques) */
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-
-  /* Apoio (fundos de secao alternada, chips) */
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-
-  /* Texto/fundo de baixa enfase */
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-
+  --background: #ffffff;
+  --foreground: var(--brand-dark);
+  
+  --card: #ffffff;
+  --card-foreground: var(--brand-dark);
+  
+  --popover: #ffffff;
+  --popover-foreground: var(--brand-dark);
+  
+  /* Cor principal da marca (CTA, links, destaques: #E3504D) */
+  --primary: var(--brand-red);
+  --primary-foreground: #ffffff;
+  
+  /* Apoio (fundos de seção alternada, chips: #4A249E) */
+  --secondary: var(--brand-purple);
+  --secondary-foreground: #ffffff;
+  
+  /* Texto/fundo de baixa ênfase */
+  --muted: var(--brand-light);
+  --muted-foreground: var(--brand-text-muted);
+  
   /* Hover de itens interativos neutros */
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --accent: var(--brand-light);
+  --accent-foreground: var(--brand-dark);
+  
+  --destructive: var(--brand-red);
+  
+  --border: #E5E5EA;
+  --input: #E5E5EA;
+  --ring: var(--brand-red);
 
-  --destructive: oklch(0.577 0.245 27.325);
-
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-
-  /* --- Motion: duracoes e easings compartilhados --- */
+  /* --- Motion: durações e easings compartilhados --- */
   --duration-fast: 150ms;
   --duration-base: 250ms;
   --duration-slow: 450ms;
@@ -95,6 +105,16 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+
+  --color-brand-red: var(--brand-red);
+  --color-brand-purple: var(--brand-purple);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-darker: var(--brand-darker);
+  --color-brand-text-dark: var(--brand-text-dark);
+  --color-brand-text-muted: var(--brand-text-muted);
+  --color-brand-text-light: var(--brand-text-light);
+  --color-brand-light: var(--brand-light);
+  --color-brand-gray: var(--brand-gray);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

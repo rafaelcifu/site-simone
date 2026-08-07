@@ -1,39 +1,36 @@
-import { faq } from "@/content/home";
+import { getHomeContent } from "@/content/home";
 import { pageSeo } from "@/content/seo";
 import { buildMetadata } from "@/lib/seo";
-import { faqSchema, graph, webPageSchema } from "@/lib/schema";
+import { graph, webPageSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/atoms/json-ld";
 import { Hero } from "@/components/sections/hero";
-import { Stats } from "@/components/sections/stats";
-import { ServicesGrid } from "@/components/sections/services-grid";
+import { ManifestoCard } from "@/components/sections/manifesto-card";
+import { AboutTwoCards } from "@/components/sections/about-two-cards";
+import { StatsSection } from "@/components/sections/stats-section";
+import { Cases } from "@/components/sections/cases";
+import { Products } from "@/components/sections/products";
+import { ClientLogosGrid } from "@/components/sections/client-logos-grid";
 import { Testimonials } from "@/components/sections/testimonials";
-import { Faq } from "@/components/sections/faq";
-import { CtaBand } from "@/components/sections/cta-band";
+import { FinalCta } from "@/components/sections/final-cta";
 
 export const metadata = buildMetadata({ ...pageSeo.home, absoluteTitle: true });
 
-/**
- * Home. Pagina = montagem de secoes, nada de markup solto aqui.
- * Reordenar/remover secao = mexer so nesta lista.
- *
- * O FAQPage no JSON-LD so e valido porque a secao <Faq /> esta visivel
- * na pagina. Se ela sair, tire o faqSchema junto.
- */
 export default function HomePage() {
-  const pageGraph = graph(
-    webPageSchema({ ...pageSeo.home, type: "WebPage" }),
-    faq.length ? faqSchema(faq) : null
-  );
+  const content = getHomeContent("pt");
+  const pageGraph = graph(webPageSchema({ ...pageSeo.home, type: "WebPage" }));
 
   return (
     <>
       <JsonLd data={pageGraph} />
-      <Hero />
-      <Stats />
-      <ServicesGrid limit={3} />
-      <Testimonials />
-      <Faq />
-      <CtaBand />
+      <Hero data={content.hero} />
+      <ManifestoCard data={content.manifesto} />
+      <AboutTwoCards data={content.aboutSection} />
+      <StatsSection data={content.statsSection} />
+      <Cases data={content.cases} />
+      <Products data={content.products} />
+      <ClientLogosGrid />
+      <Testimonials data={content.testimonials} />
+      <FinalCta data={content.finalCta} />
     </>
   );
 }

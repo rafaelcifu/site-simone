@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Inter, DM_Sans } from "next/font/google";
 
 import { site, siteUi } from "@/content/site";
 import { pageSeo, person } from "@/content/seo";
@@ -15,9 +15,8 @@ import { Footer } from "@/components/organisms/footer";
 import "./globals.css";
 
 /**
- * Fontes. Trocar pelas do Figma quando o layout for importado.
+ * Fontes globais importadas do Figma (Design System).
  * `variable` alimenta --font-body / --font-display em globals.css.
- * Sempre via next/font — nunca <link> para Google Fonts (bloqueia render).
  */
 const body = Inter({
   variable: "--font-body",
@@ -25,7 +24,7 @@ const body = Inter({
   display: "swap",
 });
 
-const display = Inter({
+const display = DM_Sans({
   variable: "--font-display",
   subsets: ["latin"],
   display: "swap",
