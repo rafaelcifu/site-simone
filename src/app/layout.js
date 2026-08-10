@@ -99,11 +99,12 @@ export default function RootLayout({ children }) {
     <html
       lang="pt-BR"
       className={`${body.variable} ${display.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <head>
         <JsonLd data={siteGraph} />
       </head>
-      <body className="flex min-h-full flex-col">
+      <body className="flex min-h-full flex-col" suppressHydrationWarning>
         {/* Acessibilidade e SEO: primeiro elemento focavel pula a navegacao. */}
         <a
           href="#conteudo"

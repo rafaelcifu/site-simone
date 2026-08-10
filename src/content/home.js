@@ -5,54 +5,57 @@ export const homeContentByLocale = {
     hero: {
       title: "Simone Moura",
       subtitle: {
-        part1: "Eu crio ",
-        highlight1: "estratégia para empresas com foco nas pessoas, na inovação e na transformação de mercados",
-        part2: ". Quer o meu apoio para destravar o seu crescimento e da sua empresa?",
+        part1: "“Eu crio ",
+        highlight1: "estratégias para empresas com foco na transformação",
+        part2: " das pessoas e dos mercados. Sem desperdícios, sem distrações e com propósito verdadeiro.”",
       },
-      primaryCta: { label: "Conheça a minha trajetória", href: "/sobre" },
+      primaryCta: { label: "Quero falar sobre minha empresa", href: "/contato" },
       image: { src: "/simone-headset-hero.png", alt: "Simone Moura" },
     },
     manifesto: {
-      taglinePrefix: "SIMONE MOURA",
-      taglineSuffix: " • ESTRATÉGIA DE MARCA",
+      taglinePrefix: "Simone Moura",
+      taglineSuffix: " • Estratégia de marca",
       title: {
         part1: "Em tempo de ",
         highlight1: "IA",
-        part2: ", ",
-        highlight2: "IoT",
-        part3: ", ",
-        highlight3: "Machine Learning",
-        part4: " e tanta pressa por inovação",
+        part2: ", OIT, ",
+        highlight2: "Machine\nLearning",
+        part3: " e tanta pressa por\ninovação",
       },
       description:
-        "Muitas empresas estão perdendo suas melhores pessoas e a oportunidade de se posicionarem de maneira clara e atitudinal porque estão se distraindo com o que não vale a pena. Muito mais do que perder dinheiro, estão tomando decisões fora de propósito organizacional.",
+        "Muitas empresas estão perdendo suas melhores pessoas e a oportunidade de se posicionarem de maneira clara e atitudinal porque estão se distraindo com o que não vale a pena. Muito mais do que perder dinheiro, es tomando decisões fora de propósito organizacional.",
       image: { src: "/office-chair.png", alt: "Manifesto Simone Moura" },
     },
     aboutSection: {
-      tagline: "SOBRE",
+      tagline: "Sobre",
       name: "Simone Moura",
       leftImage: "/simone-stage-left.png",
-      paragraph1:
-        "A Ping Pong Estratégia é a primeira empresa do Nordeste do Brasil focada em gestão de marcas e comunicação pela neurociência.",
-      paragraph2:
-        "Com mais de 700 projetos entregues em todo o Brasil para diversos segmentos tais como: Saúde e wellness, mercado financeiro, agronegócio, canal distribuidor, setor de alimentos, shopping centers, construção civil e incorporadoras, setor industrial, veículos de comunicação e mídia, agências de publicidade dentre outros.",
-      paragraph3:
-        "Experiências internacionais: Universidade de Berlim e London Business School.",
-      cta: { label: "Conheça a história da Simone", href: "/sobre" },
+      paragraphs: [
+        "Mais de 35 anos transformando conhecimento em estratégia aplicada. Formação na Universidade de Harvard, EUA - Universidade do Minho, Portugal, FGV, ESPM, PUCRS, INSPER, Universidade Berlim e London Business School.",
+        "Colunista de importantes portais de comunicação e palestrante.",
+        "Ama Música e esportes. Prefere tênis à sapato alto. Como paixão, estudar e conversar com as pessoas.",
+        "De executiva a construtora de marcas em movimento.\nApós 25 anos em grandes empresas, fundei a Ping Pong Estratégia com uma convicção que, na época, parecia ousada: marcas não são produtos, são relações. Antes de propósito, branding e comportamento de consumo se tornarem pauta do mercado, já defendíamos que valor nasce da conexão entre pessoas, negócios e estratégia.",
+        "Em 2020, nasceu a Caza Futuro, ampliando essa visão para a transformação digital. Porque tecnologia, por si só, não transforma empresas; ela transforma quando melhora a vida das pessoas e cria caminhos para os negócios.",
+        "Essa mesma inquietação deu origem à 365, plataforma digital de compras para o mercado B2B, da qual sou cofundadora. Lançada em 2024, após dois anos de estudos, pesquisas e desenvolvimento, a 365 nasceu para tornar a experiência de compra empresarial mais simples, ágil e conectada às novas dinâmicas do mercado.",
+        "Hoje, após mais de 35 anos de trajetória, metodologia própria e mais de 700 empresas impactadas, sigo fazendo o que sempre acreditei: unir estratégia, inovação, neurociência e comportamento para transformar empresas em marcas vivas, relevantes, desejadas e preparadas para evoluir continuamente."
+      ],
+      cta: { label: "Conheça um pouco da minha formação", href: "/sobre" },
     },
     statsSection: {
-      title:
-        "Muito mais que 700 projetos entregues. Quer marcas que gerem a verdadeira mudança de hábitos no seu consumidor e no seu cliente?",
-      description:
-        "A Ping Pong Estratégia une branding, neurociência e JTBD para criar posicionamentos atitudinais que aceleram o crescimento das empresas.",
+      title: {
+        highlight: "Muito mais que 700 projetos entregues. ",
+        text: "Uma trajetória que une gestores e líderes a uma metodologia de trabalho autoral, customizada para cada cliente."
+      },
+      paragraph1: "Pilares de metodologia: Branding estratégico · Neurociência aplicada ao consumo · Economia comportamental · Posicionamento de mercado e de produtos pela metodologia JTBD (Jobs to be done) · Análise de mercado em profundidade e entrevista · Liderança por propósito",
+      paragraph2: "Inspirada por: Richard Thaler, Simon Sinek, Paco Underhill, Martin Lindstrom, Clayton Christensen, Philip Kotler, etc.",
       items: [
         {
           value: "+30",
-          label: "Anos dedicados à gestão de marcas e estratégia",
+          label: "anos de atuação nos mercados do Brasil e exterior",
         },
         {
           value: "+700",
-          label: "Projetos entregues em todo o Brasil para diversos segmentos",
+          label: "Projetos entregues para empresas de diversos tamanhos e segmentos",
         },
         {
           value: "+2B",
@@ -144,8 +147,8 @@ export const homeContentByLocale = {
       },
     },
     finalCta: {
-      title: 'A sua marca já sabe quem ela é. O problema é que o mercado ainda não."',
-      cta: { label: "Fale com a Simone", href: "/contato" },
+      title: "A sua marca já sabe quem ela é. O problema é que o mercado ainda não.",
+      cta: { label: "Quero falar sobre minha empresa", href: "/contato" },
       image: { src: "/simone-cta-cutout.png", alt: "Simone Moura" },
     },
   },

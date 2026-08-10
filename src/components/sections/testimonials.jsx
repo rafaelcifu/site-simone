@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Star } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 import { Reveal } from "@/components/motion/reveal";
 
@@ -8,65 +8,84 @@ export function Testimonials({ data }) {
   const { title, avatars, current } = data;
 
   return (
-    <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 bg-background">
-      <Reveal>
-        <h2 className="font-display text-4xl font-bold tracking-tight text-brand-dark md:text-5xl mb-12">
-          {title}
-        </h2>
-      </Reveal>
-
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 items-start">
-        {/* Coluna Esquerda: Miniaturas dos Avatares */}
-        <div className="lg:col-span-4 flex lg:flex-col lg:-space-y-4 items-center sm:flex-row -space-x-4 lg:space-x-0 pt-4">
-          {avatars && avatars.map((avatar, idx) => (
-            <Reveal key={idx} delay={0.08 * idx} className={`z-[${30 - idx * 10}]`}>
-              <div className={`relative h-24 w-24 overflow-hidden rounded-full border-4 border-brand-light transition-all duration-300 ${idx === 1 ? 'border-brand-red scale-110 shadow-lg z-40' : 'opacity-80 hover:opacity-100 hover:scale-105 hover:z-50'}`}>
-                <Image
-                  src={avatar.src}
-                  alt={avatar.name}
-                  fill
-                  className="object-cover"
-                  sizes="96px"
-                />
-              </div>
-            </Reveal>
-          ))}
+    <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-24 bg-white overflow-hidden">
+      <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 items-start">
+        
+        {/* Coluna Esquerda: Avatares Empilhados */}
+        <div className="lg:col-span-3 flex flex-col gap-4">
+          {avatars && avatars.map((avatar, idx) => {
+            const isCenter = idx === 1;
+            return (
+              <Reveal key={idx} delay={0.08 * idx}>
+                <div 
+                  className={`relative w-full rounded-2xl overflow-hidden transition-all duration-300 ${
+                    isCenter 
+                      ? 'h-64 opacity-100 shadow-md' 
+                      : 'h-32 opacity-80'
+                  }`}
+                >
+                  <Image
+                    src={avatar.src}
+                    alt={avatar.name}
+                    fill
+                    className="object-cover grayscale"
+                    sizes="(max-width: 1024px) 100vw, 25vw"
+                  />
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
 
-        {/* Coluna Direita: Depoimento em Destaque */}
-        <div className="lg:col-span-8 flex flex-col gap-6 rounded-3xl bg-brand-light p-8 md:p-12 border border-border/60">
+        {/* Coluna Direita: Conteúdo */}
+        <div className="lg:col-span-9 flex flex-col pt-2 lg:pl-8">
           <Reveal>
-            <h3 className="font-display text-2xl font-bold text-brand-dark">
+            <h2 className="font-display text-4xl font-bold tracking-tight text-neutral-900 md:text-5xl lg:text-[3.5rem] leading-[1.1] mb-16 max-w-lg">
+              {title}
+            </h2>
+          </Reveal>
+
+          <Reveal delay={0.06}>
+            <h3 className="font-display text-2xl font-bold text-neutral-900 md:text-3xl mb-4">
               {current.company}
             </h3>
           </Reveal>
 
-          <Reveal delay={0.06}>
-            <p className="text-base text-neutral-700 leading-relaxed md:text-lg italic">
-              &ldquo;{current.quote}&rdquo;
+          <Reveal delay={0.12}>
+            <p className="text-[13px] text-neutral-700 leading-relaxed md:text-[15px] font-medium max-w-4xl">
+              {current.quote}
             </p>
           </Reveal>
 
-          <Reveal delay={0.12} className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-border/50">
+          <Reveal delay={0.18} className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-8 max-w-4xl">
             <div>
-              <p className="text-xs font-semibold text-neutral-800">
+              <p className="text-[13px] font-bold text-neutral-900">
                 {current.author}
               </p>
             </div>
 
-            {/* Estrelas de AvaliaÃ§Ã£o Amarelas */}
-            <div className="flex items-center gap-1 text-amber-400">
+            {/* Estrelas de Avaliação */}
+            <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                <Star 
+                  key={i} 
+                  className={`h-4 w-4 ${i < (current.rating || 5) ? 'fill-[#EFCF46] text-[#EFCF46]' : 'fill-[#D1D5DB] text-[#D1D5DB]'}`} 
+                />
               ))}
             </div>
           </Reveal>
 
-          {/* Dots de PaginaÃ§Ã£o */}
-          <div className="flex items-center gap-2 pt-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-brand-red" />
-            <span className="h-2.5 w-2.5 rounded-full bg-neutral-300" />
-          </div>
+          {/* Navegação */}
+          <Reveal delay={0.24}>
+            <div className="flex items-center gap-3 mt-12">
+              <button className="flex h-7 w-7 items-center justify-center rounded-full bg-[#E5484D] text-white transition-transform duration-300 hover:scale-110">
+                <ChevronLeft className="h-4 w-4" />
+              </button>
+              <button className="flex h-7 w-7 items-center justify-center rounded-full bg-[#E5484D] text-white transition-transform duration-300 hover:scale-110">
+                <ChevronRight className="h-4 w-4" />
+              </button>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

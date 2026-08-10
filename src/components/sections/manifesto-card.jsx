@@ -7,50 +7,54 @@ export function ManifestoCard({ data }) {
   const { taglinePrefix, taglineSuffix, title, description, image } = data;
 
   return (
-    <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+    <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pb-12 relative z-20 -mt-20 md:-mt-32">
       <Reveal>
-        <div className="relative overflow-hidden rounded-3xl bg-brand-dark text-white shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-          <div className="grid grid-cols-1 lg:grid-cols-12">
-            {/* ConteÃºdo Ã  Esquerda */}
-            <div className="relative z-10 flex flex-col justify-center p-8 md:p-14 lg:col-span-7 bg-gradient-to-r from-brand-dark via-brand-dark/95 to-transparent">
-              <span className="text-xs font-bold tracking-[0.2em] text-brand-red uppercase mb-4">
+        <div className="relative overflow-hidden rounded-[2rem] bg-black text-white shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            {/* Conteúdo à Esquerda */}
+            <div className="relative z-10 flex flex-col justify-center p-8 md:p-14 lg:p-16 lg:pr-8 bg-gradient-to-r from-black via-black to-transparent">
+              <span className="text-xs font-normal text-brand-red mb-6">
                 {taglinePrefix}
-                <span className="text-neutral-500 font-medium">{taglineSuffix}</span>
+                <span className="text-neutral-400"> {taglineSuffix}</span>
               </span>
 
-              <h2 className="font-display text-3xl font-medium leading-[1.1] text-white md:text-4xl lg:text-[40px] mb-6 tracking-tight">
+              <h2 className="font-display text-3xl font-normal leading-snug text-white md:text-4xl lg:text-[2.5rem] mb-6 tracking-tight whitespace-pre-line">
                 {title.part1}
-                <span className="font-bold text-brand-red">{title.highlight1}</span>
+                <span className="text-brand-red">{title.highlight1}</span>
                 {title.part2}
-                <span className="font-bold text-brand-red">{title.highlight2}</span>
+                <span className="text-brand-red">{title.highlight2}</span>
                 {title.part3}
-                <span className="font-bold text-brand-red">{title.highlight3}</span>
-                {title.part4}
               </h2>
 
-              <p className="text-sm md:text-base text-neutral-400 leading-relaxed max-w-[480px]">
+              <p className="text-sm md:text-base text-neutral-300 leading-relaxed max-w-[500px]">
                 {description}
               </p>
+              
+              {/* Slider Dots */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 lg:left-auto lg:translate-x-0 lg:right-[-3rem] z-30">
+                <div className="h-1.5 w-6 rounded-full bg-brand-red" />
+                <div className="h-1.5 w-1.5 rounded-full bg-white/50" />
+                <div className="h-1.5 w-1.5 rounded-full bg-white/50" />
+              </div>
             </div>
 
-            {/* Imagem de Fundo Ã  Direita */}
-            <div className="relative min-h-[300px] lg:col-span-5 lg:min-h-[460px]">
-              {/* DegradÃª para mesclar imagem com o fundo */}
-              <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-brand-dark to-transparent z-10 hidden lg:block" />
+            {/* Imagem de Fundo à Direita */}
+            <div className="relative min-h-[350px] lg:min-h-[500px]">
+              {/* Degradê para mesclar imagem com o fundo */}
+              <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10 hidden lg:block" />
               
               <Image
                 src={image.src || "/office-chair.png"}
                 alt={image.alt || "Manifesto"}
                 fill
-                className="object-cover object-left opacity-90"
-                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover object-center opacity-90"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
 
               {/* Curvas Vermelhas Decorativas sobrepostas no canto inferior direito */}
-              <div className="absolute -bottom-6 -right-6 z-20 pointer-events-none">
-                <svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M240 120C240 186.274 186.274 240 120 240C53.7258 240 0 186.274 0 120" stroke="var(--brand-red)" strokeWidth="8" opacity="0.9" />
-                  <path d="M180 120C180 153.137 153.137 180 120 180C86.8629 180 60 153.137 60 120" stroke="var(--brand-red)" strokeWidth="6" opacity="0.6" />
+              <div className="absolute -bottom-2 right-4 z-20 pointer-events-none overflow-hidden h-32 w-24">
+                <svg width="100%" height="100%" viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute bottom-0 right-0">
+                  <path d="M100 0C100 55.228 55.228 100 0 100" stroke="#E5484D" strokeWidth="12" opacity="0.9" />
                 </svg>
               </div>
             </div>

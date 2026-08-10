@@ -59,38 +59,53 @@ export const contact = {
 
 export const social = [
   {
-    label: "Instagram",
-    href: "https://www.instagram.com/simonemoura",
-    icon: "instagram",
+    label: "X",
+    href: "https://x.com",
+    icon: "twitter",
   },
   {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/simonemoura",
-    icon: "linkedin",
+    label: "YouTube",
+    href: "https://youtube.com",
+    icon: "youtube",
+  },
+  {
+    label: "WhatsApp",
+    href: "https://whatsapp.com",
+    icon: "whatsapp",
+  },
+  {
+    label: "Facebook",
+    href: "https://facebook.com",
+    icon: "facebook",
+  },
+  {
+    label: "Instagram",
+    href: "https://instagram.com",
+    icon: "instagram",
   },
 ];
 
 export const mainNavByLocale = {
   pt: [
-    { label: "Início", href: "/" },
+    { label: "Home", href: "/" },
     { label: "Sobre", href: "/sobre" },
     { label: "Serviços", href: "/servicos" },
-    { label: "Metodologias", href: "/metodologias" },
-    { label: "Contato", href: "/contato" },
+    { label: "Metodologia", href: "/metodologias" },
+    { label: "Conteúdos", href: "/conteudos" },
   ],
   en: [
     { label: "Home", href: "/en" },
     { label: "About", href: "/en/about" },
     { label: "Services", href: "/en/services" },
-    { label: "Methodologies", href: "/en/methodologies" },
-    { label: "Contact", href: "/en/contact" },
+    { label: "Methodology", href: "/en/methodologies" },
+    { label: "Content", href: "/en/content" },
   ],
   es: [
     { label: "Inicio", href: "/es" },
     { label: "Sobre mí", href: "/es/sobre" },
     { label: "Servicios", href: "/es/servicios" },
-    { label: "Metodologías", href: "/es/metodologias" },
-    { label: "Contacto", href: "/es/contacto" },
+    { label: "Metodología", href: "/es/metodologias" },
+    { label: "Contenidos", href: "/es/contenidos" },
   ],
 };
 
@@ -118,7 +133,13 @@ export const siteUiByLocale = {
       navigationTitle: "Navegação",
       contactTitle: "Contato",
       copyrightSymbol: "©",
-      rights: "Todos os direitos reservados.",
+      rights: "Todos os direitos",
+      copyrightText: "Simone Moura - 2026 - Todos os direitos",
+      privacyPolicy: "Política de privacidade",
+      quote: '"Eu crio estratégias para empresas com foco na transformação das pessoas e dos mercados. Sem desperdícios, sem distrações e com propósito verdadeiro."',
+      newsletterTitle: "Inscreva-se na newsletter",
+      newsletterPlaceholder: "nome@email.com.br",
+      newsletterButton: "Inscreva-se"
     },
     ctaBand: {
       title: "Pronto para começar?",
