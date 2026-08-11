@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 
 import { Reveal } from "@/components/motion/reveal";
 import {
@@ -37,6 +40,11 @@ export function Cases({ data }) {
               align: "start",
               loop: true,
             }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+              }),
+            ]}
             className="w-full"
           >
             <CarouselContent className="-ml-4 md:-ml-6">
