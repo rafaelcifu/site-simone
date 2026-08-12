@@ -13,13 +13,13 @@ export function Hero({ data }) {
       {/* Imagem de Fundo (Grayscale / Headset) */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute inset-y-0 right-0 w-full md:w-[80%] lg:w-[65%] h-full">
-          <Image
-            src={image.src || "/simone-headset-hero.png"}
-            alt={image.alt || "Simone Moura"}
-            fill
-            priority
-            className="object-cover object-top opacity-80 grayscale mix-blend-multiply"
-            sizes="(max-width: 768px) 100vw, 65vw"
+          <video
+            src="/video simone 1 header.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover object-top opacity-80 grayscale mix-blend-multiply"
           />
           {/* Gradiente para suavizar a borda esquerda da imagem */}
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
