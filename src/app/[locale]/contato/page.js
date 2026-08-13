@@ -1,4 +1,4 @@
-import { contatoPage, contatoUi, horarios } from "@/content/contato";
+import { getContatoContent } from "@/content/contato";
 import { contact } from "@/content/site";
 import { pageSeo } from "@/content/seo";
 import { buildMetadata } from "@/lib/seo";
@@ -12,7 +12,10 @@ import { ContactForm } from "@/components/sections/contact-form";
 
 export const metadata = buildMetadata(pageSeo.contato);
 
-export default function ContatoPage() {
+export default async function ContatoPage({ params }) {
+  const { locale } = await params;
+  const { contatoPage, contatoUi, horarios } = getContatoContent(locale);
+
   const pageGraph = graph(
     webPageSchema({ ...pageSeo.contato, type: "ContactPage" }),
     breadcrumbSchema([{ name: "Contato", path: "/contato" }])

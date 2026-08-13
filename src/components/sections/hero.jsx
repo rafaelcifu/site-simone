@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { Reveal } from "@/components/motion/reveal";
@@ -6,23 +5,28 @@ import { Button } from "@/components/ui/button";
 
 export function Hero({ data }) {
   if (!data) return null;
-  const { title, subtitle, primaryCta, image } = data;
+
+  const { title, subtitle, primaryCta } = data;
 
   return (
-    <section className="relative min-h-[680px] w-full overflow-hidden bg-white text-neutral-900 pt-32 pb-24 md:pt-48 md:pb-32 flex items-center">
-      {/* Imagem de Fundo (Grayscale / Headset) */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-y-0 right-0 w-full md:w-[80%] lg:w-[65%] h-full">
+    <section className="relative flex min-h-[680px] w-full items-center overflow-hidden bg-white px-0 pb-24 pt-32 text-neutral-900 md:pb-32 md:pt-48">
+      {/* Vídeo de fundo */}
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="absolute inset-y-0 right-0 h-full w-full md:w-[80%] lg:w-[65%]">
           <video
-            src="/video simone 1 header.mp4"
+            src="/video-simone-header.mp4"
             autoPlay
             loop
             muted
             playsInline
-            className="absolute inset-0 w-full h-full object-cover object-top opacity-80 grayscale mix-blend-multiply"
+            preload="auto"
+            className="absolute inset-0 h-full w-full object-cover object-top opacity-80 grayscale mix-blend-multiply"
           />
-          {/* Gradiente para suavizar a borda esquerda da imagem */}
+
+          {/* Gradiente para suavizar a borda esquerda do vídeo */}
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
+
+          {/* Gradiente inferior */}
           <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
         </div>
       </div>
@@ -36,11 +40,9 @@ export function Hero({ data }) {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <p className="text-xl font-normal text-neutral-800 leading-relaxed md:text-[1.35rem]">
+            <p className="text-xl font-normal leading-relaxed text-neutral-800 md:text-[1.35rem]">
               {subtitle.part1}
-              <span className="text-brand-red">
-                {subtitle.highlight1}
-              </span>
+              <span className="text-brand-red">{subtitle.highlight1}</span>
               {subtitle.part2}
             </p>
           </Reveal>
@@ -49,11 +51,9 @@ export function Hero({ data }) {
             <Button
               asChild
               size="lg"
-              className="w-fit rounded-full bg-[#E5484D] px-8 py-6 text-base font-normal text-white shadow-md hover:bg-[#E5484D]/90 hover:scale-105 transition-all duration-300"
+              className="w-fit rounded-full bg-[#E5484D] px-8 py-6 text-base font-normal text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#E5484D]/90"
             >
-              <Link href={primaryCta.href}>
-                {primaryCta.label}
-              </Link>
+              <Link href={primaryCta.href}>{primaryCta.label}</Link>
             </Button>
           </Reveal>
         </div>

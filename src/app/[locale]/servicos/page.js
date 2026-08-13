@@ -1,4 +1,4 @@
-import { servicos } from "@/content/servicos";
+import { getServicosContent } from "@/content/servicos";
 import { pageSeo } from "@/content/seo";
 import { absoluteUrl, buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
@@ -8,7 +8,10 @@ import { CtaBand } from "@/components/sections/cta-band";
 
 export const metadata = buildMetadata(pageSeo.servicos);
 
-export default function ServicosPage() {
+export default async function ServicosPage({ params }) {
+  const { locale } = await params;
+  const { items: servicos } = getServicosContent(locale);
+
   const pageGraph = graph(
     webPageSchema({ ...pageSeo.servicos, type: "CollectionPage" }),
     breadcrumbSchema([{ name: "Servicos", path: "/servicos" }]),
@@ -27,7 +30,7 @@ export default function ServicosPage() {
   return (
     <>
       <JsonLd data={pageGraph} />
-      <ServicesGrid tone="default" headingAs="h1" />
+      <ServicesGrid tone="default" headingAs="h1" data={{ items: servicos, page: getServicosContent(locale).page }} />
       <CtaBand />
     </>
   );

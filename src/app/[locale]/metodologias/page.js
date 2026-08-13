@@ -1,9 +1,4 @@
-import {
-  etapas,
-  metodologias,
-  metodologiasPage,
-  metodologiasSections,
-} from "@/content/metodologias";
+import { getMetodologiasContent } from "@/content/metodologias";
 import { pageSeo } from "@/content/seo";
 import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
@@ -17,7 +12,10 @@ import { CtaBand } from "@/components/sections/cta-band";
 
 export const metadata = buildMetadata(pageSeo.metodologias);
 
-export default function MetodologiasPage() {
+export default async function MetodologiasPage({ params }) {
+  const { locale } = await params;
+  const { etapas, metodologias, metodologiasPage, metodologiasSections } = getMetodologiasContent(locale);
+
   const pageGraph = graph(
     webPageSchema(pageSeo.metodologias),
     breadcrumbSchema([{ name: "Metodologias", path: "/metodologias" }])

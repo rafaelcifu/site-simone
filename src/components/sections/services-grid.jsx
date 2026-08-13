@@ -1,4 +1,3 @@
-import { servicos, servicosPage } from "@/content/servicos";
 import { Section } from "@/components/atoms/section";
 import { SectionHeading } from "@/components/atoms/section-heading";
 import { Stagger, StaggerItem } from "@/components/motion/stagger";
@@ -11,20 +10,21 @@ import { ServiceCard } from "@/components/molecules/service-card";
  * em /servicos ele E o titulo da pagina, entao vira <h1>.
  * Uma pagina sem <h1> — ou com dois — confunde crawler e leitor de tela.
  */
-export function ServicesGrid({ tone = "muted", limit, headingAs = "h2" }) {
-  const items = limit ? servicos.slice(0, limit) : servicos;
+export function ServicesGrid({ tone = "muted", limit, headingAs = "h2", data }) {
+  const { items, page } = data;
+  const displayItems = limit ? items.slice(0, limit) : items;
 
   return (
     <Section id="servicos" tone={tone}>
       <SectionHeading
         as={headingAs}
-        eyebrow={servicosPage.eyebrow}
-        title={servicosPage.title}
-        description={servicosPage.description}
+        eyebrow={page.eyebrow}
+        title={page.title}
+        description={page.description}
       />
 
       <Stagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((servico) => (
+        {displayItems.map((servico) => (
           <StaggerItem key={servico.slug} className="h-full">
             <ServiceCard {...servico} />
           </StaggerItem>

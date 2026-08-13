@@ -12,7 +12,7 @@ import {
 import { JsonLd } from "@/components/atoms/json-ld";
 import { Header } from "@/components/organisms/header";
 import { Footer } from "@/components/organisms/footer";
-import "./globals.css";
+import "../globals.css";
 
 /**
  * Fontes globais importadas do Figma (Design System).
@@ -85,7 +85,9 @@ export const viewport = {
   initialScale: 1,
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children, params }) {
+  const { locale } = await params;
+  
   // Grafo global: pessoa + entidade comercial + site.
   // Vai em TODAS as paginas. O schema especifico de cada pagina
   // (WebPage, BreadcrumbList, Service) e adicionado na propria pagina.
@@ -97,7 +99,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html
-      lang="pt-BR"
+      lang={locale}
       className={`${body.variable} ${display.variable} h-full antialiased`}
       suppressHydrationWarning
     >

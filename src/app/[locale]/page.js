@@ -15,8 +15,9 @@ import { FinalCta } from "@/components/sections/final-cta";
 
 export const metadata = buildMetadata({ ...pageSeo.home, absoluteTitle: true });
 
-export default function HomePage() {
-  const content = getHomeContent("pt");
+export default async function HomePage({ params }) {
+  const { locale } = await params;
+  const content = getHomeContent(locale);
   const pageGraph = graph(webPageSchema({ ...pageSeo.home, type: "WebPage" }));
 
   return (

@@ -1,10 +1,4 @@
-import {
-  bio,
-  formacoes,
-  sobrePage,
-  sobreSections,
-  valores,
-} from "@/content/sobre";
+import { getSobreContent } from "@/content/sobre";
 import { pageSeo } from "@/content/seo";
 import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
@@ -18,7 +12,10 @@ import { CtaBand } from "@/components/sections/cta-band";
 
 export const metadata = buildMetadata({ ...pageSeo.sobre, type: "profile" });
 
-export default function SobrePage() {
+export default async function SobrePage({ params }) {
+  const { locale } = await params;
+  const { bio, formacoes, sobrePage, sobreSections, valores } = getSobreContent(locale);
+
   const pageGraph = graph(
     // AboutPage sinaliza ao Google que esta e a pagina biografica da entidade.
     webPageSchema({ ...pageSeo.sobre, type: "AboutPage" }),

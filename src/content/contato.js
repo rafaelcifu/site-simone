@@ -34,3 +34,12 @@ export const contatoUi = {
     requiredMark: "*",
   },
 };
+
+export function getContatoContent(locale = "pt") {
+  return {
+    contatoPage,
+    horarios,
+    formFields,
+    contatoUi,
+  };
+}

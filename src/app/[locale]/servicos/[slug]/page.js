@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { Check } from "lucide-react";
 
-import { getServico, servicos, servicosUi } from "@/content/servicos";
+import { getServico, servicosByLocale, getServicosContent } from "@/content/servicos";
 import { buildMetadata } from "@/lib/seo";
 import {
   breadcrumbSchema,
@@ -21,13 +21,19 @@ export const dynamicParams = false;
 
 /** Gera as paginas de servico no build (site 100% estatico). */
 export function generateStaticParams() {
-  return servicos.map((servico) => ({ slug: servico.slug }));
+  const params = [];
+  for (const locale of Object.keys(servicosByLocale)) {
+    for (const servico of servicosByLocale[locale]) {
+      params.push({ locale, slug: servico.slug });
+    }
+  }
+  return params;
 }
 
 /** Params e assincrono no App Router — sempre com await. */
 export async function generateMetadata({ params }) {
-  const { slug } = await params;
-  const servico = getServico(slug);
+  const { slug, locale } = await params;
+  const servico = getServico(slug, locale);
 
   if (!servico) return {};
 
@@ -39,8 +45,9 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ServicoPage({ params }) {
-  const { slug } = await params;
-  const servico = getServico(slug);
+  const { slug, locale } = await params;
+  const servico = getServico(slug, locale);
+  const { ui: servicosUi } = getServicosContent(locale);
 
   if (!servico) notFound();
 

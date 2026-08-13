@@ -40,3 +40,13 @@ export const metodologiasSections = {
     title: "Passo a passo",
   },
 };
+
+export function getMetodologiasContent(locale = "pt") {
+  // Retorna conteúdo traduzido futuramente, por enquanto retorna PT como fallback
+  return {
+    etapas,
+    metodologias,
+    metodologiasPage,
+    metodologiasSections,
+  };
+}

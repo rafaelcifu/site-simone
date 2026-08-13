@@ -24,7 +24,7 @@ export const homeContentByLocale = {
       },
       description:
         "Muitas empresas estão perdendo suas melhores pessoas e a oportunidade de se posicionarem de maneira clara e atitudinal porque estão se distraindo com o que não vale a pena. Muito mais do que perder dinheiro, es tomando decisões fora de propósito organizacional.",
-      image: { src: "/office-chair.png", alt: "Manifesto Simone Moura" },
+      image: { src: "/slide-hero-1.png", alt: "Manifesto Simone Moura" },
     },
     aboutSection: {
       tagline: "Sobre",
@@ -177,7 +177,7 @@ export const homeContentByLocale = {
       },
       description:
         "Many companies are losing their best people and the opportunity to position themselves clearly because they are distracted by what doesn't matter. Far beyond losing money, they are making decisions outside organizational purpose.",
-      image: { src: "/office-chair.png", alt: "Simone Moura Manifesto" },
+      image: { src: "/slide-hero-1.png", alt: "Simone Moura Manifesto" },
     },
     aboutSection: {
       tagline: "ABOUT",
@@ -316,7 +316,7 @@ export const homeContentByLocale = {
       },
       description:
         "Muchas empresas están perdiendo a sus mejores personas y la oportunidad de posicionarse claramente por distraerse con lo que no importa. Más allá de perder dinero, están tomando decisiones fuera del propósito organizacional.",
-      image: { src: "/office-chair.png", alt: "Manifiesto Simone Moura" },
+      image: { src: "/slide-hero-1.png", alt: "Manifiesto Simone Moura" },
     },
     aboutSection: {
       tagline: "SOBRE",

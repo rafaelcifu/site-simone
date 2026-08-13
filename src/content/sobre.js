@@ -38,3 +38,14 @@ export const sobreSections = {
     title: "Formacao",
   },
 };
+
+export function getSobreContent(locale = "pt") {
+  // Retorna conteúdo traduzido futuramente, por enquanto retorna PT como fallback
+  return {
+    bio,
+    formacoes,
+    sobrePage,
+    sobreSections,
+    valores,
+  };
+}
