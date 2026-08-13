@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -25,19 +26,22 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  // Detecta o idioma ativo a partir da rota (/en, /es ou pt por padrÃ£o)
   const segments = pathname.split("/").filter(Boolean);
+
   const currentLang =
     segments.length > 0 && LOCALES.some((l) => l.code === segments[0])
       ? segments[0]
       : DEFAULT_LOCALE;
 
-  const { site, mainNav, siteUi } = getSiteContent(currentLang);
+  const { mainNav, siteUi } = getSiteContent(currentLang);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
+
     onScroll();
+
     window.addEventListener("scroll", onScroll, { passive: true });
+
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -49,38 +53,53 @@ export function Header() {
           scrolled ? "translate-y-0" : "translate-y-2"
         )}
       >
+        {/* Logo desktop */}
         <Link
           href={currentLang === DEFAULT_LOCALE ? "/" : `/${currentLang}`}
-          className="flex items-center gap-2 font-display text-lg font-bold tracking-tight text-brand-dark transition-opacity duration-200 hover:opacity-70"
+          className="flex items-center transition-opacity duration-200 hover:opacity-70"
         >
-          {/* S Logo / Marca */}
-          <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M25 8C20 8 18 11 18 15C18 20 28 19 28 25C28 30 24 32 20 32C15 32 13 29 13 25" stroke="var(--brand-red)" strokeWidth="3" strokeLinecap="round" />
-            <path d="M12 12C9 14 7 18 7 23C7 31 12 34 16 34" stroke="var(--brand-red)" strokeWidth="3" strokeLinecap="round" opacity="0.5" />
-          </svg>
-          <span className="hidden sm:inline-block">{site.shortName}</span>
+          <Image
+            src="/logo-novo.png"
+            alt="Simone Moura"
+            width={180}
+            height={50}
+            priority
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
+        {/* Navegação desktop */}
         <nav
           aria-label={siteUi.header.navigationLabel}
           className="hidden items-center gap-6 md:flex"
         >
           {mainNav.map((item) => (
-            <NavLink key={item.href} href={item.href} className="text-sm font-medium text-neutral-600 hover:text-brand-dark">
+            <NavLink
+              key={item.href}
+              href={item.href}
+              className="text-sm font-medium text-neutral-600 hover:text-brand-dark"
+            >
               {item.label}
             </NavLink>
           ))}
         </nav>
 
+        {/* Ações desktop */}
         <div className="hidden items-center gap-4 md:flex">
           <LanguageSwitcher />
-          <Button asChild className="rounded-full bg-brand-red hover:bg-brand-red/90 text-white font-semibold shadow-md px-6">
+
+          <Button
+            asChild
+            className="rounded-full bg-brand-red hover:bg-brand-red/90 text-white font-semibold shadow-md px-6"
+          >
             <Link href="/contato">Fale com a Simone</Link>
           </Button>
         </div>
 
+        {/* Menu mobile */}
         <div className="flex items-center gap-2 md:hidden">
           <LanguageSwitcher />
+
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button
@@ -93,15 +112,21 @@ export function Header() {
               </Button>
             </SheetTrigger>
 
-            <SheetContent side="right" className="w-72 flex flex-col justify-between">
+            <SheetContent
+              side="right"
+              className="w-72 flex flex-col justify-between"
+            >
               <div>
                 <SheetHeader className="mb-6 mt-4">
-                  <SheetTitle className="font-display text-left flex items-center gap-2">
-                     <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M25 8C20 8 18 11 18 15C18 20 28 19 28 25C28 30 24 32 20 32C15 32 13 29 13 25" stroke="var(--brand-red)" strokeWidth="3" strokeLinecap="round" />
-                      <path d="M12 12C9 14 7 18 7 23C7 31 12 34 16 34" stroke="var(--brand-red)" strokeWidth="3" strokeLinecap="round" opacity="0.5" />
-                    </svg>
-                    {site.shortName}
+                  <SheetTitle className="text-left">
+                    <Image
+                      src="/logo-novo.png"
+                      alt="Simone Moura"
+                      width={160}
+                      height={45}
+                      priority
+                      className="h-9 w-auto object-contain"
+                    />
                   </SheetTitle>
                 </SheetHeader>
 
@@ -111,7 +136,10 @@ export function Header() {
                 >
                   {mainNav.map((item) => (
                     <SheetClose asChild key={item.href}>
-                      <NavLink href={item.href} className="py-3 text-base text-neutral-600">
+                      <NavLink
+                        href={item.href}
+                        className="py-3 text-base text-neutral-600"
+                      >
                         {item.label}
                       </NavLink>
                     </SheetClose>
@@ -121,7 +149,10 @@ export function Header() {
 
               <div className="flex flex-col gap-3 px-2 pb-6">
                 <SheetClose asChild>
-                  <Button asChild className="w-full rounded-full bg-brand-red text-white">
+                  <Button
+                    asChild
+                    className="w-full rounded-full bg-brand-red text-white"
+                  >
                     <Link href="/contato">Fale com a Simone</Link>
                   </Button>
                 </SheetClose>
