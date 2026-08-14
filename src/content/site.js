@@ -1,4 +1,4 @@
-import { DEFAULT_LOCALE } from "./locales";
+import { DEFAULT_LOCALE, LOCALES, getLocalizedHref } from "./locales";
 
 /**
  * Dados globais do site por idioma (identidade, contato, navegação e redes).
@@ -85,29 +85,57 @@ export const social = [
   },
 ];
 
-export const mainNavByLocale = {
-  pt: [
-    { label: "Home", href: "/" },
-    { label: "Sobre", href: "/sobre" },
-    { label: "Serviços", href: "/servicos" },
-    { label: "Metodologia", href: "/metodologias" },
-    { label: "Conteúdos", href: "/conteudos" },
-  ],
-  en: [
-    { label: "Home", href: "/en" },
-    { label: "About", href: "/en/about" },
-    { label: "Services", href: "/en/services" },
-    { label: "Methodology", href: "/en/methodologies" },
-    { label: "Content", href: "/en/content" },
-  ],
-  es: [
-    { label: "Inicio", href: "/es" },
-    { label: "Sobre mí", href: "/es/sobre" },
-    { label: "Servicios", href: "/es/servicios" },
-    { label: "Metodología", href: "/es/metodologias" },
-    { label: "Contenidos", href: "/es/contenidos" },
-  ],
+/**
+ * Navegação principal.
+ *
+ * O `path` é o caminho REAL da rota — o nome da pasta em src/app, sempre em
+ * português — e o prefixo de idioma é aplicado por `getLocalizedHref`. Só o
+ * RÓTULO é traduzido.
+ *
+ * Não escreva o href traduzido na mão (`/en/about`): a rota é `/en/sobre`, e
+ * o menu inteiro do inglês já foi para 404 exatamente por isso. Item novo =
+ * uma linha em `navRoutes` + o rótulo nos três idiomas.
+ *
+ * Item só entra aqui quando a página existe. ("Conteúdos" saiu por isso —
+ * quando a rota existir, é só devolver a linha e os três rótulos.)
+ */
+const navRoutes = [
+  { key: "home", path: "/" },
+  { key: "sobre", path: "/sobre" },
+  { key: "servicos", path: "/servicos" },
+  { key: "metodologias", path: "/metodologias" },
+];
+
+const navLabels = {
+  pt: {
+    home: "Home",
+    sobre: "Sobre",
+    servicos: "Serviços",
+    metodologias: "Metodologia",
+  },
+  en: {
+    home: "Home",
+    sobre: "About",
+    servicos: "Services",
+    metodologias: "Methodology",
+  },
+  es: {
+    home: "Inicio",
+    sobre: "Sobre mí",
+    servicos: "Servicios",
+    metodologias: "Metodología",
+  },
 };
+
+export const mainNavByLocale = Object.fromEntries(
+  LOCALES.map((loc) => [
+    loc.code,
+    navRoutes.map(({ key, path }) => ({
+      label: navLabels[loc.code]?.[key] ?? navLabels[DEFAULT_LOCALE][key],
+      href: getLocalizedHref(path, loc.code),
+    })),
+  ])
+);
 
 export const mainNav = mainNavByLocale.pt;
 

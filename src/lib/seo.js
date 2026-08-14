@@ -1,23 +1,74 @@
-import { site } from "@/content/site";
+import { siteByLocale } from "@/content/site";
+import {
+  DEFAULT_LOCALE,
+  LOCALES,
+  getLocaleInfo,
+  getLocalizedHref,
+} from "@/content/locales";
 import { person } from "@/content/seo";
 
 /**
- * Monta o objeto `metadata` de uma pagina, com canonical, Open Graph e
- * Twitter Card ja preenchidos e consistentes.
+ * Dominio raiz do site. Uma unica base para todos os idiomas — o que separa
+ * um idioma do outro e o prefixo no caminho (/en, /es), nao a origem.
+ */
+const BASE_URL = siteByLocale[DEFAULT_LOCALE].url;
+
+/** URL absoluta de um caminho, no idioma pedido. */
+export function localeUrl(path = "/", locale = DEFAULT_LOCALE) {
+  const href = getLocalizedHref(path, locale);
+  return `${BASE_URL}${href === "/" ? "" : href}`;
+}
+
+/**
+ * Mapa de hreflang da pagina: cada idioma apontando para a propria URL.
+ *
+ * Por que isso importa: sem hreflang o Google trata /en e /es como
+ * concorrentes da versao pt e costuma indexar so uma. `x-default` diz qual
+ * servir para quem nao casa com nenhum idioma da lista.
+ */
+function languageAlternates(path, alternatePaths) {
+  const languages = {};
+  for (const loc of LOCALES) {
+    // `alternatePaths` cobre o caso do caminho mudar de idioma para idioma
+    // (slug traduzido). Sem ele, assume o mesmo caminho nos tres.
+    const localePath = alternatePaths?.[loc.code] ?? path;
+    languages[loc.locale] = localeUrl(localePath, loc.code);
+  }
+  languages["x-default"] = localeUrl(
+    alternatePaths?.[DEFAULT_LOCALE] ?? path,
+    DEFAULT_LOCALE
+  );
+  return languages;
+}
+
+/**
+ * Monta o objeto `metadata` de uma pagina, com canonical, hreflang, Open Graph
+ * e Twitter Card ja preenchidos e consistentes.
  *
  * Sempre use este helper em vez de escrever `export const metadata = {}`
  * na mao. Assim nenhuma pagina sai sem canonical (causa comum de conteudo
  * duplicado) nem sem OG (link feio no WhatsApp e no LinkedIn).
  *
- *   export const metadata = buildMetadata(pageSeo.sobre);
+ *   export async function generateMetadata({ params }) {
+ *     const { locale } = await params;
+ *     return buildMetadata({ ...getPageSeo(locale).sobre, locale });
+ *   }
  *
- * Para uma pagina dinamica:
- *   return buildMetadata({ title, description, path: `/servicos/${slug}` });
+ * SEMPRE passe `locale`. Sem ele a pagina traduzida sai com canonical
+ * apontando para a versao em portugues — que e o mesmo que pedir ao Google
+ * para nao indexar a traducao.
  */
 export function buildMetadata({
   title,
   description,
   path = "/",
+  /** Codigo do idioma da pagina: "pt", "en", "es". */
+  locale = DEFAULT_LOCALE,
+  /**
+   * So para rota com slug traduzido: { pt: "/servicos/x", en: "/servicos/y" }.
+   * Sem isso o hreflang assume o mesmo caminho em todos os idiomas.
+   */
+  alternatePaths,
   /** true na home: usa o titulo exato, sem aplicar o template "| Simone Moura" */
   absoluteTitle = false,
   /**
@@ -36,13 +87,16 @@ export function buildMetadata({
   noIndex = false,
   keywords,
 }) {
-  const url = `${site.url}${path === "/" ? "" : path}`;
+  const localeInfo = getLocaleInfo(locale);
+  const siteLocale = siteByLocale[localeInfo.code] ?? siteByLocale[DEFAULT_LOCALE];
+  const url = localeUrl(path, localeInfo.code);
+  const fullTitle = absoluteTitle ? title : `${title} | ${siteLocale.name}`;
 
   const openGraph = {
     type,
-    locale: site.ogLocale,
-    siteName: site.name,
-    title: absoluteTitle ? title : `${title} | ${site.name}`,
+    locale: localeInfo.ogLocale,
+    siteName: siteLocale.name,
+    title: fullTitle,
     description,
     url,
   };
@@ -53,7 +107,7 @@ export function buildMetadata({
         url: image,
         width: 1200,
         height: 630,
-        alt: absoluteTitle ? title : `${title} | ${site.name}`,
+        alt: fullTitle,
       },
     ];
   }
@@ -64,11 +118,12 @@ export function buildMetadata({
     keywords,
     alternates: {
       canonical: url,
+      languages: languageAlternates(path, alternatePaths),
     },
     openGraph,
     twitter: {
       card: "summary_large_image",
-      title: absoluteTitle ? title : `${title} | ${site.name}`,
+      title: fullTitle,
       description,
       ...(image ? { images: [image] } : {}),
     },
@@ -85,13 +140,19 @@ export function buildMetadata({
             "max-snippet": -1,
           },
         },
-    authors: [{ name: person.name, url: site.url }],
+    authors: [{ name: person.name, url: BASE_URL }],
     creator: person.name,
     publisher: person.name,
   };
 }
 
-/** URL absoluta a partir de um caminho relativo. */
+/**
+ * URL absoluta a partir de um caminho relativo, sempre no dominio raiz.
+ *
+ * Usada pelo JSON-LD: os `@id` das entidades (Person, WebSite, o negocio)
+ * precisam ser estaveis e unicos no site inteiro, entao NAO levam prefixo
+ * de idioma. Para link de pagina traduzida use `localeUrl`.
+ */
 export function absoluteUrl(path = "/") {
-  return `${site.url}${path === "/" ? "" : path}`;
+  return `${BASE_URL}${path === "/" ? "" : path}`;
 }

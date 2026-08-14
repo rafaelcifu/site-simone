@@ -13,13 +13,22 @@ export function Hero({ data }) {
       {/* Vídeo de fundo */}
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute inset-y-0 right-0 h-full w-full md:w-[80%] lg:w-[65%]">
+          {/*
+            `poster` = primeiro frame do proprio video. Pinta o hero antes do
+            mp4 chegar, entao o LCP nao espera o video.
+            `preload="metadata"`: o autoplay comeca assim que da, mas o browser
+            nao baixa o arquivo inteiro na frente do resto da pagina.
+          */}
           <video
             src="/video-simone-header.mp4"
+            poster="/video-simone-header-poster.jpg"
             autoPlay
             loop
             muted
             playsInline
-            preload="auto"
+            preload="metadata"
+            aria-hidden="true"
+            tabIndex={-1}
             className="absolute inset-0 h-full w-full object-cover object-top opacity-80 grayscale mix-blend-multiply"
           />
 

@@ -1,20 +1,24 @@
 import { getServicosContent } from "@/content/servicos";
-import { pageSeo } from "@/content/seo";
-import { absoluteUrl, buildMetadata } from "@/lib/seo";
+import { getPageSeo } from "@/content/seo";
+import { buildMetadata, localeUrl } from "@/lib/seo";
 import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/atoms/json-ld";
 import { ServicesGrid } from "@/components/sections/services-grid";
 import { CtaBand } from "@/components/sections/cta-band";
 
-export const metadata = buildMetadata(pageSeo.servicos);
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  return buildMetadata({ ...getPageSeo(locale).servicos, locale });
+}
 
 export default async function ServicosPage({ params }) {
   const { locale } = await params;
   const { items: servicos } = getServicosContent(locale);
+  const pageSeo = getPageSeo(locale);
 
   const pageGraph = graph(
-    webPageSchema({ ...pageSeo.servicos, type: "CollectionPage" }),
-    breadcrumbSchema([{ name: "Servicos", path: "/servicos" }]),
+    webPageSchema({ ...pageSeo.servicos, type: "CollectionPage", locale }),
+    breadcrumbSchema([{ name: pageSeo.servicos.title, path: "/servicos" }], locale),
     {
       "@type": "ItemList",
       name: pageSeo.servicos.title,
@@ -22,7 +26,7 @@ export default async function ServicosPage({ params }) {
         "@type": "ListItem",
         position: index + 1,
         name: servico.title,
-        url: absoluteUrl(`/servicos/${servico.slug}`),
+        url: localeUrl(`/servicos/${servico.slug}`, locale),
       })),
     }
   );

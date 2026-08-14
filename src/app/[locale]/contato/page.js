@@ -1,6 +1,6 @@
 import { getContatoContent } from "@/content/contato";
 import { contact } from "@/content/site";
-import { pageSeo } from "@/content/seo";
+import { getPageSeo } from "@/content/seo";
 import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/atoms/json-ld";
@@ -10,15 +10,19 @@ import { Icon } from "@/components/atoms/icon";
 import { Reveal } from "@/components/motion/reveal";
 import { ContactForm } from "@/components/sections/contact-form";
 
-export const metadata = buildMetadata(pageSeo.contato);
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  return buildMetadata({ ...getPageSeo(locale).contato, locale });
+}
 
 export default async function ContatoPage({ params }) {
   const { locale } = await params;
   const { contatoPage, contatoUi, horarios } = getContatoContent(locale);
+  const pageSeo = getPageSeo(locale);
 
   const pageGraph = graph(
-    webPageSchema({ ...pageSeo.contato, type: "ContactPage" }),
-    breadcrumbSchema([{ name: "Contato", path: "/contato" }])
+    webPageSchema({ ...pageSeo.contato, type: "ContactPage", locale }),
+    breadcrumbSchema([{ name: pageSeo.contato.title, path: "/contato" }], locale)
   );
 
   return (

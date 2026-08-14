@@ -7,7 +7,8 @@ import {
   knowsAbout,
   person,
 } from "@/content/seo";
-import { absoluteUrl } from "@/lib/seo";
+import { DEFAULT_LOCALE, getLocaleInfo } from "@/content/locales";
+import { absoluteUrl, localeUrl } from "@/lib/seo";
 
 /**
  * Builders de JSON-LD (schema.org).
@@ -143,16 +144,28 @@ export function websiteSchema() {
   };
 }
 
-/** Uma pagina. Amarra a pagina ao site e a pessoa. */
-export function webPageSchema({ path, title, description, type = "WebPage" }) {
-  const url = absoluteUrl(path);
+/**
+ * Uma pagina. Amarra a pagina ao site e a pessoa.
+ *
+ * `locale` faz a URL e o @id seguirem o idioma: /sobre e /en/sobre sao duas
+ * paginas, com dois @id. Sem isso as versoes traduzidas declaram a mesma
+ * entidade com URLs diferentes e o grafo fica ambiguo.
+ */
+export function webPageSchema({
+  path,
+  title,
+  description,
+  type = "WebPage",
+  locale = DEFAULT_LOCALE,
+}) {
+  const url = localeUrl(path, locale);
   return {
     "@type": type,
     "@id": `${url}#webpage`,
     url,
     name: title,
     description,
-    inLanguage: site.locale,
+    inLanguage: getLocaleInfo(locale).locale,
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": PERSON_ID },
     primaryImageOfPage: absoluteUrl(person.image),
@@ -165,12 +178,14 @@ export function webPageSchema({ path, title, description, type = "WebPage" }) {
  *   breadcrumbSchema([
  *     { name: "Servicos", path: "/servicos" },
  *     { name: servico.title, path: `/servicos/${servico.slug}` },
- *   ])
+ *   ], locale)
  *
- * O item "Inicio" e adicionado automaticamente — nao inclua na lista.
+ * O item inicial (Inicio / Home) e adicionado automaticamente, ja no idioma
+ * da pagina — nao inclua na lista.
  */
-export function breadcrumbSchema(items = []) {
-  const all = [{ name: "Inicio", path: "/" }, ...items];
+export function breadcrumbSchema(items = [], locale = DEFAULT_LOCALE) {
+  const localeInfo = getLocaleInfo(locale);
+  const all = [{ name: localeInfo.homeLabel, path: "/" }, ...items];
 
   return {
     "@type": "BreadcrumbList",
@@ -178,19 +193,20 @@ export function breadcrumbSchema(items = []) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: absoluteUrl(item.path),
+      item: localeUrl(item.path, localeInfo.code),
     })),
   };
 }
 
 /** Um servico especifico. Use na pagina /servicos/[slug]. */
-export function serviceSchema(servico) {
+export function serviceSchema(servico, locale = DEFAULT_LOCALE) {
+  const url = localeUrl(`/servicos/${servico.slug}`, locale);
   return {
     "@type": "Service",
-    "@id": `${absoluteUrl(`/servicos/${servico.slug}`)}#service`,
+    "@id": `${url}#service`,
     name: servico.title,
     description: servico.hero?.description || servico.excerpt,
-    url: absoluteUrl(`/servicos/${servico.slug}`),
+    url,
     provider: { "@id": BUSINESS_ID },
     areaServed: areaServed.map((a) => ({ "@type": a.type, name: a.name })),
     serviceType: servico.title,

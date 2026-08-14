@@ -21,6 +21,15 @@ export function proxy(request) {
     return NextResponse.next();
   }
 
+  // O idioma padrão é servido SEM prefixo (/sobre, não /pt/sobre). Como o
+  // Next também responde em /pt/sobre, as duas URLs existiriam com o mesmo
+  // conteúdo — conteúdo duplicado. O 301 elege uma só.
+  if (pathname === `/${DEFAULT_LOCALE}` || pathname.startsWith(`/${DEFAULT_LOCALE}/`)) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname.slice(`/${DEFAULT_LOCALE}`.length) || "/";
+    return NextResponse.redirect(url, 301);
+  }
+
   // Verifica se a URL já possui um locale
   const pathnameHasLocale = LOCALES.some(
     (loc) =>

@@ -1,5 +1,5 @@
 import { getHomeContent } from "@/content/home";
-import { pageSeo } from "@/content/seo";
+import { getPageSeo } from "@/content/seo";
 import { buildMetadata } from "@/lib/seo";
 import { graph, webPageSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/atoms/json-ld";
@@ -13,12 +13,22 @@ import { ClientLogosGrid } from "@/components/sections/client-logos-grid";
 import { Testimonials } from "@/components/sections/testimonials";
 import { FinalCta } from "@/components/sections/final-cta";
 
-export const metadata = buildMetadata({ ...pageSeo.home, absoluteTitle: true });
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  return buildMetadata({
+    ...getPageSeo(locale).home,
+    locale,
+    absoluteTitle: true,
+  });
+}
 
 export default async function HomePage({ params }) {
   const { locale } = await params;
   const content = getHomeContent(locale);
-  const pageGraph = graph(webPageSchema({ ...pageSeo.home, type: "WebPage" }));
+  const pageSeo = getPageSeo(locale);
+  const pageGraph = graph(
+    webPageSchema({ ...pageSeo.home, type: "WebPage", locale })
+  );
 
   return (
     <>

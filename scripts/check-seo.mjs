@@ -77,14 +77,36 @@ if (arquivos.length === 0) {
   process.exit(1);
 }
 
-/** Converte caminho de arquivo em rota. */
+/**
+ * Idioma padrao do site. Ele e servido SEM prefixo na URL publica: o arquivo
+ * gerado em .next/server/app/pt/sobre.html responde em /sobre, e /pt/sobre
+ * redireciona (301) para la — ver src/proxy.js.
+ *
+ * Precisa bater com DEFAULT_LOCALE em src/content/locales.js. Nao da para
+ * importar de la: aquele modulo usa o alias "@/", que so existe dentro do
+ * build do Next.
+ */
+const DEFAULT_LOCALE = "pt";
+
+/**
+ * Converte caminho de arquivo em rota PUBLICA.
+ *
+ * O prefixo do idioma padrao e removido, porque e assim que a pagina existe
+ * para o usuario e para o Google. Os outros idiomas mantem o prefixo.
+ */
 function rotaDe(arquivo) {
   const normalized = arquivo.replace(/\\/g, "/");
   const r = normalized
     .replace(`${APP_DIR}/`, "")
     .replace(/\.html$/, "")
     .replace(/^index$/, "");
-  return `/${r}`.replace(/\/$/, "") || "/";
+  const rota = `/${r}`.replace(/\/$/, "") || "/";
+
+  if (rota === `/${DEFAULT_LOCALE}`) return "/";
+  if (rota.startsWith(`/${DEFAULT_LOCALE}/`)) {
+    return rota.slice(`/${DEFAULT_LOCALE}`.length);
+  }
+  return rota;
 }
 
 const idsGlobais = new Map();
@@ -207,14 +229,32 @@ for (const arquivo of arquivos) {
       erro(rota, `canonical aponta para ${caminho}`);
     }
   }
+
+  // --- 7b. hreflang --------------------------------------------------------
+  // Site multi-idioma sem hreflang: o Google trata as traducoes como
+  // concorrentes da versao em portugues e costuma indexar so uma delas.
+  const hreflangs = [
+    ...html.matchAll(/<link rel="alternate" hrefLang="([^"]+)"/gi),
+  ].map((m) => m[1].toLowerCase());
+
+  if (hreflangs.length === 0) {
+    erro(rota, "sem hreflang (use buildMetadata com `locale`)");
+  } else if (!hreflangs.includes("x-default")) {
+    erro(rota, "hreflang sem x-default");
+  }
 }
 
 // --- 8. Cobertura do sitemap ------------------------------------------------
 const sitemapPath = join(APP_DIR, "sitemap.xml.body");
 if (existsSync(sitemapPath)) {
   const sitemap = readFileSync(sitemapPath, "utf-8");
+
+  // Compara a URL inteira, nao so o fim do caminho: senao "/sobre" casaria
+  // com "<loc>.../en/sobre</loc>" e uma rota faltando passaria batido.
+  const origem = sitemap.match(/<loc>(https?:\/\/[^/<]+)/)?.[1] ?? "";
+
   for (const rota of rotasEncontradas) {
-    const alvo = rota === "/" ? "</loc>" : `${rota}</loc>`;
+    const alvo = `<loc>${origem}${rota === "/" ? "" : rota}</loc>`;
     if (!sitemap.includes(alvo)) {
       erro(rota, "nao esta no sitemap.xml (adicione em app/sitemap.js)");
     }

@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { Check } from "lucide-react";
 
 import { getServico, servicosByLocale, getServicosContent } from "@/content/servicos";
+import { getPageSeo } from "@/content/seo";
 import { buildMetadata } from "@/lib/seo";
 import {
   breadcrumbSchema,
@@ -37,10 +38,19 @@ export async function generateMetadata({ params }) {
 
   if (!servico) return {};
 
+  // Mapa de slug por idioma, casado pelo `id` — o slug pode ser traduzido.
+  const alternatePaths = {};
+  for (const code of Object.keys(servicosByLocale)) {
+    const irmao = servicosByLocale[code].find((s) => s.id === servico.id);
+    if (irmao) alternatePaths[code] = `/servicos/${irmao.slug}`;
+  }
+
   return buildMetadata({
     title: servico.title,
     description: servico.hero?.description || servico.excerpt,
     path: `/servicos/${servico.slug}`,
+    locale,
+    alternatePaths,
   });
 }
 
@@ -57,12 +67,16 @@ export default async function ServicoPage({ params }) {
       path,
       title: servico.title,
       description: servico.hero?.description || servico.excerpt,
+      locale,
     }),
-    serviceSchema(servico),
-    breadcrumbSchema([
-      { name: "Servicos", path: "/servicos" },
-      { name: servico.title, path },
-    ])
+    serviceSchema(servico, locale),
+    breadcrumbSchema(
+      [
+        { name: getPageSeo(locale).servicos.title, path: "/servicos" },
+        { name: servico.title, path },
+      ],
+      locale
+    )
   );
 
   return (

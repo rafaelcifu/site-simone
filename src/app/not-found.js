@@ -1,11 +1,14 @@
 import Link from "next/link";
 
-import { siteUi } from "@/content/site";
+import { site, siteUi } from "@/content/site";
 import { Section } from "@/components/atoms/section";
 import { Button } from "@/components/ui/button";
 
 // 404 nunca deve ser indexada.
+// `metadataBase` aqui porque esta rota fica fora de /[locale] e nao herda o
+// do layout — sem ele o Next resolve as URLs sociais em localhost no build.
 export const metadata = {
+  metadataBase: new URL(site.url),
   title: siteUi.notFound.title,
   robots: { index: false, follow: true },
 };

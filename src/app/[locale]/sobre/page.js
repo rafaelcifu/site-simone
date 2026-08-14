@@ -1,5 +1,5 @@
 import { getSobreContent } from "@/content/sobre";
-import { pageSeo } from "@/content/seo";
+import { getPageSeo } from "@/content/seo";
 import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/atoms/json-ld";
@@ -10,16 +10,20 @@ import { Reveal } from "@/components/motion/reveal";
 import { Stagger, StaggerItem } from "@/components/motion/stagger";
 import { CtaBand } from "@/components/sections/cta-band";
 
-export const metadata = buildMetadata({ ...pageSeo.sobre, type: "profile" });
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  return buildMetadata({ ...getPageSeo(locale).sobre, locale, type: "profile" });
+}
 
 export default async function SobrePage({ params }) {
   const { locale } = await params;
   const { bio, formacoes, sobrePage, sobreSections, valores } = getSobreContent(locale);
+  const pageSeo = getPageSeo(locale);
 
   const pageGraph = graph(
     // AboutPage sinaliza ao Google que esta e a pagina biografica da entidade.
-    webPageSchema({ ...pageSeo.sobre, type: "AboutPage" }),
-    breadcrumbSchema([{ name: "Sobre", path: "/sobre" }])
+    webPageSchema({ ...pageSeo.sobre, type: "AboutPage", locale }),
+    breadcrumbSchema([{ name: pageSeo.sobre.title, path: "/sobre" }], locale)
   );
 
   return (

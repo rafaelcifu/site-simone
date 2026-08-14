@@ -13,6 +13,8 @@ export const LOCALES = [
     flag: "🇧🇷",
     locale: "pt-BR",
     ogLocale: "pt_BR",
+    /** Rótulo do primeiro item da trilha de navegação (JSON-LD BreadcrumbList). */
+    homeLabel: "Início",
   },
   {
     code: "en",
@@ -21,6 +23,7 @@ export const LOCALES = [
     flag: "🇺🇸",
     locale: "en-US",
     ogLocale: "en_US",
+    homeLabel: "Home",
   },
   {
     code: "es",
@@ -29,6 +32,7 @@ export const LOCALES = [
     flag: "🇪🇸",
     locale: "es-ES",
     ogLocale: "es_ES",
+    homeLabel: "Inicio",
   },
 ];
 
