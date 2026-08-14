@@ -46,7 +46,7 @@ export function ClientLogosGrid() {
         </div>
 
         {/* Coluna Direita: Grid de Logos 6x4 */}
-        <div className="lg:col-span-8 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 lg:gap-3">
+        <div className="lg:col-span-8 grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 gap-2 lg:gap-3">
           {CLIENT_LOGOS.map((logo, index) => (
             <Reveal key={index} delay={0.02 * index}>
               <div className="relative flex aspect-square items-center justify-center rounded-2xl p-0 overflow-hidden transition-transform duration-300 hover:scale-105 shadow-[0_2px_8px_rgba(0,0,0,0.04)] bg-[#F9F9F9]">
@@ -55,7 +55,7 @@ export function ClientLogosGrid() {
                   alt={logo.name}
                   fill
                   className="object-contain"
-                  sizes="(max-width: 768px) 33vw, 15vw"
+                  sizes="(max-width: 768px) 25vw, 15vw"
                 />
               </div>
             </Reveal>

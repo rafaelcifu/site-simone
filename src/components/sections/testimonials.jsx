@@ -3,96 +3,82 @@
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
-const testimonials = [
-  {
-    name: "Giacomo Brayner",
-    role: "Sócio-diretor da Bando Propaganda",
-    company: "Bando Propaganda",
-    text: "Construção de valor, marcas com propósito. Há 12 anos atrás, a Simone Moura já tratava desses temas com uma desenvoltura impressionante, ela parece estar sempre a um passo à frente das coisas.",
-    image: "/depoimentos/testimonial-avatar1.png",
-  },
-  {
-    name: "Nome da segunda pessoa",
-    role: "Cargo da segunda pessoa",
-    company: "Empresa da segunda pessoa",
-    text: "Digite aqui o depoimento da segunda pessoa.",
-    image: "/depoimentos/testimonial-avatar2.png",
-  },
-  {
-    name: "Nome da terceira pessoa",
-    role: "Cargo da terceira pessoa",
-    company: "Empresa da terceira pessoa",
-    text: "Digite aqui o depoimento da terceira pessoa.",
-    image: "/depoimentos/testimonial-avatar3.png",
-  },
-];
-
-function getSlideIndex(index) {
-  const total = testimonials.length;
-
+function wrap(index, total) {
   return (index + total) % total;
 }
 
-export function Testimonials() {
+function Stars({ count, total = 5 }) {
+  return (
+    <div className="flex gap-1" aria-label={`${count} de ${total} estrelas`}>
+      {Array.from({ length: total }).map((_, i) => (
+        <span
+          key={i}
+          className={
+            i < count ? "text-2xl text-yellow-400" : "text-2xl text-neutral-300"
+          }
+          aria-hidden="true"
+        >
+          ★
+        </span>
+      ))}
+    </div>
+  );
+}
+
+export function Testimonials({ data }) {
+  const items = data?.items ?? [];
+  const total = items.length;
+
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const nextSlide = useCallback(() => {
-    setActiveIndex((currentIndex) =>
-      getSlideIndex(currentIndex + 1)
-    );
-  }, []);
+  const next = useCallback(() => {
+    setActiveIndex((i) => wrap(i + 1, total));
+  }, [total]);
 
-  const previousSlide = useCallback(() => {
-    setActiveIndex((currentIndex) =>
-      getSlideIndex(currentIndex - 1)
-    );
-  }, []);
+  const prev = useCallback(() => {
+    setActiveIndex((i) => wrap(i - 1, total));
+  }, [total]);
 
+  // autoplay — pausa se total === 0
   useEffect(() => {
-    const timer = setInterval(() => {
-      nextSlide();
-    }, 5000);
+    if (total === 0) return;
+    const id = setInterval(next, 5000);
+    return () => clearInterval(id);
+  }, [next, total]);
 
-    return () => {
-      clearInterval(timer);
-    };
-  }, [nextSlide]);
+  if (total === 0) return null;
 
-  const activeTestimonial = testimonials[activeIndex];
-
-  const previousTestimonial =
-    testimonials[getSlideIndex(activeIndex - 1)];
-
-  const nextTestimonial =
-    testimonials[getSlideIndex(activeIndex + 1)];
+  const active = items[activeIndex];
+  const prevItem = items[wrap(activeIndex - 1, total)];
+  const nextItem = items[wrap(activeIndex + 1, total)];
 
   return (
     <section className="bg-white py-20 lg:py-28">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-12 lg:gap-16">
-        {/* Coluna das imagens */}
+        {/* ── Coluna das imagens ─────────────────────────────── */}
         <div className="flex flex-col gap-5 lg:col-span-4">
-          {/* Imagem anterior */}
+          {/* Imagem anterior — clicável para navegar */}
           <button
             type="button"
-            onClick={previousSlide}
+            onClick={prev}
             aria-label="Ver depoimento anterior"
-            className="relative h-40 w-full overflow-hidden rounded-2xl bg-neutral-200 opacity-70 transition hover:opacity-100"
+            className="group relative h-40 w-full overflow-hidden rounded-2xl bg-neutral-200 opacity-60 transition-opacity duration-300 hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E5484D]"
           >
             <Image
-              src={previousTestimonial.image}
-              alt={`Foto de ${previousTestimonial.name}`}
+              src={prevItem.image}
+              alt={`Foto de ${prevItem.author}`}
               fill
               sizes="(max-width: 1024px) 100vw, 320px"
-              className="object-cover grayscale"
+              className="object-cover grayscale transition-transform duration-500 group-hover:scale-105"
             />
           </button>
 
           {/* Imagem principal */}
           <div className="relative h-80 w-full overflow-hidden rounded-2xl bg-neutral-200 shadow-md">
             <Image
-              key={activeTestimonial.image}
-              src={activeTestimonial.image}
-              alt={`Foto de ${activeTestimonial.name}`}
+              key={active.image}
+              src={active.image}
+              alt={`Foto de ${active.author}`}
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 320px"
@@ -100,71 +86,85 @@ export function Testimonials() {
             />
           </div>
 
-          {/* Imagem seguinte */}
+          {/* Imagem seguinte — clicável para navegar */}
           <button
             type="button"
-            onClick={nextSlide}
+            onClick={next}
             aria-label="Ver próximo depoimento"
-            className="relative h-40 w-full overflow-hidden rounded-2xl bg-neutral-200 opacity-70 transition hover:opacity-100"
+            className="group relative h-40 w-full overflow-hidden rounded-2xl bg-neutral-200 opacity-60 transition-opacity duration-300 hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E5484D]"
           >
             <Image
-              src={nextTestimonial.image}
-              alt={`Foto de ${nextTestimonial.name}`}
+              src={nextItem.image}
+              alt={`Foto de ${nextItem.author}`}
               fill
               sizes="(max-width: 1024px) 100vw, 320px"
-              className="object-cover grayscale"
+              className="object-cover grayscale transition-transform duration-500 group-hover:scale-105"
             />
           </button>
         </div>
 
-        {/* Coluna do texto */}
+        {/* ── Coluna do texto ───────────────────────────────── */}
         <div className="lg:col-span-8">
           <h2 className="max-w-xl text-5xl font-bold leading-tight tracking-tight text-neutral-950 lg:text-6xl">
-            Depoimentos de clientes
+            {data.title}
           </h2>
 
-          <div className="mt-20">
+          <div className="mt-20 min-h-[260px] transition-all duration-300">
             <p className="text-3xl font-semibold text-neutral-950">
-              {activeTestimonial.company}
+              {active.company}
             </p>
 
             <p className="mt-5 max-w-4xl text-lg leading-relaxed text-neutral-800">
-              {activeTestimonial.text}
+              {active.quote}
             </p>
 
             <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
               <p className="font-bold text-neutral-950">
-                {activeTestimonial.name} —{" "}
-                {activeTestimonial.role}
+                {active.author}
+                {active.role && (
+                  <> &mdash; <span className="font-normal">{active.role}</span></>
+                )}
               </p>
 
-              <div
-                className="text-2xl tracking-[0.3em] text-yellow-400"
-                aria-label="5 estrelas"
-              >
-                ★★★★★
-              </div>
+              <Stars count={active.stars} />
             </div>
 
             {/* Botões de navegação */}
-            <div className="mt-14 flex gap-4">
+            <div className="mt-14 flex items-center gap-4">
               <button
                 type="button"
-                onClick={previousSlide}
+                onClick={prev}
                 aria-label="Depoimento anterior"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-[#E5484D] text-2xl text-white transition hover:scale-110"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-[#E5484D] text-2xl text-white transition-transform duration-200 hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E5484D]"
               >
                 ‹
               </button>
 
               <button
                 type="button"
-                onClick={nextSlide}
+                onClick={next}
                 aria-label="Próximo depoimento"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-[#E5484D] text-2xl text-white transition hover:scale-110"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-[#E5484D] text-2xl text-white transition-transform duration-200 hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E5484D]"
               >
                 ›
               </button>
+
+              {/* Indicadores de posição */}
+              <div className="ml-2 flex gap-2" aria-hidden="true">
+                {items.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={() => setActiveIndex(i)}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      i === activeIndex
+                        ? "w-6 bg-[#E5484D]"
+                        : "w-2 bg-neutral-300 hover:bg-neutral-400"
+                    }`}
+                    aria-label={`Ir para depoimento ${i + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>

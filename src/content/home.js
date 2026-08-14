@@ -68,18 +68,18 @@ export const homeContentByLocale = {
       subtitle: "Projetos que valem a pena compartilhar",
       items: [
         {
-          id: "esmaltec",
-          title: "Esmaltec Eletrodomésticos",
-          description:
-            "Empresa com mais de 60 anos de atuação no Brasil e no exterior, setor de linha branca.",
-          image: "/case-esmaltec.png",
-          href: "/servicos",
-        },
-        {
           id: "medeiros",
           title: "Medeiros Distribuidora",
           description:
             "Projeto de rebranding da marca onde foi revisitada toda a essência e cultura.",
+          image: "/case-esmaltec.png",
+          href: "/servicos",
+        },
+        {
+          id: "esmaltec",
+          title: "Esmaltec Eletrodomésticos",
+          description:
+            "Empresa com mais de 60 anos de atuação no Brasil e no exterior, setor de linha branca.",
           image: "/case-medeiros.png",
           href: "/servicos",
         },
@@ -133,18 +133,53 @@ export const homeContentByLocale = {
     },
     testimonials: {
       title: "Depoimentos de clientes",
-      avatars: [
-        { src: "/testimonial-avatar1.png", name: "Hotel Sonata" },
-        { src: "/testimonial-avatar2.png", name: "Bando Propaganda" },
-        { src: "/testimonial-avatar3.png", name: "Max" },
+      items: [
+        {
+          company: "Bando Propaganda",
+          quote:
+            "Construção de valor, marcas com propósito. Há 12 anos atrás, a Simone Moura já tratava desses temas com uma desenvoltura impressionante, ela parece estar sempre a um passo à frente das coisas.",
+          author: "Giacomo Brayner",
+          role: "Sócio-diretor da Bando Propaganda",
+          image: "/testimonial-avatar2.png",
+          stars: 4,
+        },
+        {
+          company: "Hotel Sonata",
+          quote:
+            "O Hotel Sonata tem duas fases: Antes e após a Simone Moura. A PingPong Estratégia chegou até nós com uma proposta de fazer a diferença em nossas vidas e conseguiu de imediato. Hoje a Simone faz parte do nosso dia a dia e eu digo que eu nunca vi uma profissional tão comprometida, responsável e envolvida em todos os negócios que ela faz.",
+          author: "Ivana Rangel",
+          role: "CEO Hotel Sonata de Iracema · Presidente Fortaleza Convention & Visitors Bureau",
+          image: "/testimonial-avatar1.png",
+          stars: 4,
+        },
+        {
+          company: "Max Propaganda",
+          quote:
+            "Com trabalhos realizados tanto para a Max Propaganda, quanto para vários clientes nossos, a contribuição para todos foi imensa no que se refere às estratégias, ao planejamento, posicionamento e branding.",
+          author: "Gustavo Rocha",
+          role: "Diretor comercial da Max Propaganda",
+          image: "/testimonial-avatar3.png",
+          stars: 4,
+        },
+        {
+          company: "AUDO",
+          quote:
+            "A Ping Pong foi um divisor de águas para a AUDO, nos ajudou a entender que podemos colocar os pés no chão, mesmo buscando mostrar ao mercado soluções totalmente disruptivas. A Simone nos fez remar no mar da inovação sem temer, trabalhando junto, lado a lado e nos ajudando a emplacar nosso propósito e posicionamento. Nesse maremoto de informações e mudanças, ela nos conduziu a desenvolver e entregar projetos inovadores aliados a esse novo contexto.",
+          author: "Milena Rosado",
+          role: "CEO da AUDO",
+          image: "/case-bando.png",
+          stars: 4,
+        },
+        {
+          company: "Clementino Fraga",
+          quote:
+            "Ver sua forma de trabalhar, ouvir suas explicações e exemplos é simplesmente magnético. Sua fala talvez seja um dos segredos de seu sucesso profissional, pois tem uma forma encantadora de te prender no conteúdo e ter desejo de querer crescer muito mais.",
+          author: "Vanessa Nunes",
+          role: "Gerente de RH do Laboratório Clementino Fraga",
+          image: "/case-clementino.png",
+          stars: 4,
+        },
       ],
-      current: {
-        company: "Bando Propaganda",
-        quote:
-          "Construção de valor, marcas com propósito. Há 12 anos atrás, a Simone Moura já tratava desses temas com uma desenvoltura impressionante, ela parece estar sempre a um passo à frente das coisas.",
-        author: "Giacomo Brayner - Sócio-diretor da Bando Propaganda",
-        rating: 5,
-      },
     },
     finalCta: {
       title: "A sua marca já sabe quem ela é. O problema é que o mercado ainda não.",
@@ -183,13 +218,16 @@ export const homeContentByLocale = {
       tagline: "ABOUT",
       name: "Simone Moura",
       leftImage: "/simone-stage-left.png",
-      paragraph1:
-        "Ping Pong Estratégia is the first firm in Northeastern Brazil focused on brand management and communication powered by neuroscience.",
-      paragraph2:
-        "Over 700 delivered projects across Brazil in sectors such as healthcare, finance, agribusiness, retail, food, construction, industrial, and media.",
-      paragraph3:
-        "International experience: Berlin University and London Business School.",
-      cta: { label: "Learn Simone's story", href: "/en/about" },
+      paragraphs: [
+        "Over 35 years transforming knowledge into applied strategy. Executive education at Harvard University (USA), University of Minho (Portugal), FGV, ESPM, PUCRS, INSPER, Berlin University, and London Business School.",
+        "Columnist for leading communication portals and keynote speaker.",
+        "Loves music and sports. Prefers sneakers to high heels. Her true passions: studying and connecting with people.",
+        "From corporate executive to builder of brands in motion.\nAfter 25 years in major corporations, I founded Ping Pong Estratégia with a conviction that seemed bold at the time: brands are not products, they are relationships. Long before purpose, branding, and consumer behavior became mainstream market trends, we were already championing that value stems from connecting people, business, and strategy.",
+        "In 2020, Caza Futuro was born, expanding that vision into digital transformation. Because technology alone does not transform companies; it transforms when it improves people's lives and paves new paths for business.",
+        "That same drive led to 365, a B2B digital procurement platform of which I am co-founder. Launched in 2024 after two years of research and development, 365 was built to make enterprise purchasing simpler, faster, and aligned with modern market dynamics.",
+        "Today, with over 35 years of experience, a proprietary methodology, and more than 700 companies impacted, I continue doing what I have always believed in: combining strategy, innovation, neuroscience, and human behavior to turn companies into living, relevant, desirable brands prepared to evolve continuously."
+      ],
+      cta: { label: "Learn about my background", href: "/en/about" },
     },
     statsSection: {
       title:
@@ -207,18 +245,18 @@ export const homeContentByLocale = {
       subtitle: "Projects worth sharing",
       items: [
         {
-          id: "esmaltec",
-          title: "Esmaltec Appliances",
-          description:
-            "Home appliance manufacturer with over 60 years of history in Brazil and abroad.",
-          image: "/case-esmaltec.png",
-          href: "/en/services",
-        },
-        {
           id: "medeiros",
           title: "Medeiros Distribution",
           description:
             "Brand rebranding project revisiting company essence and culture.",
+          image: "/case-esmaltec.png",
+          href: "/en/services",
+        },
+        {
+          id: "esmaltec",
+          title: "Esmaltec Appliances",
+          description:
+            "Home appliance manufacturer with over 60 years of history in Brazil and abroad.",
           image: "/case-medeiros.png",
           href: "/en/services",
         },
@@ -272,18 +310,53 @@ export const homeContentByLocale = {
     },
     testimonials: {
       title: "Client Testimonials",
-      avatars: [
-        { src: "/testimonial-avatar1.png", name: "Hotel Sonata" },
-        { src: "/testimonial-avatar2.png", name: "Bando Propaganda" },
-        { src: "/testimonial-avatar3.png", name: "Max" },
+      items: [
+        {
+          company: "Bando Propaganda",
+          quote:
+            "Value creation, purpose-driven brands. 12 years ago, Simone Moura was already handling these topics with impressive fluency. She always seems to be one step ahead.",
+          author: "Giacomo Brayner",
+          role: "Managing Partner at Bando Propaganda",
+          image: "/testimonial-avatar2.png",
+          stars: 4,
+        },
+        {
+          company: "Hotel Sonata",
+          quote:
+            "Hotel Sonata has two phases: before and after Simone Moura. PingPong Estratégia came to us with a proposal to make a real difference — and succeeded immediately. I've never seen a professional so committed, responsible, and invested in her clients' businesses.",
+          author: "Ivana Rangel",
+          role: "CEO Hotel Sonata de Iracema · President Fortaleza Convention & Visitors Bureau",
+          image: "/testimonial-avatar1.png",
+          stars: 4,
+        },
+        {
+          company: "Max Propaganda",
+          quote:
+            "Working both for Max Propaganda and several of our clients, the contribution to all of them was immense in terms of strategy, planning, positioning, and branding.",
+          author: "Gustavo Rocha",
+          role: "Commercial Director at Max Propaganda",
+          image: "/testimonial-avatar3.png",
+          stars: 4,
+        },
+        {
+          company: "AUDO",
+          quote:
+            "Ping Pong was a turning point for AUDO. Simone helped us understand that we can stay grounded even while showing the market truly disruptive solutions. She guided us to develop and deliver innovative projects aligned with this new context.",
+          author: "Milena Rosado",
+          role: "CEO of AUDO",
+          image: "/case-bando.png",
+          stars: 4,
+        },
+        {
+          company: "Clementino Fraga",
+          quote:
+            "Watching her work, listening to her explanations and examples is simply magnetic. Her communication is perhaps one of the secrets to her professional success — she has an enchanting way of keeping you engaged and making you want to grow even more.",
+          author: "Vanessa Nunes",
+          role: "HR Manager at Laboratório Clementino Fraga",
+          image: "/case-clementino.png",
+          stars: 4,
+        },
       ],
-      current: {
-        company: "Bando Propaganda",
-        quote:
-          "Value creation, purpose-driven brands. 12 years ago, Simone Moura was already handling these topics with impressive fluency. She always seems to be one step ahead.",
-        author: "Giacomo Brayner - Managing Partner at Bando Propaganda",
-        rating: 5,
-      },
     },
     finalCta: {
       title: 'Your brand already knows who it is. The problem is the market doesn\'t yet."',
@@ -322,13 +395,16 @@ export const homeContentByLocale = {
       tagline: "SOBRE",
       name: "Simone Moura",
       leftImage: "/simone-stage-left.png",
-      paragraph1:
-        "Ping Pong Estratégia es la primera firma del noreste de Brasil enfocada en gestión de marcas y comunicación basada en neurociencia.",
-      paragraph2:
-        "Más de 700 proyectos entregados en salud, finanzas, agronegocio, alimentos y medios.",
-      paragraph3:
-        "Experiencia internacional: Universidad de Berlín y London Business School.",
-      cta: { label: "Conoce la historia de Simone", href: "/es/sobre" },
+      paragraphs: [
+        "Más de 35 años transformando conocimiento en estrategia aplicada. Formación en la Universidad de Harvard (EE. UU.), Universidad del Miño (Portugal), FGV, ESPM, PUCRS, INSPER, Universidad de Berlín y London Business School.",
+        "Columnista en destacados portales de comunicación y conferencista.",
+        "Ama la música y el deporte. Prefiere zapatillas a tacones. Su verdadera pasión: estudiar y conversar con la gente.",
+        "De ejecutiva a constructora de marcas en movimiento.\nTras 25 años en grandes corporaciones, fundé Ping Pong Estratégia con una convicción que, en su momento, parecía audaz: las marcas no son productos, son relaciones. Mucho antes de que el propósito, el branding y el comportamiento del consumidor fueran tendencia en el mercado, ya defendíamos que el valor nace de la conexión entre personas, negocios y estrategia.",
+        "En 2020 nació Caza Futuro, ampliando esa visión hacia la transformación digital. Porque la tecnología, por sí sola, no transforma empresas; las transforma cuando mejora la vida de las personas y crea nuevos caminos para los negocios.",
+        "Esa misma inquietud dio origen a 365, plataforma digital de compras para el mercado B2B, de la cual soy cofundadora. Lanzada en 2024 tras dos años de investigación y desarrollo, 365 nació para hacer la experiencia de compra empresarial más simple, ágil y conectada con las nuevas dinámicas del mercado.",
+        "Hoy, tras más de 35 años de trayectoria, metodología propia y más de 700 empresas impactadas, sigo haciendo lo que siempre creí: unir estrategia, innovación, neurociencia y comportamiento para transformar empresas en marcas vivas, relevantes, deseadas y preparadas para evolucionar continuamente."
+      ],
+      cta: { label: "Conoce un poco de mi formación", href: "/es/sobre" },
     },
     statsSection: {
       title:
@@ -346,18 +422,18 @@ export const homeContentByLocale = {
       subtitle: "Proyectos que valen la pena compartir",
       items: [
         {
-          id: "esmaltec",
-          title: "Esmaltec Electrodomésticos",
-          description:
-            "Empresa con más de 60 años de trayectoria en Brasil y el exterior.",
-          image: "/case-esmaltec.png",
-          href: "/es/servicios",
-        },
-        {
           id: "medeiros",
           title: "Medeiros Distribuidora",
           description:
             "Proyecto de rebranding donde se revisitó la esencia de la marca.",
+          image: "/case-esmaltec.png",
+          href: "/es/servicios",
+        },
+        {
+          id: "esmaltec",
+          title: "Esmaltec Electrodomésticos",
+          description:
+            "Empresa con más de 60 años de trayectoria en Brasil y el exterior.",
           image: "/case-medeiros.png",
           href: "/es/servicios",
         },
@@ -411,18 +487,53 @@ export const homeContentByLocale = {
     },
     testimonials: {
       title: "Testimonios de clientes",
-      avatars: [
-        { src: "/testimonial-avatar1.png", name: "Hotel Sonata" },
-        { src: "/testimonial-avatar2.png", name: "Bando Propaganda" },
-        { src: "/testimonial-avatar3.png", name: "Max" },
+      items: [
+        {
+          company: "Bando Propaganda",
+          quote:
+            "Construcción de valor, marcas con propósito. Hace 12 años, Simone Moura ya trataba estos temas con una soltura impresionante. Parece estar siempre un paso adelante.",
+          author: "Giacomo Brayner",
+          role: "Socio-director de Bando Propaganda",
+          image: "/testimonial-avatar2.png",
+          stars: 4,
+        },
+        {
+          company: "Hotel Sonata",
+          quote:
+            "Hotel Sonata tiene dos fases: antes y después de Simone Moura. Nunca he visto a una profesional tan comprometida, responsable e involucrada en los negocios de sus clientes.",
+          author: "Ivana Rangel",
+          role: "CEO Hotel Sonata de Iracema · Presidenta Fortaleza Convention & Visitors Bureau",
+          image: "/testimonial-avatar1.png",
+          stars: 4,
+        },
+        {
+          company: "Max Propaganda",
+          quote:
+            "La contribución de Simone tanto para Max Propaganda como para varios de nuestros clientes fue inmensa en cuanto a estrategias, planificación, posicionamiento y branding.",
+          author: "Gustavo Rocha",
+          role: "Director comercial de Max Propaganda",
+          image: "/testimonial-avatar3.png",
+          stars: 4,
+        },
+        {
+          company: "AUDO",
+          quote:
+            "Ping Pong fue un punto de inflexión para AUDO. Simone nos ayudó a desarrollar y entregar proyectos innovadores alineados con este nuevo contexto de mercado.",
+          author: "Milena Rosado",
+          role: "CEO de AUDO",
+          image: "/case-bando.png",
+          stars: 4,
+        },
+        {
+          company: "Clementino Fraga",
+          quote:
+            "Ver su forma de trabajar es simplemente magnético. Tiene una forma encantadora de mantenerte involucrado en el contenido y con deseos de crecer mucho más.",
+          author: "Vanessa Nunes",
+          role: "Gerente de RR.HH. del Laboratorio Clementino Fraga",
+          image: "/case-clementino.png",
+          stars: 4,
+        },
       ],
-      current: {
-        company: "Bando Propaganda",
-        quote:
-          "Construcción de valor, marcas con propósito. Hace 12 años, Simone Moura ya trataba estos temas con una soltura impresionante. Parece estar siempre un paso adelante.",
-        author: "Giacomo Brayner - Socio-director de Bando Propaganda",
-        rating: 5,
-      },
     },
     finalCta: {
       title: 'Tu marca ya sabe quién es. El problema es que el mercado todavía no."',
@@ -439,7 +550,7 @@ export function getHomeContent(locale = DEFAULT_LOCALE) {
 export const hero = homeContentByLocale.pt.hero;
 export const sobreResumo = homeContentByLocale.pt.aboutSection;
 export const numeros = homeContentByLocale.pt.statsSection.items;
-export const depoimentos = [homeContentByLocale.pt.testimonials.current];
+export const depoimentos = homeContentByLocale.pt.testimonials.items;
 export const homeSections = {
   testimonials: { eyebrow: "Depoimentos", title: "Depoimentos de clientes" },
 };
