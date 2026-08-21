@@ -145,7 +145,7 @@ export const pageSeoByLocale = {
       // A home usa `title.absolute` para nao virar "Simone Moura | Simone Moura"
       title: "Simone Moura | Branding Estrategico e Neurociencia do Consumo",
       description:
-        "Estrategista de branding e marketing com +30 anos e +700 projetos. Reposicionamento de marca, neurociencia aplicada ao consumo e Jobs to be Done.",
+        "Estrategista de branding e marketing com + de 35 anos e +700 projetos. Reposicionamento de marca, neurociencia aplicada ao consumo e Jobs to be Done.",
       path: "/",
     },
     sobre: {
@@ -177,7 +177,7 @@ export const pageSeoByLocale = {
     home: {
       title: "Simone Moura | Strategic Branding and Consumer Neuroscience",
       description:
-        "Branding and marketing strategist with 30+ years and 700+ projects. Brand repositioning, applied consumer neuroscience and Jobs to be Done.",
+        "Branding and marketing strategist with 35+ years and 700+ projects. Brand repositioning, applied consumer neuroscience and Jobs to be Done.",
       path: "/",
     },
     sobre: {
@@ -209,7 +209,7 @@ export const pageSeoByLocale = {
     home: {
       title: "Simone Moura | Branding Estrategico y Neurociencia del Consumo",
       description:
-        "Estratega de branding y marketing con +30 anos y +700 proyectos. Reposicionamiento de marca, neurociencia aplicada al consumo y Jobs to be Done.",
+        "Estratega de branding y marketing con + de 35 anos y +700 proyectos. Reposicionamento de marca, neurociencia aplicada al consumo y Jobs to be Done.",
       path: "/",
     },
     sobre: {

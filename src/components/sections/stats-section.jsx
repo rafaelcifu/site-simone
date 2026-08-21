@@ -35,7 +35,7 @@ export function StatsSection({ data }) {
           {items?.map((item, index) => (
             <Reveal key={index} delay={0.1 * index} className="flex-shrink-0">
               <div className="flex flex-col items-center justify-center text-center p-4 rounded-full border border-[#E5484D] bg-white aspect-square w-40 h-40 md:w-44 md:h-44 xl:w-[12rem] xl:h-[12rem] shadow-sm hover:scale-105 transition-transform duration-300">
-                <span className="font-display text-4xl xl:text-[2.75rem] font-bold text-neutral-900 leading-none">
+                <span className="font-display text-3xl sm:text-4xl xl:text-[2.5rem] font-bold text-neutral-900 leading-none whitespace-nowrap">
                   {item.value}
                 </span>
                 <span className="mt-2 text-[10px] xl:text-[11px] font-medium text-neutral-700 leading-tight max-w-[120px]">

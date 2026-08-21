@@ -10,7 +10,7 @@ export const siteByLocale = {
     shortName: "Simone Moura",
     url: "https://www.simonemoura.com.br",
     description:
-      "Simone Moura une branding estratégico, neurociência aplicada ao consumo e Jobs to be Done para reposicionar marcas e destravar crescimento. +30 anos, +700 projetos.",
+      "Simone Moura une branding estratégico, neurociência aplicada ao consumo e Jobs to be Done para reposicionar marcas e destravar crescimento. + de 35 anos, +700 projetos.",
     tagline:
       "Crio estratégias para empresas com foco nas pessoas, na inovação e na transformação de mercados",
     locale: "pt-BR",
@@ -21,7 +21,7 @@ export const siteByLocale = {
     shortName: "Simone Moura",
     url: "https://www.simonemoura.com.br/en",
     description:
-      "Simone Moura combines strategic branding, applied neuroscience, and Jobs to be Done to reposition brands and unlock growth. +30 years, +700 projects.",
+      "Simone Moura combines strategic branding, applied neuroscience, and Jobs to be Done to reposition brands and unlock growth. +35 years, +700 projects.",
     tagline:
       "Building human-centered strategies for business innovation and market transformation",
     locale: "en-US",
@@ -32,7 +32,7 @@ export const siteByLocale = {
     shortName: "Simone Moura",
     url: "https://www.simonemoura.com.br/es",
     description:
-      "Simone Moura combina branding estratégico, neurociencia aplicada y Jobs to be Done para reposicionar marcas y desbloquear el crecimiento. +30 años, +700 proyectos.",
+      "Simone Moura combina branding estratégico, neurociencia aplicada y Jobs to be Done para reposicionar marcas y desbloquear el crecimiento. + de 35 años, +700 proyectos.",
     tagline:
       "Estrategias empresariales con foco en las personas, la innovación y la transformación de mercados",
     locale: "es-ES",
@@ -183,7 +183,7 @@ export const siteUiByLocale = {
     socialCard: {
       description:
         "Branding estratégico, neurociência aplicada ao consumo e Jobs to be Done.",
-      stats: "+30 anos · +700 projetos entregues",
+      stats: "+ de 35 anos · +700 projetos entregues",
     },
   },
   en: {
@@ -215,7 +215,7 @@ export const siteUiByLocale = {
     socialCard: {
       description:
         "Strategic branding, applied consumer neuroscience, and Jobs to be Done.",
-      stats: "+30 years · +700 delivered projects",
+      stats: "+35 years · +700 delivered projects",
     },
   },
   es: {
@@ -247,7 +247,7 @@ export const siteUiByLocale = {
     socialCard: {
       description:
         "Branding estratégico, neurociencia aplicada al consumo y Jobs to be Done.",
-      stats: "+30 años · +700 proyectos entregados",
+      stats: "+ de 35 años · +700 proyectos entregados",
     },
   },
 };

@@ -36,7 +36,7 @@ export const homeContentByLocale = {
         "Ama Música e esportes. Prefere tênis à sapato alto. Como paixão, estudar e conversar com as pessoas.",
         "De executiva a construtora de marcas em movimento.\nApós 25 anos em grandes empresas, fundei a Ping Pong Estratégia com uma convicção que, na época, parecia ousada: marcas não são produtos, são relações. Antes de propósito, branding e comportamento de consumo se tornarem pauta do mercado, já defendíamos que valor nasce da conexão entre pessoas, negócios e estratégia.",
         "Em 2020, nasceu a Caza Futuro, ampliando essa visão para a transformação digital. Porque tecnologia, por si só, não transforma empresas; ela transforma quando melhora a vida das pessoas e cria caminhos para os negócios.",
-        "Essa mesma inquietação deu origem à 365, plataforma digital de compras para o mercado B2B, da qual sou cofundadora. Lançada em 2024, após dois anos de estudos, pesquisas e desenvolvimento, a 365 nasceu para tornar a experiência de compra empresarial mais simples, ágil e conectada às novas dinâmicas do mercado.",
+        "Essa mesma inquietação deu origem à 365, plataforma digital de compras para o mercado B2B da qual fui a criadora e a co fundadora. Lançada em 2024, após dois anos de estudos, pesquisas e desenvolvimento, com aporte de investidor, o ecossistema digital nasceu para resolver uma dor de milhares de clientes da distribuidora Medeiros e tornar a experiência de compra mais simples, ágil, personalizada e dinâmica.",
         "Hoje, após mais de 35 anos de trajetória, metodologia própria e mais de 700 empresas impactadas, sigo fazendo o que sempre acreditei: unir estratégia, inovação, neurociência e comportamento para transformar empresas em marcas vivas, relevantes, desejadas e preparadas para evoluir continuamente."
       ],
       cta: { label: "Conheça um pouco da minha formação", href: "/sobre" },
@@ -50,7 +50,7 @@ export const homeContentByLocale = {
       paragraph2: "Inspirada por: Richard Thaler, Simon Sinek, Paco Underhill, Martin Lindstrom, Clayton Christensen, Philip Kotler, etc.",
       items: [
         {
-          value: "+30",
+          value: "+ de 35",
           label: "anos de atuação nos mercados do Brasil e exterior",
         },
         {
@@ -224,7 +224,7 @@ export const homeContentByLocale = {
         "Loves music and sports. Prefers sneakers to high heels. Her true passions: studying and connecting with people.",
         "From corporate executive to builder of brands in motion.\nAfter 25 years in major corporations, I founded Ping Pong Estratégia with a conviction that seemed bold at the time: brands are not products, they are relationships. Long before purpose, branding, and consumer behavior became mainstream market trends, we were already championing that value stems from connecting people, business, and strategy.",
         "In 2020, Caza Futuro was born, expanding that vision into digital transformation. Because technology alone does not transform companies; it transforms when it improves people's lives and paves new paths for business.",
-        "That same drive led to 365, a B2B digital procurement platform of which I am co-founder. Launched in 2024 after two years of research and development, 365 was built to make enterprise purchasing simpler, faster, and aligned with modern market dynamics.",
+        "That same drive gave rise to 365, a B2B digital procurement platform of which I was the creator and co-founder. Launched in 2024 after two years of research, studies, and development, backed by investor funding, the digital ecosystem was born to solve a major pain point for thousands of Medeiros distributor clients and make the purchasing experience simpler, faster, personalized, and dynamic.",
         "Today, with over 35 years of experience, a proprietary methodology, and more than 700 companies impacted, I continue doing what I have always believed in: combining strategy, innovation, neuroscience, and human behavior to turn companies into living, relevant, desirable brands prepared to evolve continuously."
       ],
       cta: { label: "Learn about my background", href: "/en/about" },
@@ -235,7 +235,7 @@ export const homeContentByLocale = {
       description:
         "Ping Pong Estratégia combines branding, neuroscience, and JTBD to build attitudinal positioning that accelerates business growth.",
       items: [
-        { value: "+30", label: "Years dedicated to brand strategy" },
+        { value: "+35", label: "Years dedicated to brand strategy" },
         { value: "+700", label: "Delivered projects across Brazil" },
         { value: "+$2B", label: "Revenue generated" },
       ],
@@ -401,7 +401,7 @@ export const homeContentByLocale = {
         "Ama la música y el deporte. Prefiere zapatillas a tacones. Su verdadera pasión: estudiar y conversar con la gente.",
         "De ejecutiva a constructora de marcas en movimiento.\nTras 25 años en grandes corporaciones, fundé Ping Pong Estratégia con una convicción que, en su momento, parecía audaz: las marcas no son productos, son relaciones. Mucho antes de que el propósito, el branding y el comportamiento del consumidor fueran tendencia en el mercado, ya defendíamos que el valor nace de la conexión entre personas, negocios y estrategia.",
         "En 2020 nació Caza Futuro, ampliando esa visión hacia la transformación digital. Porque la tecnología, por sí sola, no transforma empresas; las transforma cuando mejora la vida de las personas y crea nuevos caminos para los negocios.",
-        "Esa misma inquietud dio origen a 365, plataforma digital de compras para el mercado B2B, de la cual soy cofundadora. Lanzada en 2024 tras dos años de investigación y desarrollo, 365 nació para hacer la experiencia de compra empresarial más simple, ágil y conectada con las nuevas dinámicas del mercado.",
+        "Esa misma inquietud dio origen a 365, plataforma digital de compras para el mercado B2B de la cual fui creadora y cofundadora. Lanzada en 2024 tras dos años de estudios, investigaciones y desarrollo, con aporte de inversionistas, el ecosistema digital nació para resolver un problema de miles de clientes de la distribuidora Medeiros y hacer la experiencia de compra más simple, ágil, personalizada y dinámica.",
         "Hoy, tras más de 35 años de trayectoria, metodología propia y más de 700 empresas impactadas, sigo haciendo lo que siempre creí: unir estrategia, innovación, neurociencia y comportamiento para transformar empresas en marcas vivas, relevantes, deseadas y preparadas para evolucionar continuamente."
       ],
       cta: { label: "Conoce un poco de mi formación", href: "/es/sobre" },
@@ -412,7 +412,7 @@ export const homeContentByLocale = {
       description:
         "Ping Pong Estratégia une branding, neurociencia y JTBD para crear posicionamientos que aceleran el crecimiento empresarial.",
       items: [
-        { value: "+30", label: "Años dedicados a la estrategia de marca" },
+        { value: "+ de 35", label: "Años dedicados a la estrategia de marca" },
         { value: "+700", label: "Proyectos entregados en todo Brasil" },
         { value: "+$2B", label: "Ingresos generados" },
       ],
