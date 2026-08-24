@@ -66,37 +66,47 @@ export const homeContentByLocale = {
     cases: {
       title: "Cases memoráveis e em evolução",
       subtitle: "Projetos que valem a pena compartilhar",
+      readMoreLabel: "Saiba mais",
+      closeDetailsLabel: "Fechar detalhes",
       items: [
-        {
-          id: "medeiros",
-          title: "Medeiros Distribuidora",
-          description:
-            "Projeto de rebranding da marca onde foi revisitada toda a essência e cultura.",
-          image: "/case-esmaltec.png",
-          href: "/servicos",
-        },
         {
           id: "esmaltec",
           title: "Esmaltec Eletrodomésticos",
           description:
             "Empresa com mais de 60 anos de atuação no Brasil e no exterior, setor de linha branca.",
-          image: "/case-medeiros.png",
+          fullDescription:
+            "Empresa com mais de 60 anos de atuação no Brasil e no exterior – setor de linha branca. Foi responsável juntamente com a agência de publicidade que atendia a organização pela criação e desenvolvimento do planejamento de rebranding e reposicionamento da marca, levando a empresa ao reconhecimento nacional, lançamento de produtos em grandes players do varejo brasileiro (Magalu, Casas Bahia, Carrefour e Ponto Frio) e à liderança em market share em fogões populares. Cases de sucesso em estratégias de mídias alternativas e ações de merchandising em importantes programas de mídia eletrônica.",
+          logo: "/novos-logos-cases/esmaltec.png",
+          href: "/servicos",
+        },
+        {
+          id: "medeiros",
+          title: "Medeiros Distribuidora",
+          description:
+            "Projeto de rebranding da marca onde foi revisitada toda a essência e cultura.",
+          fullDescription:
+            "Projeto de rebranding da marca onde foi revisitada toda a essência e cultura. Nova logomarca e posicionamento de mercado – projetos de trade marketing e implementação de CRM e setor de marketing e posicionamento da marca no digital (redes sociais e site).",
+          logo: "/novos-logos-cases/medeiros.png",
           href: "/servicos",
         },
         {
           id: "clementino",
           title: "Grupo Clementino Fraga",
           description:
-            "Empresa de 55 anos com atuação em todo o estado do Ceará",
-          image: "/case-clementino.png",
+            "Empresa de 55 anos com atuação em todo o estado do Ceará e referência em saúde.",
+          fullDescription:
+            "Empresa de 55 anos com atuação em todo o estado do Ceará e referência em prestação de serviços em saúde: Projeto de rebranding da marca onde foi revisitada toda a essência e cultura. Nova logomarca e posicionamento de mercado – implementação de CRM e criação de um setor de marketing. Posicionamento da marca no digital. Criação de novos produtos a partir do reposicionamento da organização. Responsável por treinamentos de equipes e implementação do brand voice da marca e pelo planejamento estratégico anual.",
+          logo: "/novos-logos-cases/clementino.png",
           href: "/servicos",
         },
         {
           id: "bando",
-          title: "Bando de Criação",
+          title: "Bando",
           description:
-            "Agência premiada internacionalmente e uma das referências em publicidade em todo o país",
-          image: "/case-bando.png",
+            "Agência premiada internacionalmente e uma das referências em publicidade no país.",
+          fullDescription:
+            "Agência premiada internacionalmente e uma das referências em publicidade em todo o país e no Nordeste do Brasil, foi responsável por importantes projetos em reposicionamento de marca, rebranding e planejamentos estratégicos de mídia destacando-se: Hapvida Notredame (planos de saúde), Granja Regina (indústria de alimentos / proteína animal) e grupo Bspar (construtora e incorporadora).",
+          logo: "/novos-logos-cases/bando.png",
           href: "/servicos",
         },
       ],
@@ -167,7 +177,7 @@ export const homeContentByLocale = {
             "A Ping Pong foi um divisor de águas para a AUDO, nos ajudou a entender que podemos colocar os pés no chão, mesmo buscando mostrar ao mercado soluções totalmente disruptivas. A Simone nos fez remar no mar da inovação sem temer, trabalhando junto, lado a lado e nos ajudando a emplacar nosso propósito e posicionamento. Nesse maremoto de informações e mudanças, ela nos conduziu a desenvolver e entregar projetos inovadores aliados a esse novo contexto.",
           author: "Milena Rosado",
           role: "CEO da AUDO",
-          image: "/case-bando.png",
+          image: "/audo-nova.png",
           stars: 4,
         },
         {
@@ -176,7 +186,7 @@ export const homeContentByLocale = {
             "Ver sua forma de trabalhar, ouvir suas explicações e exemplos é simplesmente magnético. Sua fala talvez seja um dos segredos de seu sucesso profissional, pois tem uma forma encantadora de te prender no conteúdo e ter desejo de querer crescer muito mais.",
           author: "Vanessa Nunes",
           role: "Gerente de RH do Laboratório Clementino Fraga",
-          image: "/case-clementino.png",
+          image: "/clementino-fraga-nova.png",
           stars: 4,
         },
       ],
@@ -243,37 +253,47 @@ export const homeContentByLocale = {
     cases: {
       title: "Memorable & evolving cases",
       subtitle: "Projects worth sharing",
+      readMoreLabel: "Learn more",
+      closeDetailsLabel: "Close details",
       items: [
-        {
-          id: "medeiros",
-          title: "Medeiros Distribution",
-          description:
-            "Brand rebranding project revisiting company essence and culture.",
-          image: "/case-esmaltec.png",
-          href: "/en/services",
-        },
         {
           id: "esmaltec",
           title: "Esmaltec Appliances",
           description:
             "Home appliance manufacturer with over 60 years of history in Brazil and abroad.",
-          image: "/case-medeiros.png",
+          fullDescription:
+            "Home appliance manufacturer with over 60 years of operations in Brazil and abroad. Led the strategic rebranding and market repositioning plan from 2004 to 2029, taking the company to national recognition, major retail partnerships, and market share leadership.",
+          logo: "/novos-logos-cases/esmaltec.png",
+          href: "/en/services",
+        },
+        {
+          id: "medeiros",
+          title: "Medeiros Distribution",
+          description:
+            "Brand rebranding project revisiting company essence and culture.",
+          fullDescription:
+            "Rebranding project revisiting the complete essence and organizational culture. New brand identity, market positioning, trade marketing strategies, CRM implementation, and digital marketing presence.",
+          logo: "/novos-logos-cases/medeiros.png",
           href: "/en/services",
         },
         {
           id: "clementino",
           title: "Grupo Clementino Fraga",
           description:
-            "55-year-old enterprise operating across Ceará state.",
-          image: "/case-clementino.png",
+            "55-year-old healthcare leader operating across Ceará state.",
+          fullDescription:
+            "Healthcare reference in Ceará with 55 years of history: Brand repositioning, CRM implementation, marketing division setup, digital positioning, and team training for consistent brand voice.",
+          logo: "/novos-logos-cases/clementino.png",
           href: "/en/services",
         },
         {
           id: "bando",
-          title: "Bando de Criação",
+          title: "Bando",
           description:
             "Internationally awarded advertising agency and industry benchmark.",
-          image: "/case-bando.png",
+          fullDescription:
+            "Internationally awarded advertising agency responsible for major brand repositioning and media planning for top regional and national clients.",
+          logo: "/novos-logos-cases/bando.png",
           href: "/en/services",
         },
       ],
@@ -344,7 +364,7 @@ export const homeContentByLocale = {
             "Ping Pong was a turning point for AUDO. Simone helped us understand that we can stay grounded even while showing the market truly disruptive solutions. She guided us to develop and deliver innovative projects aligned with this new context.",
           author: "Milena Rosado",
           role: "CEO of AUDO",
-          image: "/case-bando.png",
+          image: "/audo-nova.png",
           stars: 4,
         },
         {
@@ -353,7 +373,7 @@ export const homeContentByLocale = {
             "Watching her work, listening to her explanations and examples is simply magnetic. Her communication is perhaps one of the secrets to her professional success — she has an enchanting way of keeping you engaged and making you want to grow even more.",
           author: "Vanessa Nunes",
           role: "HR Manager at Laboratório Clementino Fraga",
-          image: "/case-clementino.png",
+          image: "/clementino-fraga-nova.png",
           stars: 4,
         },
       ],
@@ -419,38 +439,48 @@ export const homeContentByLocale = {
     },
     cases: {
       title: "Casos memorables en evolución",
-      subtitle: "Proyectos que valen la pena compartir",
+      subtitle: "Proyectos que valem a pena compartir",
+      readMoreLabel: "Saber más",
+      closeDetailsLabel: "Cerrar detalles",
       items: [
-        {
-          id: "medeiros",
-          title: "Medeiros Distribuidora",
-          description:
-            "Proyecto de rebranding donde se revisitó la esencia de la marca.",
-          image: "/case-esmaltec.png",
-          href: "/es/servicios",
-        },
         {
           id: "esmaltec",
           title: "Esmaltec Electrodomésticos",
           description:
-            "Empresa con más de 60 años de trayectoria en Brasil y el exterior.",
-          image: "/case-medeiros.png",
+            "Empresa con más de 60 años de trayectoria en Brasil y el exterior, sector de línea blanca.",
+          fullDescription:
+            "Empresa con más de 60 años de operaciones en Brasil y en el exterior – sector de línea blanca. Responsable por la creación y desarrollo del plan de rebranding y reposicionamiento de marca, alcanzando el reconocimiento nacional y liderazgo en market share.",
+          logo: "/novos-logos-cases/esmaltec.png",
+          href: "/es/servicios",
+        },
+        {
+          id: "medeiros",
+          title: "Medeiros Distribuidora",
+          description:
+            "Proyecto de rebranding donde se revisitó la esencia de la marca y su cultura.",
+          fullDescription:
+            "Proyecto de rebranding de marca donde fue revisitada toda la esencia y cultura organizacional. Nueva marca, posicionamiento de mercado, proyectos de trade marketing, CRM y posicionamiento digital.",
+          logo: "/novos-logos-cases/medeiros.png",
           href: "/es/servicios",
         },
         {
           id: "clementino",
           title: "Grupo Clementino Fraga",
           description:
-            "Empresa de 55 años con presencia en todo el estado de Ceará.",
-          image: "/case-clementino.png",
+            "Empresa de 55 años con presencia en todo el estado de Ceará y líder en salud.",
+          fullDescription:
+            "Referencia en servicios de salud con 55 años de trayectoria: Proyecto de rebranding, nueva marca, implementación de CRM, creación de departamento de marketing y capacitación de equipos para la voz de la marca.",
+          logo: "/novos-logos-cases/clementino.png",
           href: "/es/servicios",
         },
         {
           id: "bando",
-          title: "Bando de Criação",
+          title: "Bando",
           description:
-            "Agencia premiada internacionalmente y referente en publicidad.",
-          image: "/case-bando.png",
+            "Agencia premiada internacionalmente y referente en publicidad en el país.",
+          fullDescription:
+            "Agencia premiada internacionalmente y referente publicitario, responsable por proyectos clave de reposicionamiento de marca, rebranding y planificación estratégica para grandes empresas.",
+          logo: "/novos-logos-cases/bando.png",
           href: "/es/servicios",
         },
       ],
@@ -521,7 +551,7 @@ export const homeContentByLocale = {
             "Ping Pong fue un punto de inflexión para AUDO. Simone nos ayudó a desarrollar y entregar proyectos innovadores alineados con este nuevo contexto de mercado.",
           author: "Milena Rosado",
           role: "CEO de AUDO",
-          image: "/case-bando.png",
+          image: "/audo-nova.png",
           stars: 4,
         },
         {
@@ -530,7 +560,7 @@ export const homeContentByLocale = {
             "Ver su forma de trabajar es simplemente magnético. Tiene una forma encantadora de mantenerte involucrado en el contenido y con deseos de crecer mucho más.",
           author: "Vanessa Nunes",
           role: "Gerente de RR.HH. del Laboratorio Clementino Fraga",
-          image: "/case-clementino.png",
+          image: "/clementino-fraga-nova.png",
           stars: 4,
         },
       ],
