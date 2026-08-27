@@ -3,8 +3,7 @@ import { getPageSeo } from "@/content/seo";
 import { buildMetadata, localeUrl } from "@/lib/seo";
 import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/atoms/json-ld";
-import { ServicesGrid } from "@/components/sections/services-grid";
-import { CtaBand } from "@/components/sections/cta-band";
+import { ServicesList } from "@/components/sections/services-list";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -13,7 +12,7 @@ export async function generateMetadata({ params }) {
 
 export default async function ServicosPage({ params }) {
   const { locale } = await params;
-  const { items: servicos } = getServicosContent(locale);
+  const { page, items: servicos } = getServicosContent(locale);
   const pageSeo = getPageSeo(locale);
 
   const pageGraph = graph(
@@ -34,8 +33,7 @@ export default async function ServicosPage({ params }) {
   return (
     <>
       <JsonLd data={pageGraph} />
-      <ServicesGrid tone="default" headingAs="h1" data={{ items: servicos, page: getServicosContent(locale).page }} />
-      <CtaBand />
+      <ServicesList page={page} items={servicos} />
     </>
   );
 }

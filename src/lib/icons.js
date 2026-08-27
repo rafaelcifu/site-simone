@@ -8,8 +8,11 @@
  */
 import {
   ArrowRight,
+  Building,
   Check,
+  Clock,
   Compass,
+  CreditCard,
   GitBranch,
   Handshake,
   Heart,
@@ -24,8 +27,11 @@ import {
 
 export const icons = {
   ArrowRight,
+  Building,
   Check,
+  Clock,
   Compass,
+  CreditCard,
   GitBranch,
   Handshake,
   Heart,

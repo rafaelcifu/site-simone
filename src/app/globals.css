@@ -125,10 +125,19 @@
   --font-sans: var(--font-body);
   --font-display: var(--font-display);
 
-  /* Animacoes usadas pelos componentes de UI (accordion, etc.) */
+  /* Animacoes usadas pelos componentes de UI (accordion, marquee, etc.) */
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-marquee: marquee 35s linear infinite;
 
+  @keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
   @keyframes accordion-down {
     from {
       height: 0;

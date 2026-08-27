@@ -1,52 +1,89 @@
-/**
- * Pagina de metodologias.
- * PLACEHOLDER — substituir pelo conteudo real.
- */
+import { DEFAULT_LOCALE } from "./locales";
 
-export const metodologiasPage = {
-  eyebrow: "Metodologias",
-  title: "Como eu trabalho",
-  description: "Uma frase explicando a abordagem.",
+export const metodologiasContentByLocale = {
+  pt: {
+    hero: {
+      eyebrow: "Metodologia",
+      title: "Mais de 700 projetos não nascem por acaso.",
+      subtitle:
+        "Branding estratégico · Neurociência aplicada · Economia comportamental · JTBD · Análise de mercado · Liderança por propósito",
+      inspiration:
+        "Inspirada por: Richard Thaler, Simon Sinek, Paco Underhill, Martin Lindstrom, Clayton Christensen",
+    },
+    diagram: {
+      topGraphic: "/images/metodologias/metodologia-top-diagram.svg",
+      curvesGraphic: "/images/metodologias/metodologia-curves-diagram.svg",
+      pillars: [
+        "Branding estratégico",
+        "Neurociência aplicada ao consumo",
+        "Economia comportamental",
+        "Jobs to Be Done (JTBD)",
+        "Análise de mercado e comportamento humano",
+        "Pesquisa de comportamento",
+        "Liderança por propósito",
+      ],
+    },
+  },
+  en: {
+    hero: {
+      eyebrow: "Methodology",
+      title: "More than 700 projects do not happen by chance.",
+      subtitle:
+        "Strategic branding · Applied neuroscience · Behavioral economics · JTBD · Market analysis · Purpose-driven leadership",
+      inspiration:
+        "Inspired by: Richard Thaler, Simon Sinek, Paco Underhill, Martin Lindstrom, Clayton Christensen",
+    },
+    diagram: {
+      topGraphic: "/images/metodologias/metodologia-top-diagram.svg",
+      curvesGraphic: "/images/metodologias/metodologia-curves-diagram.svg",
+      pillars: [
+        "Strategic branding",
+        "Applied consumer neuroscience",
+        "Behavioral economics",
+        "Jobs to Be Done (JTBD)",
+        "Market analysis & human behavior",
+        "Behavioral research",
+        "Purpose-driven leadership",
+      ],
+    },
+  },
+  es: {
+    hero: {
+      eyebrow: "Metodología",
+      title: "Más de 700 proyectos no nacen por casualidad.",
+      subtitle:
+        "Branding estratégico · Neurociencia aplicada · Economía del comportamiento · JTBD · Análisis de mercado · Liderazgo por propósito",
+      inspiration:
+        "Inspirada por: Richard Thaler, Simon Sinek, Paco Underhill, Martin Lindstrom, Clayton Christensen",
+    },
+    diagram: {
+      topGraphic: "/images/metodologias/metodologia-top-diagram.svg",
+      curvesGraphic: "/images/metodologias/metodologia-curves-diagram.svg",
+      pillars: [
+        "Branding estratégico",
+        "Neurociencia aplicada al consumo",
+        "Economía del comportamiento",
+        "Jobs to Be Done (JTBD)",
+        "Análisis de mercado y comportamiento humano",
+        "Investigación de comportamiento",
+        "Liderazgo por propósito",
+      ],
+    },
+  },
 };
 
-export const metodologias = [
-  {
-    slug: "metodologia-um",
-    title: "Metodologia um",
-    excerpt: "Resumo de uma linha.",
-    body: "Explicacao mais longa da metodologia.",
-    icon: "Layers",
-  },
-  {
-    slug: "metodologia-dois",
-    title: "Metodologia dois",
-    excerpt: "Resumo de uma linha.",
-    body: "Explicacao mais longa da metodologia.",
-    icon: "GitBranch",
-  },
-];
+export const metodologias =
+  metodologiasContentByLocale.pt.diagram.pillars.map((p, i) => ({
+    slug: `metodologia-${i + 1}`,
+    title: p,
+    excerpt: p,
+  }));
 
-/** Etapas do processo (usado como timeline / numerada). */
-export const etapas = [
-  { step: "01", title: "Primeiro contato", body: "O que acontece nessa etapa." },
-  { step: "02", title: "Diagnostico", body: "O que acontece nessa etapa." },
-  { step: "03", title: "Plano de acao", body: "O que acontece nessa etapa." },
-  { step: "04", title: "Acompanhamento", body: "O que acontece nessa etapa." },
-];
+export const metodologiasPage = metodologiasContentByLocale.pt.hero;
 
-export const metodologiasSections = {
-  process: {
-    eyebrow: "Processo",
-    title: "Passo a passo",
-  },
-};
-
-export function getMetodologiasContent(locale = "pt") {
-  // Retorna conteúdo traduzido futuramente, por enquanto retorna PT como fallback
-  return {
-    etapas,
-    metodologias,
-    metodologiasPage,
-    metodologiasSections,
-  };
+export function getMetodologiasContent(locale = DEFAULT_LOCALE) {
+  return (
+    metodologiasContentByLocale[locale] ??
+    metodologiasContentByLocale[DEFAULT_LOCALE]
+  );
 }
