@@ -25,6 +25,9 @@ export const homeContentByLocale = {
       description:
         "Muitas empresas estão perdendo suas melhores pessoas e a oportunidade de se posicionarem de maneira clara e atitudinal porque estão se distraindo com o que não vale a pena. Muito mais do que perder dinheiro, es tomando decisões fora de propósito organizacional.",
       image: { src: "/slide-hero-1.png", alt: "Manifesto Simone Moura" },
+      slides: [
+        { src: "/slide-hero-1.png", alt: "Manifesto Simone Moura" },
+      ],
     },
     aboutSection: {
       tagline: "Sobre",
@@ -76,7 +79,7 @@ export const homeContentByLocale = {
             "Empresa com mais de 60 anos de atuação no Brasil e no exterior, setor de linha branca.",
           fullDescription:
             "Empresa com mais de 60 anos de atuação no Brasil e no exterior – setor de linha branca. Foi responsável juntamente com a agência de publicidade que atendia a organização pela criação e desenvolvimento do planejamento de rebranding e reposicionamento da marca, levando a empresa ao reconhecimento nacional, lançamento de produtos em grandes players do varejo brasileiro (Magalu, Casas Bahia, Carrefour e Ponto Frio) e à liderança em market share em fogões populares. Cases de sucesso em estratégias de mídias alternativas e ações de merchandising em importantes programas de mídia eletrônica.",
-          logo: "/novos-logos-cases/esmaltec.png",
+          logo: "/logos/esmaltec2.png",
           href: "/servicos",
         },
         {
@@ -106,7 +109,7 @@ export const homeContentByLocale = {
             "Agência premiada internacionalmente e uma das referências em publicidade no país.",
           fullDescription:
             "Agência premiada internacionalmente e uma das referências em publicidade em todo o país e no Nordeste do Brasil, foi responsável por importantes projetos em reposicionamento de marca, rebranding e planejamentos estratégicos de mídia destacando-se: Hapvida Notredame (planos de saúde), Granja Regina (indústria de alimentos / proteína animal) e grupo Bspar (construtora e incorporadora).",
-          logo: "/novos-logos-cases/bando.png",
+          logo: "/logos/bandoo.png",
           href: "/servicos",
         },
       ],
@@ -115,14 +118,10 @@ export const homeContentByLocale = {
       title: "Produtos",
       items: [
         {
-          id: "branding",
-          title: "Projeto em Branding Estratégico e Posicionamento de mercado",
-          description:
-            "Reposicionamento de marca e de produtos com foco na descoberta do D.N.A e essência da marca cultura organizacional.",
-          duration: "Duração: 06 meses dentro da organização.",
-        },
-        {
           id: "workshops",
+          slug: "oficinas-workshops-corporativos",
+          href: "/servicos#oficinas-workshops-corporativos",
+          ctaLabel: "Saber mais",
           title: "Workshops Corporativos com colaboradores e lideranças",
           bullets: [
             "Cultura com Propósito (Colaboradores entendendo a essência da Marca)",
@@ -134,10 +133,33 @@ export const homeContentByLocale = {
         },
         {
           id: "immersao",
+          slug: "imersao-corporativa",
+          href: "/servicos#imersao-corporativa",
+          ctaLabel: "Saber mais",
           title: "Imersão corporativa",
           description:
             "Como o cérebro humano entende o que a sua marca diz - neurociência aplicada ao branding, marketing e ao processo de tomada de decisão na jornada de compras - estudos de caso e dinâmicas em grupo. (pelo preceito da economia comportamental e pela neurociência)",
           duration: "Duração: 02 dias",
+        },
+        {
+          id: "mentoria",
+          slug: "mentoria-estrategica",
+          href: "/servicos#mentoria-estrategica",
+          ctaLabel: "Saber mais",
+          title: "Mentoria estratégica",
+          description:
+            "Mentoria personalizada para negócios e empreendedores que une diagnóstico, fortalecimento do core business, posicionamento de mercado e comunicação baseada na neurociência para gerar crescimento consistente e sustentável.",
+          duration: "Duração: 07 encontros ao vivo (Google Meet)",
+        },
+        {
+          id: "branding",
+          slug: "branding-e-marketing-estrategico",
+          href: "/servicos#branding-e-marketing-estrategico",
+          ctaLabel: "Saber mais",
+          title: "Projeto em Branding Estratégico e Posicionamento de mercado",
+          description:
+            "Reposicionamento de marca e de produtos com foco na descoberta do D.N.A e essência da marca cultura organizacional.",
+          duration: "Duração: 06 meses dentro da organização.",
         },
       ],
     },
@@ -147,7 +169,7 @@ export const homeContentByLocale = {
         {
           company: "Bando Propaganda",
           quote:
-            "Construção de valor, marcas com propósito. Há 12 anos atrás, a Simone Moura já tratava desses temas com uma desenvoltura impressionante, ela parece estar sempre a um passo à frente das coisas.",
+            "Construção de valor, marcas com propósito. Há mais de 20 anos atrás, a Simone Moura já tratava desses temas com uma desenvoltura impressionante, ela parece estar sempre a um passo à frente das coisas.",
           author: "Giacomo Brayner",
           role: "Sócio-diretor da Bando Propaganda",
           image: "/testimonial-avatar2.png",
@@ -223,6 +245,9 @@ export const homeContentByLocale = {
       description:
         "Many companies are losing their best people and the opportunity to position themselves clearly because they are distracted by what doesn't matter. Far beyond losing money, they are making decisions outside organizational purpose.",
       image: { src: "/slide-hero-1.png", alt: "Simone Moura Manifesto" },
+      slides: [
+        { src: "/slide-hero-1.png", alt: "Simone Moura Manifesto" },
+      ],
     },
     aboutSection: {
       tagline: "ABOUT",
@@ -263,7 +288,7 @@ export const homeContentByLocale = {
             "Home appliance manufacturer with over 60 years of history in Brazil and abroad.",
           fullDescription:
             "Home appliance manufacturer with over 60 years of operations in Brazil and abroad. Led the strategic rebranding and market repositioning plan from 2004 to 2029, taking the company to national recognition, major retail partnerships, and market share leadership.",
-          logo: "/novos-logos-cases/esmaltec.png",
+          logo: "/logos/esmaltec2.png",
           href: "/en/services",
         },
         {
@@ -293,7 +318,7 @@ export const homeContentByLocale = {
             "Internationally awarded advertising agency and industry benchmark.",
           fullDescription:
             "Internationally awarded advertising agency responsible for major brand repositioning and media planning for top regional and national clients.",
-          logo: "/novos-logos-cases/bando.png",
+          logo: "/logos/bandoo.png",
           href: "/en/services",
         },
       ],
@@ -302,14 +327,10 @@ export const homeContentByLocale = {
       title: "Products",
       items: [
         {
-          id: "branding",
-          title: "Strategic Branding & Market Positioning Project",
-          description:
-            "Brand and product repositioning focusing on discovering brand DNA, essence, and organizational culture.",
-          duration: "Duration: 06 months embedded.",
-        },
-        {
           id: "workshops",
+          slug: "oficinas-workshops-corporativos",
+          href: "/en/services#oficinas-workshops-corporativos",
+          ctaLabel: "Learn more",
           title: "Corporate Workshops for Leaders and Teams",
           bullets: [
             "Purposeful culture (employees understanding brand essence)",
@@ -321,10 +342,33 @@ export const homeContentByLocale = {
         },
         {
           id: "immersao",
+          slug: "imersao-corporativa",
+          href: "/en/services#imersao-corporativa",
+          ctaLabel: "Learn more",
           title: "Corporate Immersion",
           description:
             "How the human brain perceives your brand — applied neuroscience for branding, marketing, and buyer journey decision-making.",
           duration: "Duration: 02 days",
+        },
+        {
+          id: "mentoria",
+          slug: "mentoria-estrategica",
+          href: "/en/services#mentoria-estrategica",
+          ctaLabel: "Learn more",
+          title: "Strategic Mentorship",
+          description:
+            "Personalized mentorship for businesses and founders blending diagnostics, core business strengthening, market positioning, and neuroscience-based messaging for sustainable growth.",
+          duration: "Duration: 07 live sessions (Google Meet)",
+        },
+        {
+          id: "branding",
+          slug: "branding-e-marketing-estrategico",
+          href: "/en/services#branding-e-marketing-estrategico",
+          ctaLabel: "Learn more",
+          title: "Strategic Branding & Market Positioning Project",
+          description:
+            "Brand and product repositioning focusing on discovering brand DNA, essence, and organizational culture.",
+          duration: "Duration: 06 months embedded.",
         },
       ],
     },
@@ -334,7 +378,7 @@ export const homeContentByLocale = {
         {
           company: "Bando Propaganda",
           quote:
-            "Value creation, purpose-driven brands. 12 years ago, Simone Moura was already handling these topics with impressive fluency. She always seems to be one step ahead.",
+            "Value creation, purpose-driven brands. Over 20 years ago, Simone Moura was already handling these topics with impressive fluency. She always seems to be one step ahead.",
           author: "Giacomo Brayner",
           role: "Managing Partner at Bando Propaganda",
           image: "/testimonial-avatar2.png",
@@ -410,6 +454,9 @@ export const homeContentByLocale = {
       description:
         "Muchas empresas están perdiendo a sus mejores personas y la oportunidad de posicionarse claramente por distraerse con lo que no importa. Más allá de perder dinero, están tomando decisiones fuera del propósito organizacional.",
       image: { src: "/slide-hero-1.png", alt: "Manifiesto Simone Moura" },
+      slides: [
+        { src: "/slide-hero-1.png", alt: "Manifiesto Simone Moura" },
+      ],
     },
     aboutSection: {
       tagline: "SOBRE",
@@ -450,7 +497,7 @@ export const homeContentByLocale = {
             "Empresa con más de 60 años de trayectoria en Brasil y el exterior, sector de línea blanca.",
           fullDescription:
             "Empresa con más de 60 años de operaciones en Brasil y en el exterior – sector de línea blanca. Responsable por la creación y desarrollo del plan de rebranding y reposicionamiento de marca, alcanzando el reconocimiento nacional y liderazgo en market share.",
-          logo: "/novos-logos-cases/esmaltec.png",
+          logo: "/logos/esmaltec2.png",
           href: "/es/servicios",
         },
         {
@@ -480,7 +527,7 @@ export const homeContentByLocale = {
             "Agencia premiada internacionalmente y referente en publicidad en el país.",
           fullDescription:
             "Agencia premiada internacionalmente y referente publicitario, responsable por proyectos clave de reposicionamiento de marca, rebranding y planificación estratégica para grandes empresas.",
-          logo: "/novos-logos-cases/bando.png",
+          logo: "/logos/bandoo.png",
           href: "/es/servicios",
         },
       ],
@@ -489,14 +536,10 @@ export const homeContentByLocale = {
       title: "Productos",
       items: [
         {
-          id: "branding",
-          title: "Proyecto en Branding Estratégico y Posicionamiento de mercado",
-          description:
-            "Reposicionamiento de marca y productos enfocado en el ADN de la marca y cultura organizacional.",
-          duration: "Duración: 06 meses dentro de la organización.",
-        },
-        {
           id: "workshops",
+          slug: "oficinas-workshops-corporativos",
+          href: "/es/servicios#oficinas-workshops-corporativos",
+          ctaLabel: "Saber más",
           title: "Workshops Corporativos para líderes y equipos",
           bullets: [
             "Cultura con propósito (colaboradores entendiendo la esencia)",
@@ -508,10 +551,33 @@ export const homeContentByLocale = {
         },
         {
           id: "immersao",
+          slug: "imersao-corporativa",
+          href: "/es/servicios#imersao-corporativa",
+          ctaLabel: "Saber más",
           title: "Inmersión corporativa",
           description:
             "Cómo entiende el cerebro humano lo que dice tu marca — neurociencia aplicada al branding y toma de decisiones.",
           duration: "Duración: 02 días",
+        },
+        {
+          id: "mentoria",
+          slug: "mentoria-estrategica",
+          href: "/es/servicios#mentoria-estrategica",
+          ctaLabel: "Saber más",
+          title: "Mentoría estratégica",
+          description:
+            "Mentoría personalizada para negocios y emprendedores que une diagnóstico, fortalecimiento del core business, posicionamiento y comunicación basada en neurociencia para un crecimiento sostenible.",
+          duration: "Duración: 07 sesiones en vivo (Google Meet)",
+        },
+        {
+          id: "branding",
+          slug: "branding-e-marketing-estrategico",
+          href: "/es/servicios#branding-e-marketing-estrategico",
+          ctaLabel: "Saber más",
+          title: "Proyecto en Branding Estratégico y Posicionamento de mercado",
+          description:
+            "Reposicionamiento de marca y productos enfocado en el ADN de la marca y cultura organizacional.",
+          duration: "Duración: 06 meses dentro de la organización.",
         },
       ],
     },
@@ -521,7 +587,7 @@ export const homeContentByLocale = {
         {
           company: "Bando Propaganda",
           quote:
-            "Construcción de valor, marcas con propósito. Hace 12 años, Simone Moura ya trataba estos temas con una soltura impresionante. Parece estar siempre un paso adelante.",
+            "Construcción de valor, marcas con propósito. Hace más de 20 años, Simone Moura ya trataba estos temas con una soltura impresionante. Parece estar siempre un paso adelante.",
           author: "Giacomo Brayner",
           role: "Socio-director de Bando Propaganda",
           image: "/testimonial-avatar2.png",

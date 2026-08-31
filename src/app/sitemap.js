@@ -24,6 +24,7 @@ const paginas = [
   { path: "/servicos", priority: 0.9, changeFrequency: "monthly" },
   { path: "/metodologias", priority: 0.8, changeFrequency: "yearly" },
   { path: "/contato", priority: 0.7, changeFrequency: "yearly" },
+  { path: "/privacidade", priority: 0.5, changeFrequency: "yearly" },
 ];
 
 /** Mapa hreflang de um caminho fixo: cada idioma apontando para a propria URL. */

@@ -76,7 +76,7 @@ export function Cases({ data }) {
                       <motion.div
                         layout
                         className={`relative w-full rounded-[20px] overflow-hidden flex items-center justify-center transition-all duration-300 ${
-                          isBando ? "bg-[#E30052]" : "bg-white border border-neutral-100 shadow-sm"
+                          isBando ? "bg-[#fe0365]" : "bg-white border border-neutral-100 shadow-sm"
                         } ${isExpanded ? "h-36 sm:h-40" : "h-48 sm:h-52"}`}
                       >
                         {item.logo ? (
@@ -86,7 +86,7 @@ export function Cases({ data }) {
                               alt={item.title}
                               fill
                               className={`${
-                                isBando ? "object-cover" : "object-contain p-4"
+                                isBando ? "object-contain p-2" : "object-contain p-4"
                               } transition-transform duration-500 group-hover:scale-105`}
                               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                             />

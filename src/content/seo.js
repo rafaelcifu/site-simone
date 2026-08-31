@@ -172,6 +172,12 @@ export const pageSeoByLocale = {
         "Fale com Simone Moura sobre branding, posicionamento de marca, oficinas corporativas e transformacao digital para a sua empresa.",
       path: "/contato",
     },
+    privacidade: {
+      title: "Politica de Privacidade",
+      description:
+        "Politica de Privacidade de Simone Moura. Saiba como tratamos e protegemos seus dados pessoais em conformidade com a LGPD.",
+      path: "/privacidade",
+    },
   },
   en: {
     home: {
@@ -204,6 +210,12 @@ export const pageSeoByLocale = {
         "Talk to Simone Moura about branding, brand positioning, corporate workshops and digital transformation for your company.",
       path: "/contato",
     },
+    privacidade: {
+      title: "Privacy Policy",
+      description:
+        "Simone Moura Privacy Policy. Learn how we collect, process, and protect your personal data in accordance with privacy regulations.",
+      path: "/privacidade",
+    },
   },
   es: {
     home: {
@@ -235,6 +247,12 @@ export const pageSeoByLocale = {
       description:
         "Habla con Simone Moura sobre branding, posicionamiento de marca, talleres corporativos y transformacion digital para tu empresa.",
       path: "/contato",
+    },
+    privacidade: {
+      title: "Politica de Privacidad",
+      description:
+        "Politica de Privacidad de Simone Moura. Conozca como recopilamos y protegemos sus datos personales conforme a la legislacion vigente.",
+      path: "/privacidade",
     },
   },
 };

@@ -42,7 +42,7 @@ export function ServicesList({ page, items }) {
             <section
               key={servico.id || index}
               id={servico.slug}
-              className={`w-full py-16 md:py-20 lg:py-24 border-t border-black/5 ${
+              className={`w-full scroll-mt-24 py-16 md:py-20 lg:py-24 border-t border-black/5 ${
                 isEven ? "bg-[#F7F7FA]" : "bg-white"
               }`}
             >

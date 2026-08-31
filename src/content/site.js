@@ -59,29 +59,19 @@ export const contact = {
 
 export const social = [
   {
-    label: "X",
-    href: "https://x.com",
-    icon: "twitter",
+    label: "Instagram",
+    href: "https://www.instagram.com/mourassimone",
+    icon: "instagram",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/simone-moura/",
+    icon: "linkedin",
   },
   {
     label: "YouTube",
-    href: "https://youtube.com",
+    href: "https://youtu.be/BtFBMXGq5BQ?si=UvvbIxeiqGZMAYqA",
     icon: "youtube",
-  },
-  {
-    label: "WhatsApp",
-    href: "https://whatsapp.com",
-    icon: "whatsapp",
-  },
-  {
-    label: "Facebook",
-    href: "https://facebook.com",
-    icon: "facebook",
-  },
-  {
-    label: "Instagram",
-    href: "https://instagram.com",
-    icon: "instagram",
   },
 ];
 
@@ -200,6 +190,12 @@ export const siteUiByLocale = {
       contactTitle: "Contact",
       copyrightSymbol: "©",
       rights: "All rights reserved.",
+      copyrightText: "Simone Moura - 2026 - All rights reserved",
+      privacyPolicy: "Privacy policy",
+      quote: '"I build strategies for businesses focused on transforming people and markets. Without waste, without distractions, and with true purpose."',
+      newsletterTitle: "Subscribe to our newsletter",
+      newsletterPlaceholder: "name@email.com",
+      newsletterButton: "Subscribe",
     },
     ctaBand: {
       title: "Ready to start?",
@@ -232,6 +228,12 @@ export const siteUiByLocale = {
       contactTitle: "Contacto",
       copyrightSymbol: "©",
       rights: "Todos los derechos reservados.",
+      copyrightText: "Simone Moura - 2026 - Todos los derechos reservados",
+      privacyPolicy: "Política de privacidad",
+      quote: '"Creo estrategias para empresas con foco en la transformación de las personas y de los mercados. Sin desperdicios, sin distracciones y con propósito verdadero."',
+      newsletterTitle: "Suscríbete al boletín",
+      newsletterPlaceholder: "nombre@correo.com",
+      newsletterButton: "Suscribirse",
     },
     ctaBand: {
       title: "¿Listo para comenzar?",

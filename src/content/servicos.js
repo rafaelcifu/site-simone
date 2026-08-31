@@ -40,71 +40,10 @@ export const servicosUiByLocale = {
 export const servicosByLocale = {
   pt: [
     {
-      id: "branding",
-      slug: "branding-e-marketing-estrategico",
-      number: "1",
-      title: "1. Branding e Marketing Estratégico (Gestão de Marca)",
-      excerpt: "Reposicionamento real de empresas que querem crescer com consistência.",
-      description:
-        "Reposicionamento real de empresas que querem crescer com consistência. Um olhar por dentro da organização para ressignificar seus caminhos.\n\nProjeto em Branding e marketing estratégico (*) com foco no D.N.A da marca, do (re) posicionamento e ressignificado de estratégias para produtos e serviços alinhado à cultura e a essência da organização.",
-      image: {
-        src: "/images/servicos/servico-1.png",
-        alt: "Branding e Marketing Estratégico - Simone Moura",
-      },
-      cta: {
-        label: "Quero falar sobre minha empresa",
-        href: "/contato",
-      },
-      details: [
-        {
-          icon: "Clock",
-          label: "Duração",
-          value:
-            "06 meses (presencial ou remoto) realizado dentro da empresa contratante. (metodologia própria) com gestores e lideranças.",
-        },
-        {
-          icon: "Target",
-          label: "Público-Alvo",
-          value: "Gestores e lideranças",
-        },
-        {
-          icon: "CreditCard",
-          label: "Pagamento:",
-          value: "Mensal",
-        },
-        {
-          icon: "Sparkles",
-          label: "Metodologia aplicada:",
-          value: "JTBD e Neurociência aplicada ao consumo e comportamento",
-        },
-      ],
-      // Dados para rota dinâmica /servicos/[slug]
-      hero: {
-        title: "Branding e Marketing Estratégico (Gestão de Marca)",
-        description:
-          "Reposicionamento real de empresas que querem crescer com consistência. Um olhar por dentro da organização para ressignificar seus caminhos.",
-      },
-      sections: [
-        {
-          title: "Para quem é",
-          body: "Gestores e lideranças de empresas que buscam reposicionamento consistente no mercado.",
-        },
-        {
-          title: "Como funciona",
-          body: "06 meses (presencial ou remoto) realizado dentro da empresa contratante com metodologia própria.",
-        },
-      ],
-      highlights: [
-        "Foco no D.N.A da marca",
-        "Alinhado à cultura e essência",
-        "Metodologia JTBD e Neurociência",
-      ],
-    },
-    {
       id: "workshops",
       slug: "oficinas-workshops-corporativos",
-      number: "2",
-      title: "2. Oficinas & Workshops Corporativos Customizados",
+      number: "1",
+      title: "1. Oficinas & Workshops Corporativos Customizados",
       excerpt: "Oficinas práticas de 4 horas focadas em comunicação, propósito e vendas pela ótica da neurociência.",
       description:
         "- Os desafios das marcas para a inovação conectada À cultura e propósito da organização para posicionar produtos e serviços no mercado.\n\n- A falha é de Comunicação! Porque estamos perdendo valor, talentos e receita.\n\n- Reposicionando as estratégias e argumentos de comunicação pela ótica da neurociência para vendas e atendimento.\n\n- Propósito de marca vende. Não é poesia e nem conto de fadas. É direcionamento. Como sua empresa pode descobrir o que muda o jogo da operação.",
@@ -162,8 +101,8 @@ export const servicosByLocale = {
     {
       id: "imersao",
       slug: "imersao-corporativa",
-      number: "3",
-      title: "3. Imersão Corporativa",
+      number: "2",
+      title: "2. Imersão Corporativa",
       excerpt: "Imersão de 2 dias em transformação digital, cultura analítica e neurovendas para gestores.",
       description:
         "- Transformação digital não é tecnologia! Introdução à cultura analítica para compreensão e adoção da mentalidade digital dentro da organização. Aplicação de metodologias ágeis e estudos de caso reais (criados por Simone Moura) para levar sua empresa para o futuro.\n\n- Vendas sob a ótica da neurociência: Seu time comercial e de atendimento entendendo como o cérebro do cliente reage à tomada de decisão de compra.",
@@ -220,16 +159,17 @@ export const servicosByLocale = {
       ],
     },
     {
-      id: "produtos-digitais",
-      slug: "criacao-de-produtos-e-servicos-digitais",
-      number: "4",
-      title: "4. Criação de Produtos e Serviços 100% Digitais (via Caza Futuro)",
-      excerpt: "Desenvolvimento ponta a ponta de produtos e serviços digitais em parceria com a Caza Futuro.",
+      id: "mentoria",
+      slug: "mentoria-estrategica",
+      number: "3",
+      title: "3. Mentoria estratégica",
+      excerpt:
+        "Mentoria personalizada para negócios e empreendedores focada em crescimento consistente e sustentável.",
       description:
-        "Criação e desenvolvimento de produtos 100% digitais que transformam a vida dos consumidores e sejam capazes de levar as empresas ao futuro.\n\nIncluindo: descoberta do produto ideal (metodologia JTBD e ágeis) Posicionamento mercadológico, jornada do usuário, pesquisas junto ao público-alvo, identidade visual, conceito, visão estruturada de produto digital, desenvolvedores, especialistas em UX/UI, IA, integrações de sistemas e API´s e CRM etc.\nEstratégia de marketing digital (incluindo captação de leads).\nCriação publicitária com copywriting e performance digital.",
+        "Para negócios e empreendedores cada empresa é única. A estratégia transforma.\n\nMentoria personalizada que une diagnóstico, fortalecimento do core business, posicionamento de mercado e comunicação baseada na neurociência para gerar crescimento consistente e sustentável.",
       image: {
         src: "/images/servicos/servico-4.png",
-        alt: "Criação de Produtos Digitais - Simone Moura",
+        alt: "Mentoria Estratégica - Simone Moura",
       },
       cta: {
         label: "Quero falar sobre minha empresa",
@@ -237,30 +177,109 @@ export const servicosByLocale = {
       },
       details: [
         {
-          icon: "Handshake",
-          label: "Parceria",
-          value: "Caza Futuro",
+          icon: "Clock",
+          label: "Duração",
+          value:
+            "07 encontros via googlemeet “ao vivo” com Simone Moura com 02 horas de duração cada.",
+        },
+        {
+          icon: "Target",
+          label: "Público-Alvo",
+          value:
+            "Gestores de pequenas e médias empresas de diversos setores da economia, pequenos e médios empreendedores, startups, profissionais em geral que precisam reposicionar seus negócios e estratégias.",
+        },
+        {
+          icon: "CreditCard",
+          label: "Modalidade de pagamento:",
+          value:
+            "50% de sinal vide contrato e NF e 50% no fim da mentoria.\n\nObservação: valor cobrado por participante.",
+        },
+        {
+          icon: "Sparkles",
+          label: "Metodologia aplicada:",
+          value:
+            "• Ferramentas de gestão\n• Metodologia Jobs to be done\n• Estudos de caso\n• Exercícios customizados.",
         },
       ],
       hero: {
-        title: "Criação de Produtos e Serviços 100% Digitais",
+        title: "Mentoria estratégica",
         description:
-          "Desenvolvimento ponta a ponta de produtos e serviços digitais em parceria com a Caza Futuro.",
+          "Mentoria personalizada que une diagnóstico, fortalecimento do core business, posicionamento de mercado e comunicação baseada na neurociência para gerar crescimento consistente e sustentável.",
       },
       sections: [
         {
           title: "Para quem é",
-          body: "Empresas que desejam criar novos modelos de negócio digitais e plataformas escaláveis.",
+          body: "Gestores de pequenas e médias empresas, empreendedores, startups e profissionais em geral que precisam reposicionar seus negócios e estratégias.",
         },
         {
           title: "Como funciona",
-          body: "Do discovery ao go-to-market com equipe multidisciplinar especializada.",
+          body: "07 encontros via Google Meet ao vivo com Simone Moura com 02 horas de duração cada.",
         },
       ],
       highlights: [
-        "Metodologia JTBD e discovery completo",
-        "Design UX/UI, IA e engenharia",
-        "Estratégia de marketing e performance",
+        "Diagnóstico e fortalecimento do core business",
+        "Comunicação baseada na neurociência",
+        "Metodologia Jobs to be done e estudos de caso",
+      ],
+    },
+    {
+      id: "branding",
+      slug: "branding-e-marketing-estrategico",
+      number: "4",
+      title: "4. Branding e Marketing Estratégico (Gestão de Marca)",
+      excerpt: "Reposicionamento real de empresas que querem crescer com consistência.",
+      description:
+        "Reposicionamento real de empresas que querem crescer com consistência. Um olhar por dentro da organização para ressignificar seus caminhos.\n\nProjeto em Branding e marketing estratégico (*) com foco no D.N.A da marca, do (re) posicionamento e ressignificado de estratégias para produtos e serviços alinhado à cultura e a essência da organização.",
+      image: {
+        src: "/images/servicos/servico-1.png",
+        alt: "Branding e Marketing Estratégico - Simone Moura",
+      },
+      cta: {
+        label: "Quero falar sobre minha empresa",
+        href: "/contato",
+      },
+      details: [
+        {
+          icon: "Clock",
+          label: "Duração",
+          value:
+            "06 meses (presencial ou remoto) realizado dentro da empresa contratante. (metodologia própria) com gestores e lideranças.",
+        },
+        {
+          icon: "Target",
+          label: "Público-Alvo",
+          value: "Gestores e lideranças",
+        },
+        {
+          icon: "CreditCard",
+          label: "Pagamento:",
+          value: "Mensal",
+        },
+        {
+          icon: "Sparkles",
+          label: "Metodologia aplicada:",
+          value: "JTBD e Neurociência aplicada ao consumo e comportamento",
+        },
+      ],
+      hero: {
+        title: "Branding e Marketing Estratégico (Gestão de Marca)",
+        description:
+          "Reposicionamento real de empresas que querem crescer com consistência. Um olhar por dentro da organização para ressignificar seus caminhos.",
+      },
+      sections: [
+        {
+          title: "Para quem é",
+          body: "Gestores e lideranças de empresas que buscam reposicionamento consistente no mercado.",
+        },
+        {
+          title: "Como funciona",
+          body: "06 meses (presencial ou remoto) realizado dentro da empresa contratante com metodologia própria.",
+        },
+      ],
+      highlights: [
+        "Foco no D.N.A da marca",
+        "Alinhado à cultura e essência",
+        "Metodologia JTBD e Neurociência",
       ],
     },
   ],

@@ -1,11 +1,12 @@
-import { ArrowRight, Box, Users, BrainCircuit } from "lucide-react";
+import { ArrowRight, Box, Users, BrainCircuit, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Reveal } from "@/components/motion/reveal";
 
 const iconMap = {
-  branding: Box,
   workshops: Users,
   immersao: BrainCircuit,
+  mentoria: Sparkles,
+  branding: Box,
 };
 
 export function Products({ data }) {
@@ -78,8 +79,11 @@ export function Products({ data }) {
                     {item.duration}
                   </span>
 
-                  <Link href="/servicos" className="inline-flex items-center gap-2 text-[#E5484D] text-[15px] hover:text-white transition-colors group w-fit md:text-[17px]">
-                    Saber mais 
+                  <Link
+                    href={item.href || `/servicos#${item.slug || item.id}`}
+                    className="inline-flex items-center gap-2 text-[#E5484D] text-[15px] hover:text-white transition-colors group w-fit md:text-[17px]"
+                  >
+                    {item.ctaLabel || "Saber mais"}
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </div>
