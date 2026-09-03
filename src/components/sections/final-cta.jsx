@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import { Reveal } from "@/components/motion/reveal";
+import { LeadsterLink } from "@/components/molecules/leadster-link";
 
 export function FinalCta({ data }) {
   if (!data) return null;
@@ -21,12 +21,12 @@ export function FinalCta({ data }) {
             </Reveal>
             <Reveal delay={0.1}>
               <div>
-                <Link
+                <LeadsterLink
                   href={cta.href}
                   className="inline-flex h-12 md:h-14 items-center justify-center rounded-full bg-[#E5484D] px-8 md:px-10 text-sm md:text-[15px] font-medium text-white transition-transform hover:scale-105"
                 >
                   {cta.label}
-                </Link>
+                </LeadsterLink>
               </div>
             </Reveal>
           </div>

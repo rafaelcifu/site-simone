@@ -9,7 +9,11 @@ export const homeContentByLocale = {
         highlight1: "estratégias para empresas com foco na transformação",
         part2: " das pessoas e dos mercados. Sem desperdícios, sem distrações e com propósito verdadeiro.”",
       },
-      primaryCta: { label: "Quero falar sobre minha empresa", href: "/contato" },
+      primaryCta: {
+        label: "Quero falar sobre minha empresa",
+        href: "/contato",
+        opensLeadster: true,
+      },
       image: { src: "/simone-headset-hero.png", alt: "Simone Moura" },
     },
     manifesto: {

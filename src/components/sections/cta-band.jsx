@@ -1,7 +1,6 @@
-import Link from "next/link";
-
 import { primaryCta, siteUi } from "@/content/site";
 import { Section } from "@/components/atoms/section";
+import { LeadsterLink } from "@/components/molecules/leadster-link";
 import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
 
@@ -21,7 +20,9 @@ export function CtaBand({
         </div>
 
         <Button asChild size="lg" variant="secondary">
-          <Link href={primaryCta.href}>{primaryCta.label}</Link>
+          <LeadsterLink href={primaryCta.href}>
+            {primaryCta.label}
+          </LeadsterLink>
         </Button>
       </Reveal>
     </Section>

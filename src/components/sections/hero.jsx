@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
+import { LeadsterLink } from "@/components/molecules/leadster-link";
 import { HeroVideo } from "@/components/sections/hero-video";
 
 export function Hero({ data }) {
@@ -51,7 +52,13 @@ export function Hero({ data }) {
               size="lg"
               className="rounded-full bg-[#E5484D] px-8 py-6 text-base font-normal text-white shadow-xl transition-all duration-300 hover:scale-105 hover:bg-[#E5484D]/90 focus-visible:ring-2 focus-visible:ring-white md:text-lg"
             >
-              <Link href={primaryCta.href}>{primaryCta.label}</Link>
+              {primaryCta.opensLeadster ? (
+                <LeadsterLink href={primaryCta.href}>
+                  {primaryCta.label}
+                </LeadsterLink>
+              ) : (
+                <Link href={primaryCta.href}>{primaryCta.label}</Link>
+              )}
             </Button>
           </Reveal>
         </div>
@@ -59,4 +66,3 @@ export function Hero({ data }) {
     </section>
   );
 }
-

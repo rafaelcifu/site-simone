@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Reveal } from "@/components/motion/reveal";
 import { Icon } from "@/components/atoms/icon";
+import { LeadsterLink } from "@/components/molecules/leadster-link";
 import { Button } from "@/components/ui/button";
 
 export function ServicesList({ page, items }) {
@@ -114,9 +114,9 @@ export function ServicesList({ page, items }) {
                           size="lg"
                           className="w-full sm:w-fit rounded-full bg-brand-red hover:bg-brand-red/90 text-white font-semibold shadow-md px-8 py-6 text-sm transition-all duration-300 hover:scale-105"
                         >
-                          <Link href={servico.cta?.href || "/contato"}>
+                          <LeadsterLink href={servico.cta?.href || "/contato"}>
                             {servico.cta?.label || "Quero falar sobre minha empresa"}
-                          </Link>
+                          </LeadsterLink>
                         </Button>
                       </div>
                     </Reveal>

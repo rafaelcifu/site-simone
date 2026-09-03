@@ -11,6 +11,7 @@ import { getSiteContent } from "@/content/site";
 import { LOCALES, DEFAULT_LOCALE } from "@/content/locales";
 import { NavLink } from "@/components/molecules/nav-link";
 import { LanguageSwitcher } from "@/components/molecules/language-switcher";
+import { LeadsterLink } from "@/components/molecules/leadster-link";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -92,7 +93,7 @@ export function Header() {
             asChild
             className="rounded-full bg-brand-red hover:bg-brand-red/90 text-white font-semibold shadow-md px-6"
           >
-            <Link href="/contato">Fale com a Simone</Link>
+            <LeadsterLink href="/contato">Fale com a Simone</LeadsterLink>
           </Button>
         </div>
 
@@ -153,7 +154,7 @@ export function Header() {
                     asChild
                     className="w-full rounded-full bg-brand-red text-white"
                   >
-                    <Link href="/contato">Fale com a Simone</Link>
+                    <LeadsterLink href="/contato">Fale com a Simone</LeadsterLink>
                   </Button>
                 </SheetClose>
               </div>
