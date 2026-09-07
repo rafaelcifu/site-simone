@@ -6,13 +6,14 @@
 export const contatoPage = {
   eyebrow: "Contato",
   title: "Vamos conversar",
-  description: "Frase de apoio incentivando o contato.",
+  description:
+    "Conte o momento da sua empresa e o desafio que precisa enfrentar. A partir daí, avaliamos juntos o formato de trabalho mais adequado.",
 };
 
 /** Horarios de atendimento exibidos ao lado do formulario. */
 export const horarios = [
   { day: "Segunda a sexta", hours: "09h - 18h" },
-  { day: "Sabado", hours: "09h - 13h" },
+  { day: "Sábado", hours: "09h - 13h" },
 ];
 
 /**
@@ -27,7 +28,7 @@ export const formFields = [
 ];
 
 export const contatoUi = {
-  scheduleTitle: "Horarios",
+  scheduleTitle: "Horários",
   form: {
     emailSubject: "Contato pelo site",
     submitLabel: "Enviar mensagem",
