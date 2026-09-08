@@ -33,20 +33,20 @@ const CLIENT_LOGOS = [
 
 export function ClientLogosGrid() {
   return (
-    <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-24 bg-white overflow-hidden">
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 items-center">
+    <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-16 md:py-24 bg-white overflow-hidden">
+      <div className="grid grid-cols-1 gap-8 md:gap-12 lg:grid-cols-12 items-center">
         
         {/* Coluna Esquerda: Título */}
         <div className="lg:col-span-4">
           <Reveal>
-            <h2 className="font-display text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold tracking-tight text-neutral-900 leading-[1.1]">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-[3rem] lg:text-[3.5rem] font-bold tracking-tight text-neutral-900 leading-[1.1]">
               Marcas que acreditam no nosso trabalho
             </h2>
           </Reveal>
         </div>
 
-        {/* Coluna Direita: Grid de Logos 6x4 */}
-        <div className="lg:col-span-8 grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 gap-2 lg:gap-3">
+        {/* Coluna Direita: Grid de Logos 3x8 no mobile, 4x6 no tablet, 6x4 no desktop */}
+        <div className="lg:col-span-8 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2.5 sm:gap-3">
           {CLIENT_LOGOS.map((logo, index) => (
             <Reveal key={index} delay={0.02 * index}>
               <div className="relative flex aspect-square items-center justify-center rounded-2xl p-0 overflow-hidden transition-transform duration-300 hover:scale-105 shadow-[0_2px_8px_rgba(0,0,0,0.04)] bg-[#F9F9F9]">

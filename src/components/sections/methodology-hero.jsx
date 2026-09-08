@@ -6,7 +6,7 @@ export function MethodologyHero({ data }) {
   const { eyebrow, title, subtitle, inspiration } = data;
 
   return (
-    <section className="relative w-full bg-white pt-32 pb-16 md:pt-40 md:pb-20 lg:pt-48 lg:pb-24">
+    <section className="relative w-full bg-white pt-28 pb-12 sm:pt-36 sm:pb-16 md:pt-40 md:pb-20 lg:pt-48 lg:pb-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           {/* Badge Pill "Metodologia" */}
@@ -17,7 +17,7 @@ export function MethodologyHero({ data }) {
           </div>
 
           {/* Título Principal <h1> */}
-          <h1 className="mb-6 max-w-3xl font-display text-3xl font-normal tracking-tight text-brand-dark sm:text-4xl md:text-5xl lg:text-[48px] lg:leading-[1.15]">
+          <h1 className="mb-4 sm:mb-6 max-w-3xl font-display text-2xl sm:text-4xl md:text-5xl lg:text-[48px] lg:leading-[1.15] font-normal tracking-tight text-brand-dark">
             {title}
           </h1>
 

@@ -14,7 +14,7 @@ export function Products({ data }) {
   const { title, items } = data;
 
   return (
-    <section className="relative bg-black text-white py-32 lg:py-40 overflow-hidden">
+    <section className="relative bg-black text-white py-16 sm:py-24 md:py-32 lg:py-40 overflow-hidden">
       {/* Decorative Red Abstract Shape on the Right */}
       <div className="absolute right-[-10%] top-[10%] w-[50%] h-[80%] pointer-events-none opacity-90 hidden lg:block">
         <svg viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-[#E5484D] stroke-current" strokeWidth="12" strokeLinecap="round">
@@ -25,7 +25,7 @@ export function Products({ data }) {
 
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <Reveal>
-          <h2 className="font-display text-5xl font-bold tracking-tight text-white md:text-6xl lg:text-[80px] mb-12 lg:mb-16">
+          <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white md:text-6xl lg:text-[80px] mb-8 sm:mb-12 lg:mb-16">
             {title}
           </h2>
         </Reveal>
@@ -45,22 +45,22 @@ export function Products({ data }) {
                 className={`flex flex-col border-neutral-800 ${
                   isLast ? "border-b-0" : "border-b"
                 } ${
-                  isFirst ? "pt-8 pb-16 lg:pt-10 lg:pb-24" : "py-16 lg:py-24"
+                  isFirst ? "pt-4 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-24" : "py-12 sm:py-16 lg:py-24"
                 }`}
               >
                 {/* Ícone Redondo */}
-                <div className="flex h-14 w-14 lg:h-16 lg:w-16 shrink-0 items-center justify-center rounded-full bg-neutral-200 mb-8 lg:mb-10">
-                  <Icon className="h-6 w-6 lg:h-8 lg:w-8 text-[#E5484D]" strokeWidth={1.5} />
+                <div className="flex h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 shrink-0 items-center justify-center rounded-full bg-neutral-200 mb-6 sm:mb-8 lg:mb-10">
+                  <Icon className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-[#E5484D]" strokeWidth={1.5} />
                 </div>
 
                 {/* Conteúdo */}
                 <div className="flex flex-col max-w-4xl">
-                  <h3 className="font-display text-2xl font-bold text-white md:text-3xl lg:text-[32px] mb-4 lg:mb-6 leading-tight">
+                  <h3 className="font-display text-xl sm:text-2xl font-bold text-white md:text-3xl lg:text-[32px] mb-3 sm:mb-4 lg:mb-6 leading-tight">
                     {item.title}
                   </h3>
 
                   {item.description && (
-                    <p className="text-[15px] text-neutral-400 leading-relaxed md:text-[17px]">
+                    <p className="text-sm text-neutral-400 leading-relaxed sm:text-[15px] md:text-[17px]">
                       {item.description}
                     </p>
                   )}
@@ -68,20 +68,20 @@ export function Products({ data }) {
                   {item.bullets && item.bullets.length > 0 && (
                     <ul className="flex flex-col gap-2 mt-2 pl-4">
                       {item.bullets.map((bullet, idx) => (
-                        <li key={idx} className="text-[15px] text-neutral-400 leading-relaxed list-disc md:text-[17px]">
+                        <li key={idx} className="text-sm text-neutral-400 leading-relaxed list-disc sm:text-[15px] md:text-[17px]">
                           {bullet}
                         </li>
                       ))}
                     </ul>
                   )}
 
-                  <span className="text-[15px] text-[#E5484D] mt-8 mb-6 block md:text-[17px]">
+                  <span className="text-sm sm:text-[15px] text-[#E5484D] mt-6 mb-4 sm:mt-8 sm:mb-6 block md:text-[17px]">
                     {item.duration}
                   </span>
 
                   <Link
                     href={item.href || `/servicos#${item.slug || item.id}`}
-                    className="inline-flex items-center gap-2 text-[#E5484D] text-[15px] hover:text-white transition-colors group w-fit md:text-[17px]"
+                    className="inline-flex items-center gap-2 text-[#E5484D] text-sm sm:text-[15px] hover:text-white transition-colors group w-fit md:text-[17px]"
                   >
                     {item.ctaLabel || "Saber mais"}
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

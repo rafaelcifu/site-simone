@@ -8,7 +8,7 @@ export function ServicesList({ page, items }) {
   return (
     <div className="w-full">
       {/* Hero Header da Página Serviços */}
-      <section className="relative w-full bg-background pt-32 pb-12 md:pt-40 md:pb-16 lg:pt-44 lg:pb-16">
+      <section className="relative w-full bg-background pt-28 pb-10 sm:pt-36 sm:pb-12 md:pt-40 md:pb-16 lg:pt-44 lg:pb-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             {/* Badge Pill "Serviços" */}
@@ -19,13 +19,13 @@ export function ServicesList({ page, items }) {
             </div>
 
             {/* Título Principal <h1> */}
-            <h1 className="mb-4 max-w-3xl font-display text-3xl font-bold tracking-tight text-brand-dark sm:text-4xl md:text-[36px] md:leading-tight">
+            <h1 className="mb-4 max-w-3xl font-display text-2xl sm:text-4xl md:text-[36px] md:leading-tight font-bold tracking-tight text-brand-dark">
               {page?.title}
             </h1>
 
             {/* Subtítulo */}
             {page?.description && (
-              <p className="max-w-2xl text-base font-normal leading-relaxed text-brand-darker sm:text-lg">
+              <p className="max-w-2xl text-sm sm:text-base font-normal leading-relaxed text-brand-darker md:text-lg">
                 {page.description}
               </p>
             )}
@@ -42,7 +42,7 @@ export function ServicesList({ page, items }) {
             <section
               key={servico.id || index}
               id={servico.slug}
-              className={`w-full scroll-mt-24 py-16 md:py-20 lg:py-24 border-t border-black/5 ${
+              className={`w-full scroll-mt-24 py-12 sm:py-16 md:py-20 lg:py-24 border-t border-black/5 ${
                 isEven ? "bg-[#F7F7FA]" : "bg-white"
               }`}
             >

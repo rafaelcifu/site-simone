@@ -11,11 +11,11 @@ export function AboutTwoCards({ data }) {
   const { tagline, name, leftImage, paragraphs, cta } = data;
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-12 relative z-10">
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 items-stretch min-h-[700px]">
+    <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12 relative z-10">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 items-stretch min-h-0 lg:min-h-[700px]">
         {/* Card Esquerdo: Imagem + Logo + Textos + Curvas Vermelhas */}
         <Reveal className="h-full">
-          <div className="relative h-full min-h-[500px] w-full overflow-hidden rounded-[2rem] shadow-2xl bg-black">
+          <div className="relative h-full min-h-[360px] sm:min-h-[460px] lg:min-h-[500px] w-full overflow-hidden rounded-2xl sm:rounded-[2rem] shadow-2xl bg-black">
             <Image
               src={leftImage || "/simone-stage-left.png"}
               alt="Simone Moura no palco"
@@ -27,8 +27,8 @@ export function AboutTwoCards({ data }) {
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/30" />
             
             {/* Header do Card Esquerdo */}
-            <div className="absolute top-0 left-0 right-0 p-8 md:p-10 flex justify-between items-start z-20">
-              <span className="text-sm font-normal text-white">
+            <div className="absolute top-0 left-0 right-0 p-6 sm:p-8 md:p-10 flex justify-between items-start z-20">
+              <span className="text-xs sm:text-sm font-normal text-white">
                 <span className="text-brand-red font-medium">Simone Moura</span> • Estratégia de marca
               </span>
               
@@ -56,18 +56,18 @@ export function AboutTwoCards({ data }) {
 
         {/* Card Direito: Textos sobre Simone */}
         <Reveal delay={0.1} className="h-full">
-          <div className="flex h-full flex-col justify-start rounded-[2rem] bg-black p-8 md:p-12 lg:p-14 text-white shadow-2xl">
-            <div className="mb-8">
+          <div className="flex h-full flex-col justify-start rounded-2xl sm:rounded-[2rem] bg-black p-6 sm:p-8 md:p-12 lg:p-14 text-white shadow-2xl">
+            <div className="mb-6 md:mb-8">
               <Badge variant="secondary" className="w-fit border-none bg-[#FDE8E8] px-3 py-1 text-xs font-semibold text-brand-red rounded-full">
                 {tagline}
               </Badge>
             </div>
 
-            <h2 className="font-display text-4xl font-normal tracking-tight text-white md:text-5xl mb-10">
+            <h2 className="font-display text-3xl font-normal tracking-tight text-white sm:text-4xl md:text-5xl mb-6 md:mb-10">
               {name}
             </h2>
 
-            <div className="flex flex-col gap-5 flex-grow">
+            <div className="flex flex-col gap-4 sm:gap-5 flex-grow">
               {paragraphs?.map((text, idx) => (
                 <p key={idx} className="text-sm text-neutral-300 leading-relaxed font-light whitespace-pre-line">
                   {text}
@@ -75,11 +75,11 @@ export function AboutTwoCards({ data }) {
               ))}
             </div>
 
-            <div className="pt-10">
+            <div className="pt-8 sm:pt-10">
               <Button
                 asChild
                 size="lg"
-                className="w-fit rounded-full bg-[#E5484D] px-8 py-6 text-sm font-normal text-white shadow-md hover:bg-[#E5484D]/90 transition-all duration-300 hover:scale-105"
+                className="w-full sm:w-fit rounded-full bg-[#E5484D] px-8 py-6 text-sm font-normal text-white shadow-md hover:bg-[#E5484D]/90 transition-all duration-300 hover:scale-105"
               >
                 <Link href={cta.href}>
                   {cta.label}

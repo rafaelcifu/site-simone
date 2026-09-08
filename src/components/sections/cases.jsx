@@ -26,11 +26,11 @@ export function Cases({ data }) {
   };
 
   return (
-    <section className="mx-auto w-full px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-white overflow-hidden">
+    <section className="mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28 bg-white overflow-hidden">
       {/* Cabeçalho da Seção */}
-      <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+      <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16">
         <Reveal>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight text-neutral-900">
             {title}
           </h2>
         </Reveal>

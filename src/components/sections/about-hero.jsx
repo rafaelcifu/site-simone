@@ -7,7 +7,7 @@ export function AboutHero({ data }) {
   const { tagline, title, paragraphs, image } = data;
 
   return (
-    <section className="relative w-full overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32">
+    <section className="relative w-full overflow-hidden pt-28 pb-12 sm:pt-36 sm:pb-16 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32">
       {/* Imagem de fundo com Simone à direita (nó 131:425 do Figma) */}
       <div className="pointer-events-none absolute inset-0 z-0 h-[650px] w-full select-none md:h-[780px] lg:h-[870px]">
         <Image
@@ -34,12 +34,12 @@ export function AboutHero({ data }) {
           </div>
 
           {/* Título Principal */}
-          <h1 className="mb-8 max-w-xl lg:max-w-2xl font-display text-3xl font-normal tracking-tight text-brand-dark sm:text-4xl md:text-5xl lg:text-[48px] lg:leading-[1.15]">
+          <h1 className="mb-6 sm:mb-8 max-w-xl lg:max-w-2xl font-display text-2xl sm:text-4xl md:text-5xl lg:text-[48px] lg:leading-[1.15]">
             {title}
           </h1>
 
           {/* Parágrafos biográficos */}
-          <div className="max-w-xl lg:max-w-2xl space-y-6 text-base leading-relaxed text-brand-darker sm:text-lg">
+          <div className="max-w-xl lg:max-w-2xl space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg leading-relaxed text-brand-darker">
             {paragraphs?.map((p, i) => (
               <p key={i} className="text-pretty">
                 {p}

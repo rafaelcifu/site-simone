@@ -5,10 +5,10 @@ import { useRef, useEffect } from "react";
 /**
  * HeroVideo — Client Component.
  *
- * Reproduz o vídeo de fundo da hero em loop contínuo sem cortes,
- * garantindo autoplay imediato e retomada após saída/retorno de aba.
+ * Reproduz o vídeo de fundo da hero (video simone novo.mp4) em loop contínuo sem cortes,
+ * garantindo autoplay imediato em mobile e desktop com poster de alta resolução.
  */
-export function HeroVideo() {
+export function HeroVideo({ poster = "/banner-mob-simone.png" }) {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -46,7 +46,7 @@ export function HeroVideo() {
   return (
     <video
       ref={videoRef}
-      src="/video-simone-novo.mp4"
+      poster={poster}
       autoPlay
       loop
       muted
@@ -55,6 +55,10 @@ export function HeroVideo() {
       aria-hidden="true"
       tabIndex={-1}
       className="absolute inset-0 h-full w-full object-cover object-center"
-    />
+    >
+      <source src="/video-simone-novo.mp4" type="video/mp4" />
+      <source src="/video%20simone%20novo.mp4" type="video/mp4" />
+    </video>
   );
 }
+

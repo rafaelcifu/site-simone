@@ -37,9 +37,9 @@ export function ManifestoCard({ data }) {
   }, [api, hasMultipleSlides]);
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pb-12 relative z-20 -mt-20 md:-mt-32">
+    <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pb-12 relative z-20 -mt-10 sm:-mt-16 md:-mt-32">
       <Reveal>
-        <div className="relative overflow-hidden rounded-[2rem] bg-black text-white shadow-2xl">
+        <div className="relative overflow-hidden rounded-2xl sm:rounded-[2rem] bg-black text-white shadow-2xl">
           <Carousel
             setApi={setApi}
             opts={{ loop: hasMultipleSlides }}

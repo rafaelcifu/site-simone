@@ -26,7 +26,7 @@ export default async function ContatoPage({ params }) {
   );
 
   return (
-    <Section padding="lg">
+    <Section padding="lg" className="pt-28 md:pt-36">
       <JsonLd data={pageGraph} />
 
       <SectionHeading
