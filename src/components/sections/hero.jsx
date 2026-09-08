@@ -12,9 +12,9 @@ export function Hero({ data }) {
 
   return (
     <section className="relative flex min-h-[640px] sm:min-h-[720px] md:min-h-[780px] lg:min-h-[860px] w-full items-center justify-center overflow-hidden bg-black px-4 pb-28 pt-28 text-white sm:px-6 md:pb-48 md:pt-44 lg:px-8">
-      {/* Vídeo de fundo com poster do banner mobile e overlays de contraste */}
+      {/* Vídeo de fundo com overlays de contraste */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-        <HeroVideo poster="/banner-mob-simone.png" />
+        <HeroVideo />
 
         {/* Camada base leve */}
         <div className="absolute inset-0 bg-black/20" />

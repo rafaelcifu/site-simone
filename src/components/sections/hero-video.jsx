@@ -8,7 +8,7 @@ import { useRef, useEffect } from "react";
  * Reproduz o vídeo de fundo da hero (video simone novo.mp4) em loop contínuo sem cortes,
  * garantindo autoplay imediato em mobile e desktop com poster de alta resolução.
  */
-export function HeroVideo({ poster = "/banner-mob-simone.png" }) {
+export function HeroVideo({ poster }) {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -46,7 +46,8 @@ export function HeroVideo({ poster = "/banner-mob-simone.png" }) {
   return (
     <video
       ref={videoRef}
-      poster={poster}
+      src="/video-simone-novo.mp4"
+      {...(poster ? { poster } : {})}
       autoPlay
       loop
       muted
