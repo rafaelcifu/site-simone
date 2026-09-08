@@ -31,7 +31,9 @@ const CLIENT_LOGOS = [
   { name: "Fruto", src: "/logos/fruta.png" },
 ];
 
-export function ClientLogosGrid() {
+export function ClientLogosGrid({ data }) {
+  const title = data?.title || "Marcas que acreditam no nosso trabalho";
+
   return (
     <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-16 md:py-24 bg-white overflow-hidden">
       <div className="grid grid-cols-1 gap-8 md:gap-12 lg:grid-cols-12 items-center">
@@ -40,7 +42,7 @@ export function ClientLogosGrid() {
         <div className="lg:col-span-4">
           <Reveal>
             <h2 className="font-display text-2xl sm:text-3xl md:text-[3rem] lg:text-[3.5rem] font-bold tracking-tight text-neutral-900 leading-[1.1]">
-              Marcas que acreditam no nosso trabalho
+              {title}
             </h2>
           </Reveal>
         </div>

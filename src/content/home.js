@@ -225,6 +225,9 @@ export const homeContentByLocale = {
         },
       ],
     },
+    clientLogos: {
+      title: "Marcas que acreditam no nosso trabalho",
+    },
     finalCta: {
       title: "A sua marca já sabe quem ela é. O problema é que o mercado ainda não.",
       cta: { label: "Quero falar sobre minha empresa", href: "/contato" },
@@ -446,6 +449,9 @@ export const homeContentByLocale = {
         },
       ],
     },
+    clientLogos: {
+      title: "Brands that trust our work",
+    },
     finalCta: {
       title: "Your brand already knows who it is. The problem is that the market doesn't yet.",
       cta: { label: "Get in touch with Simone", href: "/en/contato" },
@@ -666,6 +672,9 @@ export const homeContentByLocale = {
           stars: 4,
         },
       ],
+    },
+    clientLogos: {
+      title: "Marcas que confían en nuestro trabajo",
     },
     finalCta: {
       title: "Tu marca ya sabe quién es. El problema es que el mercado todavía no.",

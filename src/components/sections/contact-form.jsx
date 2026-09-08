@@ -20,7 +20,7 @@ import { Textarea } from "@/components/ui/textarea";
  * Resend + Route Handler). Alinhar antes de implementar: ver AGENTS.md,
  * secao "Formularios e integracoes".
  */
-export function ContactForm() {
+export function ContactForm({ fields = formFields, ui = contatoUi }) {
   const [values, setValues] = useState({});
 
   function handleChange(event) {
@@ -31,24 +31,24 @@ export function ContactForm() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    const body = formFields
+    const body = fields
       .map((field) => `${field.label}: ${values[field.name] ?? ""}`)
       .join("\n");
 
     window.location.href = `mailto:${contact.email}?subject=${encodeURIComponent(
-      contatoUi.form.emailSubject
+      ui.form.emailSubject
     )}&body=${encodeURIComponent(body)}`;
   }
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-      {formFields.map((field) => (
+      {fields.map((field) => (
         <div key={field.name} className="flex flex-col gap-2">
           <Label htmlFor={field.name}>
             {field.label}
             {field.required ? (
               <span className="text-muted-foreground">
-                {contatoUi.form.requiredMark}
+                {ui.form.requiredMark}
               </span>
             ) : null}
           </Label>
@@ -76,7 +76,7 @@ export function ContactForm() {
       ))}
 
       <Button type="submit" size="lg" className="self-start">
-        {contatoUi.form.submitLabel}
+        {ui.form.submitLabel}
       </Button>
     </form>
   );

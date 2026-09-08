@@ -116,7 +116,7 @@ export default async function ServicoPage({ params }) {
         </div>
       </Section>
 
-      <CtaBand />
+      <CtaBand locale={locale} />
     </>
   );
 }

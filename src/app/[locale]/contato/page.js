@@ -38,7 +38,7 @@ export default async function ContatoPage({ params }) {
 
       <div className="mt-12 grid gap-12 lg:grid-cols-[1.2fr_1fr]">
         <Reveal>
-          <ContactForm />
+          <ContactForm fields={formFields} ui={contatoUi} />
         </Reveal>
 
         <Reveal delay={0.1} className="flex flex-col gap-8">

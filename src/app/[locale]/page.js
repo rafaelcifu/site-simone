@@ -39,7 +39,7 @@ export default async function HomePage({ params }) {
       <StatsSection data={content.statsSection} />
       <Cases data={content.cases} />
       <Products data={content.products} />
-      <ClientLogosGrid />
+      <ClientLogosGrid data={content.clientLogos} />
       <Testimonials data={content.testimonials} />
       <FinalCta data={content.finalCta} />
     </>
