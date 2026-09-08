@@ -10,7 +10,7 @@ export const siteByLocale = {
     shortName: "Simone Moura",
     url: "https://www.simonemoura.com.br",
     description:
-      "Simone Moura une branding estratégico, neurociência aplicada ao consumo e Jobs to be Done para reposicionar marcas e destravar crescimento. + de 35 anos, +700 projetos.",
+      "Simone Moura une branding estratégico, neurociência aplicada ao consumo e Jobs to Be Done para reposicionar marcas e impulsionar o crescimento. Mais de 35 anos e 700 projetos.",
     tagline:
       "Crio estratégias para empresas com foco nas pessoas, na inovação e na transformação de mercados",
     locale: "pt-BR",
@@ -21,7 +21,7 @@ export const siteByLocale = {
     shortName: "Simone Moura",
     url: "https://www.simonemoura.com.br/en",
     description:
-      "Simone Moura combines strategic branding, applied neuroscience, and Jobs to be Done to reposition brands and unlock growth. +35 years, +700 projects.",
+      "Simone Moura combines strategic branding, applied consumer neuroscience, and Jobs to Be Done to reposition brands and drive growth. Over 35 years of experience and 700 projects.",
     tagline:
       "Building human-centered strategies for business innovation and market transformation",
     locale: "en-US",
@@ -32,7 +32,7 @@ export const siteByLocale = {
     shortName: "Simone Moura",
     url: "https://www.simonemoura.com.br/es",
     description:
-      "Simone Moura combina branding estratégico, neurociencia aplicada y Jobs to be Done para reposicionar marcas y desbloquear el crecimiento. + de 35 años, +700 proyectos.",
+      "Simone Moura combina branding estratégico, neurociencia aplicada al consumo y Jobs to Be Done para reposicionar marcas e impulsar el crecimiento. Más de 35 años de experiencia y 700 proyectos.",
     tagline:
       "Estrategias empresariales con foco en las personas, la innovación y la transformación de mercados",
     locale: "es-ES",
@@ -131,8 +131,8 @@ export const mainNav = mainNavByLocale.pt;
 
 export const primaryCtaByLocale = {
   pt: { label: "Fale comigo", href: "/contato" },
-  en: { label: "Get in touch", href: "/en/contact" },
-  es: { label: "Contacto", href: "/es/contacto" },
+  en: { label: "Get in touch", href: "/en/contato" },
+  es: { label: "Contacto", href: "/es/contato" },
 };
 
 export const primaryCta = primaryCtaByLocale.pt;
@@ -152,16 +152,16 @@ export const siteUiByLocale = {
       contactTitle: "Contato",
       copyrightSymbol: "©",
       rights: "Todos os direitos",
-      copyrightText: "Simone Moura - 2026 - Todos os direitos",
+      copyrightText: "Simone Moura — 2026 — Todos os direitos reservados",
       privacyPolicy: "Política de privacidade",
-      quote: '"Eu crio estratégias para empresas com foco na transformação das pessoas e dos mercados. Sem desperdícios, sem distrações e com propósito verdadeiro."',
+      quote: '“Eu crio estratégias para empresas com foco na transformação das pessoas e dos mercados. Sem desperdícios, sem distrações e com propósito verdadeiro.”',
       newsletterTitle: "Inscreva-se na newsletter",
       newsletterPlaceholder: "nome@email.com.br",
       newsletterButton: "Inscreva-se"
     },
     ctaBand: {
       title: "Pronto para começar?",
-      description: "Frase curta reforçando o próximo passo.",
+      description: "Vamos transformar o próximo desafio da sua empresa em uma estratégia clara.",
     },
     notFound: {
       code: "404",
@@ -172,8 +172,8 @@ export const siteUiByLocale = {
     },
     socialCard: {
       description:
-        "Branding estratégico, neurociência aplicada ao consumo e Jobs to be Done.",
-      stats: "+ de 35 anos · +700 projetos entregues",
+        "Branding estratégico, neurociência aplicada ao consumo e Jobs to Be Done.",
+      stats: "Mais de 35 anos · Mais de 700 projetos entregues",
     },
   },
   en: {
@@ -190,16 +190,16 @@ export const siteUiByLocale = {
       contactTitle: "Contact",
       copyrightSymbol: "©",
       rights: "All rights reserved.",
-      copyrightText: "Simone Moura - 2026 - All rights reserved",
+      copyrightText: "Simone Moura — 2026 — All rights reserved",
       privacyPolicy: "Privacy policy",
-      quote: '"I build strategies for businesses focused on transforming people and markets. Without waste, without distractions, and with true purpose."',
+      quote: '“I build business strategies focused on transforming people and markets. No waste, no distractions, and always guided by a genuine purpose.”',
       newsletterTitle: "Subscribe to our newsletter",
       newsletterPlaceholder: "name@email.com",
       newsletterButton: "Subscribe",
     },
     ctaBand: {
       title: "Ready to start?",
-      description: "Short message highlighting the next step.",
+      description: "Let's turn your company's next challenge into a clear strategy.",
     },
     notFound: {
       code: "404",
@@ -210,8 +210,8 @@ export const siteUiByLocale = {
     },
     socialCard: {
       description:
-        "Strategic branding, applied consumer neuroscience, and Jobs to be Done.",
-      stats: "+35 years · +700 delivered projects",
+        "Strategic branding, applied consumer neuroscience, and Jobs to Be Done.",
+      stats: "Over 35 years · More than 700 projects delivered",
     },
   },
   es: {
@@ -228,28 +228,28 @@ export const siteUiByLocale = {
       contactTitle: "Contacto",
       copyrightSymbol: "©",
       rights: "Todos los derechos reservados.",
-      copyrightText: "Simone Moura - 2026 - Todos los derechos reservados",
+      copyrightText: "Simone Moura — 2026 — Todos los derechos reservados",
       privacyPolicy: "Política de privacidad",
-      quote: '"Creo estrategias para empresas con foco en la transformación de las personas y de los mercados. Sin desperdicios, sin distracciones y con propósito verdadero."',
+      quote: '“Creo estrategias para empresas centradas en la transformación de las personas y los mercados. Sin desperdicios, sin distracciones y con un propósito genuino.”',
       newsletterTitle: "Suscríbete al boletín",
       newsletterPlaceholder: "nombre@correo.com",
       newsletterButton: "Suscribirse",
     },
     ctaBand: {
       title: "¿Listo para comenzar?",
-      description: "Frase corta reforzando el siguiente paso.",
+      description: "Transformemos el próximo desafío de tu empresa en una estrategia clara.",
     },
     notFound: {
       code: "404",
       title: "Página no encontrada",
-      description: "La dirección que intentó acceder no existe o fue movida.",
+      description: "La dirección a la que intentaste acceder no existe o fue trasladada.",
       ctaLabel: "Volver al inicio",
       ctaHref: "/es",
     },
     socialCard: {
       description:
-        "Branding estratégico, neurociencia aplicada al consumo y Jobs to be Done.",
-      stats: "+ de 35 años · +700 proyectos entregados",
+        "Branding estratégico, neurociencia aplicada al consumo y Jobs to Be Done.",
+      stats: "Más de 35 años · Más de 700 proyectos entregados",
     },
   },
 };

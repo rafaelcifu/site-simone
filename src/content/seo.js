@@ -20,10 +20,10 @@ export const person = {
   jobTitle: "Estrategista de Branding e Marketing",
   /** Uma frase. E o que aparece em resposta de IA e em rich result. */
   headline:
-    "Estrategista de branding e marketing com mais de 30 anos de atuacao, especialista em neurociencia aplicada ao consumo.",
+    "Estrategista de branding e marketing com mais de 30 anos de atuação, especialista em neurociência aplicada ao consumo.",
   /** Paragrafo. Mais completo, mesma funcao. */
   description:
-    "Simone Moura e estrategista de branding e marketing formada em Comunicacao Social e mestre em Comunicacao e Novas Tecnologias. Ha mais de tres decadas transforma conhecimento em estrategia aplicada, com foco em posicionamento de mercado, neurociencia aplicada ao consumo e Jobs to be Done. Fundadora da Ping Pong Estrategia e da Caza Futuro, ja entregou mais de 700 projetos para empresas nacionais e globais.",
+    "Simone Moura é estrategista de branding e marketing, formada em Comunicação Social e mestre em Comunicação e Novas Tecnologias. Há mais de três décadas, transforma conhecimento em estratégia aplicada, com foco em posicionamento de mercado, neurociência aplicada ao consumo e Jobs to Be Done. Fundadora da Ping Pong Estratégia e da Caza Futuro, já entregou mais de 700 projetos para empresas nacionais e globais.",
   /**
    * Caminho da foto em /public. Usada em JSON-LD (Person.image,
    * primaryImageOfPage) e como imagem da entidade.
@@ -41,20 +41,20 @@ export const person = {
  * Use termos que uma pessoa realmente buscaria.
  */
 export const knowsAbout = [
-  "Branding estrategico",
-  "Gestao de marca",
-  "Marketing estrategico",
+  "Branding estratégico",
+  "Gestão de marca",
+  "Marketing estratégico",
   "Posicionamento de mercado",
-  "Neurociencia aplicada ao consumo",
+  "Neurociência aplicada ao consumo",
   "Neuromarketing",
   "Neurobranding",
   "Neurovendas",
   "Economia comportamental",
-  "Jobs to be Done",
-  "Transformacao digital",
-  "Criacao de produtos digitais",
-  "Comunicacao corporativa",
-  "Lideranca por proposito",
+  "Jobs to Be Done",
+  "Transformação digital",
+  "Criação de produtos digitais",
+  "Comunicação corporativa",
+  "Liderança por propósito",
   "Pesquisa de comportamento do consumidor",
 ];
 
@@ -64,7 +64,7 @@ export const formacaoAcademica = [
   { name: "London Business School", country: "Reino Unido" },
   { name: "Universidade do Minho", country: "Portugal" },
   { name: "Universidade de Berlim", country: "Alemanha" },
-  { name: "Fundacao Getulio Vargas (FGV)", country: "Brasil" },
+  { name: "Fundação Getulio Vargas (FGV)", country: "Brasil" },
   { name: "ESPM", country: "Brasil" },
   { name: "PUCRS", country: "Brasil" },
   { name: "Insper", country: "Brasil" },
@@ -77,8 +77,8 @@ export const credenciais = [
     name: "Mestre em Comunicacao e Novas Tecnologias",
   },
   {
-    type: "Graduacao",
-    name: "Comunicacao Social",
+    type: "Graduação",
+    name: "Comunicação Social",
   },
 ];
 
@@ -88,43 +88,43 @@ export const credenciais = [
  */
 export const empresas = [
   {
-    name: "Ping Pong Estrategia",
+    name: "Ping Pong Estratégia",
     foundingDate: "2010",
     description:
-      "Primeira empresa do Nordeste do Brasil focada em gestao de marcas e comunicacao pela neurociencia. Mais de 700 projetos entregues em todo o Brasil.",
+      "Primeira empresa do Nordeste do Brasil focada em gestão de marcas e comunicação pela neurociência. Mais de 700 projetos entregues em todo o país.",
     url: "",
   },
   {
     name: "Caza Futuro",
     foundingDate: "2020",
     description:
-      "Criacao de produtos digitais sob a otica da metodologia Jobs to be Done e desenvolvimento de novos modelos de negocio para empresas em transformacao digital.",
+      "Criação de produtos digitais sob a ótica da metodologia Jobs to Be Done e desenvolvimento de novos modelos de negócio para empresas em transformação digital.",
     url: "",
   },
   {
     name: "Medeiros 365",
     foundingDate: "2023",
     description:
-      "Ecossistema 100% digital para compras B2B, conectando industrias de alimentos e bebidas a empreendedores do Maranhao e do Piaui.",
+      "Ecossistema 100% digital para compras B2B, conectando indústrias de alimentos e bebidas a empreendedores do Maranhão e do Piauí.",
     url: "",
   },
 ];
 
 /** Numeros que sustentam autoridade. Usados em llms.txt e em `description`. */
 export const autoridade = [
-  "Mais de 30 anos de atuacao no mercado",
+  "Mais de 30 anos de atuação no mercado",
   "Mais de 700 projetos entregues",
-  "Pioneira em branding e planejamento estrategico de posicionamento e comunicacao no Norte e Nordeste do Brasil",
-  "Experiencia com empresas nacionais e globais em diferentes setores da economia",
+  "Pioneira em branding e planejamento estratégico de posicionamento e comunicação no Norte e Nordeste do Brasil",
+  "Experiência com empresas nacionais e globais em diferentes setores da economia",
   "Criadora de um dos primeiros ecossistemas B2B digitais do setor distribuidor",
 ];
 
 /** Onde atende. Vira `areaServed`. */
 export const areaServed = [
   { type: "Country", name: "Brasil" },
-  { type: "State", name: "Ceara" },
-  { type: "State", name: "Maranhao" },
-  { type: "State", name: "Piaui" },
+  { type: "State", name: "Ceará" },
+  { type: "State", name: "Maranhão" },
+  { type: "State", name: "Piauí" },
 ];
 
 /**
@@ -143,39 +143,39 @@ export const pageSeoByLocale = {
   pt: {
     home: {
       // A home usa `title.absolute` para nao virar "Simone Moura | Simone Moura"
-      title: "Simone Moura | Branding Estrategico e Neurociencia do Consumo",
+      title: "Simone Moura | Branding Estratégico e Neurociência do Consumo",
       description:
-        "Estrategista de branding e marketing com + de 35 anos e +700 projetos. Reposicionamento de marca, neurociencia aplicada ao consumo e Jobs to be Done.",
+        "Estrategista de branding e marketing com mais de 35 anos e 700 projetos. Reposicionamento de marca, neurociência do consumo e Jobs to Be Done.",
       path: "/",
     },
     sobre: {
       title: "Sobre",
       description:
-        "Conheca a trajetoria de Simone Moura: mestre em Comunicacao, formada por Harvard e London Business School, fundadora da Ping Pong Estrategia e da Caza Futuro.",
+        "Conheça a trajetória de Simone Moura: mestre em Comunicação, formada por Harvard e London Business School, fundadora da Ping Pong Estratégia e da Caza Futuro.",
       path: "/sobre",
     },
     servicos: {
-      title: "Servicos",
+      title: "Serviços",
       description:
-        "Quatro formas de trabalhar com Simone Moura: branding estrategico, oficinas corporativas, imersoes e criacao de produtos digitais.",
+        "Quatro formas de trabalhar com Simone Moura: branding estratégico, oficinas corporativas, imersões e criação de produtos digitais.",
       path: "/servicos",
     },
     metodologias: {
       title: "Metodologias",
       description:
-        "A metodologia de Simone Moura une branding estrategico, neurociencia aplicada ao consumo, economia comportamental e Jobs to be Done.",
+        "A metodologia de Simone Moura une branding estratégico, neurociência aplicada ao consumo, economia comportamental e Jobs to Be Done.",
       path: "/metodologias",
     },
     contato: {
       title: "Contato",
       description:
-        "Fale com Simone Moura sobre branding, posicionamento de marca, oficinas corporativas e transformacao digital para a sua empresa.",
+        "Fale com Simone Moura sobre branding, posicionamento de marca, oficinas corporativas e transformação digital para a sua empresa.",
       path: "/contato",
     },
     privacidade: {
-      title: "Politica de Privacidade",
+      title: "Política de Privacidade",
       description:
-        "Politica de Privacidade de Simone Moura. Saiba como tratamos e protegemos seus dados pessoais em conformidade com a LGPD.",
+        "Política de Privacidade de Simone Moura. Saiba como tratamos e protegemos seus dados pessoais em conformidade com a LGPD.",
       path: "/privacidade",
     },
   },
@@ -189,13 +189,13 @@ export const pageSeoByLocale = {
     sobre: {
       title: "About",
       description:
-        "The path of Simone Moura: master's in Communication, educated at Harvard and London Business School, founder of Ping Pong Estrategia and Caza Futuro.",
+        "Learn about Simone Moura's journey: a master's degree in Communication, education at Harvard and London Business School, and the founding of Ping Pong Estratégia and Caza Futuro.",
       path: "/sobre",
     },
     servicos: {
       title: "Services",
       description:
-        "Four ways to work with Simone Moura: strategic branding, corporate workshops, immersions and digital product creation.",
+        "Four ways to work with Simone Moura: strategic branding, corporate workshops, immersions, and digital product creation.",
       path: "/servicos",
     },
     metodologias: {
@@ -219,39 +219,39 @@ export const pageSeoByLocale = {
   },
   es: {
     home: {
-      title: "Simone Moura | Branding Estrategico y Neurociencia del Consumo",
+      title: "Simone Moura | Branding Estratégico y Neurociencia del Consumo",
       description:
-        "Estratega de branding y marketing con + de 35 anos y +700 proyectos. Reposicionamento de marca, neurociencia aplicada al consumo y Jobs to be Done.",
+        "Estratega de branding y marketing con más de 35 años y 700 proyectos. Reposicionamiento de marca, neurociencia aplicada al consumo y Jobs to Be Done.",
       path: "/",
     },
     sobre: {
       title: "Sobre",
       description:
-        "Conoce la trayectoria de Simone Moura: maestra en Comunicacion, formada en Harvard y London Business School, fundadora de Ping Pong Estrategia y Caza Futuro.",
+        "Conoce la trayectoria de Simone Moura: máster en Comunicación, formada en Harvard y London Business School, fundadora de Ping Pong Estratégia y Caza Futuro.",
       path: "/sobre",
     },
     servicos: {
       title: "Servicios",
       description:
-        "Cuatro formas de trabajar con Simone Moura: branding estrategico, talleres corporativos, inmersiones y creacion de productos digitales.",
+        "Cuatro formas de trabajar con Simone Moura: branding estratégico, talleres corporativos, inmersiones y creación de productos digitales.",
       path: "/servicos",
     },
     metodologias: {
-      title: "Metodologias",
+      title: "Metodologías",
       description:
-        "La metodologia de Simone Moura une branding estrategico, neurociencia aplicada al consumo, economia del comportamiento y Jobs to be Done.",
+        "La metodología de Simone Moura une branding estratégico, neurociencia aplicada al consumo, economía del comportamiento y Jobs to Be Done.",
       path: "/metodologias",
     },
     contato: {
       title: "Contacto",
       description:
-        "Habla con Simone Moura sobre branding, posicionamiento de marca, talleres corporativos y transformacion digital para tu empresa.",
+        "Habla con Simone Moura sobre branding, posicionamiento de marca, talleres corporativos y transformación digital para tu empresa.",
       path: "/contato",
     },
     privacidade: {
-      title: "Politica de Privacidad",
+      title: "Política de Privacidad",
       description:
-        "Politica de Privacidad de Simone Moura. Conozca como recopilamos y protegemos sus datos personales conforme a la legislacion vigente.",
+        "Política de Privacidad de Simone Moura. Conoce cómo recopilamos y protegemos tus datos personales conforme a la legislación vigente.",
       path: "/privacidade",
     },
   },

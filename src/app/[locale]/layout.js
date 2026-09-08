@@ -13,6 +13,7 @@ import {
 import { JsonLd } from "@/components/atoms/json-ld";
 import { Header } from "@/components/organisms/header";
 import { Footer } from "@/components/organisms/footer";
+import { Leadster } from "@/components/organisms/leadster";
 import "../globals.css";
 
 /**
@@ -133,6 +134,7 @@ export default async function RootLayout({ children, params }) {
           {children}
         </main>
         <Footer />
+        <Leadster />
       </body>
     </html>
   );
