@@ -20,7 +20,7 @@ export const person = {
   jobTitle: "Estrategista de Branding e Marketing",
   /** Uma frase. E o que aparece em resposta de IA e em rich result. */
   headline:
-    "Estrategista de branding e marketing com mais de 30 anos de atuação, especialista em neurociência aplicada ao consumo.",
+    "Estrategista de branding e marketing com mais de 35 anos de atuação, especialista em neurociência aplicada ao consumo.",
   /** Paragrafo. Mais completo, mesma funcao. */
   description:
     "Simone Moura é estrategista de branding e marketing, formada em Comunicação Social e mestre em Comunicação e Novas Tecnologias. Há mais de três décadas, transforma conhecimento em estratégia aplicada, com foco em posicionamento de mercado, neurociência aplicada ao consumo e Jobs to Be Done. Fundadora da Ping Pong Estratégia e da Caza Futuro, já entregou mais de 700 projetos para empresas nacionais e globais.",
@@ -112,7 +112,7 @@ export const empresas = [
 
 /** Numeros que sustentam autoridade. Usados em llms.txt e em `description`. */
 export const autoridade = [
-  "Mais de 30 anos de atuação no mercado",
+  "Mais de 35 anos de atuação no mercado do Brasil e do exterior",
   "Mais de 700 projetos entregues",
   "Pioneira em branding e planejamento estratégico de posicionamento e comunicação no Norte e Nordeste do Brasil",
   "Experiência com empresas nacionais e globais em diferentes setores da economia",

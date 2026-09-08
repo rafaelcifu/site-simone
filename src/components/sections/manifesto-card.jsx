@@ -23,7 +23,13 @@ export function ManifestoCard({ data }) {
       ? data.slides
       : data?.image
       ? [data.image]
-      : [{ src: "/slide-hero-1.png", alt: "Manifesto Simone Moura" }];
+      : [
+          {
+            src: "/slide-hero-1.png",
+            mobileSrc: "/banner-mob-simone.png",
+            alt: "Manifesto Simone Moura",
+          },
+        ];
 
   const hasMultipleSlides = slides.length > 1;
 
@@ -49,15 +55,31 @@ export function ManifestoCard({ data }) {
             <CarouselContent className="-ml-0">
               {slides.map((slide, index) => (
                 <CarouselItem key={index} className="pl-0 relative w-full">
-                  <Image
-                    src={slide.src}
-                    alt={slide.alt || "Manifesto Simone Moura"}
-                    width={2782}
-                    height={1007}
-                    priority={index === 0}
-                    className="w-full h-auto object-cover block"
-                    sizes="(max-width: 1280px) 100vw, 1280px"
-                  />
+                  {/* Banner Mobile */}
+                  <div className="block sm:hidden w-full">
+                    <Image
+                      src={slide.mobileSrc || "/banner-mob-simone.png"}
+                      alt={slide.alt || "Manifesto Simone Moura"}
+                      width={700}
+                      height={1318}
+                      priority={index === 0}
+                      className="w-full h-auto object-cover block rounded-2xl"
+                      sizes="100vw"
+                    />
+                  </div>
+
+                  {/* Banner Desktop / Tablet */}
+                  <div className="hidden sm:block w-full">
+                    <Image
+                      src={slide.src}
+                      alt={slide.alt || "Manifesto Simone Moura"}
+                      width={2782}
+                      height={1007}
+                      priority={index === 0}
+                      className="w-full h-auto object-cover block rounded-2xl sm:rounded-[2rem]"
+                      sizes="(max-width: 1280px) 100vw, 1280px"
+                    />
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>

@@ -28,9 +28,17 @@ export const homeContentByLocale = {
       },
       description:
         "Muitas empresas estão perdendo suas melhores pessoas e a oportunidade de se posicionar de maneira clara e atitudinal porque se distraem com o que não vale a pena. Mais do que perder dinheiro, estão tomando decisões desconectadas do propósito organizacional.",
-      image: { src: "/slide-hero-1.png", alt: "Manifesto Simone Moura" },
+      image: {
+        src: "/slide-hero-1.png",
+        mobileSrc: "/banner-mob-simone.png",
+        alt: "Manifesto Simone Moura",
+      },
       slides: [
-        { src: "/slide-hero-1.png", alt: "Manifesto Simone Moura" },
+        {
+          src: "/slide-hero-1.png",
+          mobileSrc: "/banner-mob-simone.png",
+          alt: "Manifesto Simone Moura",
+        },
       ],
     },
     aboutSection: {
@@ -248,9 +256,17 @@ export const homeContentByLocale = {
       },
       description:
         "Many companies are losing their best people and the opportunity to position themselves clearly because they are distracted by what doesn't matter. Far beyond losing money, they are making decisions outside organizational purpose.",
-      image: { src: "/slide-hero-1.png", alt: "Simone Moura Manifesto" },
+      image: {
+        src: "/slide-hero-1.png",
+        mobileSrc: "/banner-mob-simone.png",
+        alt: "Simone Moura Manifesto",
+      },
       slides: [
-        { src: "/slide-hero-1.png", alt: "Simone Moura Manifesto" },
+        {
+          src: "/slide-hero-1.png",
+          mobileSrc: "/banner-mob-simone.png",
+          alt: "Simone Moura Manifesto",
+        },
       ],
     },
     aboutSection: {
@@ -461,9 +477,17 @@ export const homeContentByLocale = {
       },
       description:
         "Muchas empresas están perdiendo a sus mejores personas y la oportunidad de posicionarse claramente por distraerse con lo que no importa. Más allá de perder dinero, están tomando decisiones fuera del propósito organizacional.",
-      image: { src: "/slide-hero-1.png", alt: "Manifiesto Simone Moura" },
+      image: {
+        src: "/slide-hero-1.png",
+        mobileSrc: "/banner-mob-simone.png",
+        alt: "Manifiesto Simone Moura",
+      },
       slides: [
-        { src: "/slide-hero-1.png", alt: "Manifiesto Simone Moura" },
+        {
+          src: "/slide-hero-1.png",
+          mobileSrc: "/banner-mob-simone.png",
+          alt: "Manifiesto Simone Moura",
+        },
       ],
     },
     aboutSection: {

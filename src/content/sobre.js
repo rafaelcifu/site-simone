@@ -6,7 +6,7 @@ export const sobreContentByLocale = {
       tagline: "Sobre",
       title: "Mestre em Comunicação e Novas Tecnologias",
       paragraphs: [
-        "Com mais de 30 anos de atuação, Simone conduz imersões e treinamentos com foco em vendas, liderança e inovação, utilizando a neurociência aplicada ao consumo para melhorar a comunicação das equipes e a tomada de decisão.",
+        "Com mais de 35 anos de atuação no mercado do Brasil e do exterior, Simone conduz imersões e treinamentos com foco em vendas, liderança e inovação, utilizando a neurociência aplicada ao consumo para melhorar a comunicação das equipes e a tomada de decisão.",
         "Desenvolveu uma metodologia própria aplicada a empresas e líderes que buscam crescimento estruturado, clareza estratégica e diferenciação real no mercado.",
         "É ainda colunista de veículos de comunicação relevantes, palestrante e escritora.",
       ],
