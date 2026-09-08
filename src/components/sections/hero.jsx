@@ -65,9 +65,3 @@ export function Hero({ data }) {
     </section>
   );
 }
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> f099c9d17b6113fb1f74db8bceb78b97ab9ece37
