@@ -60,8 +60,8 @@ export function ManifestoCard({ data }) {
                     <Image
                       src={slide.mobileSrc || "/banner-mob-simone.png"}
                       alt={slide.alt || "Manifesto Simone Moura"}
-                      width={700}
-                      height={1318}
+                      width={914}
+                      height={1721}
                       priority={index === 0}
                       className="w-full h-auto object-cover block rounded-2xl"
                       sizes="100vw"
@@ -73,8 +73,8 @@ export function ManifestoCard({ data }) {
                     <Image
                       src={slide.src}
                       alt={slide.alt || "Manifesto Simone Moura"}
-                      width={2782}
-                      height={1007}
+                      width={2084}
+                      height={754}
                       priority={index === 0}
                       className="w-full h-auto object-cover block rounded-2xl sm:rounded-[2rem]"
                       sizes="(max-width: 1280px) 100vw, 1280px"
