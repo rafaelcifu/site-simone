@@ -91,7 +91,7 @@ export const homeContentByLocale = {
             "Empresa com mais de 60 anos de atuação no Brasil e no exterior, setor de linha branca.",
           fullDescription:
             "Empresa com mais de 60 anos de atuação no Brasil e no exterior, no setor de linha branca. Em parceria com a agência de publicidade que atendia a organização, desenvolveu o planejamento de rebranding e reposicionamento da marca, contribuindo para o reconhecimento nacional da empresa, o lançamento de produtos em grandes varejistas brasileiros — Magalu, Casas Bahia, Carrefour e Ponto Frio — e a liderança em participação de mercado no segmento de fogões populares. O trabalho também gerou cases de sucesso em mídias alternativas e ações de merchandising em importantes programas de mídia eletrônica.",
-          logo: "/logos/esmaltec2.png",
+          logo: "/logos/novo-logo-esmaltec.png",
           href: "/servicos",
         },
         {
@@ -121,7 +121,7 @@ export const homeContentByLocale = {
             "Agência premiada internacionalmente e uma das referências em publicidade no país.",
           fullDescription:
             "Agência premiada internacionalmente e referência em publicidade no Brasil, especialmente no Nordeste. O trabalho contemplou importantes projetos de reposicionamento de marca, rebranding e planejamento estratégico de mídia para clientes como Hapvida NotreDame, Granja Regina e Grupo BSPAR.",
-          logo: "/logos/bandoo.png",
+          logo: "/logos/novo-logo-bando.png",
           href: "/servicos",
         },
       ],
@@ -315,7 +315,7 @@ export const homeContentByLocale = {
             "Home appliance manufacturer with over 60 years of history in Brazil and abroad.",
           fullDescription:
             "Home appliance manufacturer with over 60 years of operations in Brazil and abroad. Led the strategic rebranding and market repositioning plan, helping the company achieve national recognition, major retail partnerships, and market share leadership.",
-          logo: "/logos/esmaltec2.png",
+          logo: "/logos/novo-logo-esmaltec.png",
           href: "/en/servicos",
         },
         {
@@ -345,7 +345,7 @@ export const homeContentByLocale = {
             "Internationally awarded advertising agency and industry benchmark.",
           fullDescription:
             "Internationally awarded advertising agency responsible for major brand repositioning and media planning for top regional and national clients.",
-          logo: "/logos/bandoo.png",
+          logo: "/logos/novo-logo-bando.png",
           href: "/en/servicos",
         },
       ],
@@ -539,7 +539,7 @@ export const homeContentByLocale = {
             "Empresa con más de 60 años de trayectoria en Brasil y el exterior, sector de línea blanca.",
           fullDescription:
             "Empresa con más de 60 años de operaciones en Brasil y en el exterior, en el sector de línea blanca. Responsable de la creación y el desarrollo del plan de rebranding y reposicionamiento de marca, con el que alcanzó reconocimiento nacional y liderazgo en participación de mercado.",
-          logo: "/logos/esmaltec2.png",
+          logo: "/logos/novo-logo-esmaltec.png",
           href: "/es/servicios",
         },
         {
@@ -569,7 +569,7 @@ export const homeContentByLocale = {
             "Agencia premiada internacionalmente y referente en publicidad en el país.",
           fullDescription:
             "Agencia premiada internacionalmente y referente publicitario, responsable por proyectos clave de reposicionamiento de marca, rebranding y planificación estratégica para grandes empresas.",
-          logo: "/logos/bandoo.png",
+          logo: "/logos/novo-logo-bando.png",
           href: "/es/servicios",
         },
       ],
