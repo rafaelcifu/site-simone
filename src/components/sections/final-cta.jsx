@@ -35,7 +35,7 @@ export function FinalCta({ data }) {
           <div className="lg:col-span-5 h-full relative flex items-end justify-center lg:justify-end">
             <Reveal delay={0.2} className="relative w-full h-[280px] sm:h-[380px] md:h-[500px] lg:h-[600px] -mb-4 lg:-mb-10 lg:absolute lg:bottom-0 lg:right-0 lg:w-[650px]">
               <Image
-                src={image.src || "/simone-cta-cutout.png"}
+                src={image.src || "/simone-footer-nova-foto.png"}
                 alt={image.alt || "Simone Moura"}
                 fill
                 className="object-contain object-bottom grayscale"

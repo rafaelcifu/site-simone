@@ -8,6 +8,7 @@
  */
 import {
   ArrowRight,
+  ArrowUpRight,
   Building,
   Check,
   Clock,
@@ -27,6 +28,7 @@ import {
 
 export const icons = {
   ArrowRight,
+  ArrowUpRight,
   Building,
   Check,
   Clock,

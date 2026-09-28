@@ -122,7 +122,7 @@ export function Footer() {
               />
             </Link>
 
-            <p className="max-w-sm text-[13px] leading-relaxed text-neutral-300">
+            <p className="max-w-sm text-[13px] leading-relaxed text-neutral-300 whitespace-pre-line text-pretty">
               {siteUi.footer.quote}
             </p>
           </div>

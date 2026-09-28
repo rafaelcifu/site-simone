@@ -25,28 +25,48 @@ export function AboutHero({ data }) {
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <Reveal>
-          {/* Badge Pill "Sobre" */}
-          <div className="mb-6 inline-flex items-center rounded-full border border-brand-red bg-white/60 px-4 py-1 backdrop-blur-xs">
-            <span className="text-xs font-normal text-[#B22522]">
-              {tagline}
-            </span>
-          </div>
+        <div className="max-w-xl lg:max-w-2xl">
+          <Reveal>
+            {/* Badge Pill "Sobre" */}
+            <div className="mb-6 inline-flex items-center rounded-full border border-brand-red bg-white/60 px-4 py-1 backdrop-blur-xs">
+              <span className="text-xs font-normal text-[#B22522]">
+                {tagline}
+              </span>
+            </div>
 
-          {/* Título Principal */}
-          <h1 className="mb-6 sm:mb-8 max-w-xl lg:max-w-2xl font-display text-2xl sm:text-4xl md:text-5xl lg:text-[48px] lg:leading-[1.15]">
-            {title}
-          </h1>
+            {/* Título Principal */}
+            <h1 className="mb-6 sm:mb-8 font-display text-2xl sm:text-4xl md:text-5xl lg:text-[48px] lg:leading-[1.15]">
+              {title}
+            </h1>
 
-          {/* Parágrafos biográficos */}
-          <div className="max-w-xl lg:max-w-2xl space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg leading-relaxed text-brand-darker">
-            {paragraphs?.map((p, i) => (
-              <p key={i} className="text-pretty">
-                {p}
+            {/* Parágrafo de abertura / Lead */}
+            {paragraphs?.[0] && (
+              <p className="text-base sm:text-lg md:text-xl font-normal leading-relaxed text-brand-darker text-pretty">
+                {paragraphs[0]}
               </p>
-            ))}
-          </div>
-        </Reveal>
+            )}
+
+            {/* Destaque pessoal / Toque humano */}
+            {paragraphs?.[1] && (
+              <div className="my-6 rounded-2xl border border-brand-red/20 bg-white/80 p-4 sm:p-5 backdrop-blur-xs shadow-2xs border-l-4 border-l-brand-red">
+                <p className="text-sm sm:text-base italic text-neutral-700 leading-relaxed text-pretty">
+                  {paragraphs[1]}
+                </p>
+              </div>
+            )}
+
+            {/* Trajetória e construção de negócios */}
+            {paragraphs?.length > 2 && (
+              <div className="space-y-4 sm:space-y-5 text-sm sm:text-base md:text-[17px] leading-relaxed text-brand-darker/90">
+                {paragraphs.slice(2).map((p, i) => (
+                  <p key={i} className="text-pretty">
+                    {p}
+                  </p>
+                ))}
+              </div>
+            )}
+          </Reveal>
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Reveal } from "@/components/motion/reveal";
 import { Stagger, StaggerItem } from "@/components/motion/stagger";
+import { Icon } from "@/components/atoms/icon";
 
 export function AboutTimeline({ data }) {
   if (!data) return null;
@@ -99,9 +100,39 @@ export function AboutTimeline({ data }) {
 
                 {/* Coluna do Texto Descritivo */}
                 <div className="flex-1">
-                  <p className="font-display text-base font-normal leading-relaxed text-brand-dark sm:text-lg md:text-xl lg:text-[24px] lg:leading-[1.4]">
-                    {item.text}
-                  </p>
+                  <div className="space-y-4 font-display text-base font-normal leading-relaxed text-brand-dark sm:text-lg md:text-xl lg:text-[22px] lg:leading-[1.45]">
+                    {item.paragraphs && item.paragraphs.length > 0 ? (
+                      item.paragraphs.map((p, pIdx) => (
+                        <p key={pIdx} className="text-pretty">
+                          {p}
+                        </p>
+                      ))
+                    ) : (
+                      <p className="text-pretty whitespace-pre-line">
+                        {item.text}
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Link elegante para o site */}
+                  {item.website && (
+                    <div className="mt-5">
+                      <a
+                        href={item.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-xs sm:text-sm font-medium text-brand-dark transition-all duration-300 hover:border-brand-red hover:text-brand-red hover:shadow-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2"
+                      >
+                        <span className="font-sans font-medium tracking-tight">
+                          {item.websiteLabel || item.website.replace(/^https?:\/\//, "")}
+                        </span>
+                        <Icon
+                          name="ArrowUpRight"
+                          className="size-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-brand-red"
+                        />
+                      </a>
+                    </div>
+                  )}
                 </div>
               </StaggerItem>
             );

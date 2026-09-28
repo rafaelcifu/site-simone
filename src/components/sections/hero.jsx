@@ -38,7 +38,7 @@ export function Hero({ data }) {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <p className="max-w-3xl text-base font-normal leading-relaxed text-neutral-100 sm:text-xl md:text-2xl">
+            <p className="max-w-3xl text-base font-normal leading-relaxed text-neutral-100 sm:text-xl md:text-2xl whitespace-pre-line text-pretty">
               {subtitle.part1}
               <span className="text-[#E5484D] font-medium">{subtitle.highlight1}</span>
               {subtitle.part2}

@@ -43,13 +43,14 @@ export const servicosByLocale = {
       id: "workshops",
       slug: "oficinas-workshops-corporativos",
       number: "1",
-      title: "1. Oficinas & Workshops Corporativos Customizados",
-      excerpt: "Oficinas práticas de 4 horas focadas em comunicação, propósito e vendas pela ótica da neurociência.",
+      title: "1. Workshops Corporativos para Equipes, Gestores e Lideranças",
+      excerpt:
+        "Cultura com propósito, criação de valor real para o cliente, posicionamento por JTBD e técnicas de neurovendas.",
       description:
-        "- Os desafios das marcas para conectar inovação à cultura e ao propósito da organização e posicionar produtos e serviços no mercado.\n\n- A falha é de comunicação: por que estamos perdendo valor, talentos e receita?\n\n- Reposicionamento de estratégias e argumentos de comunicação pela ótica da neurociência aplicada a vendas e atendimento.\n\n- Propósito de marca vende. Não é poesia nem conto de fadas: é direcionamento. Descubra o que pode mudar o jogo da operação da sua empresa.",
+        "- Cultura com Propósito (Colaboradores entendendo a essência da Marca)\n\n- Como criar valor real para o cliente em tempos de inovação, tecnologia e IA.\n\n- Posicione sua marca sob a ótica da metodologia do trabalho a ser feito (JTBD)\n\n- Técnicas de neuro vendas para times de atendimento e de vendas — Construindo narrativas que o cliente entende.",
       image: {
         src: "/images/servicos/servico-2.png",
-        alt: "Oficinas & Workshops Corporativos - Simone Moura",
+        alt: "Workshops Corporativos para Equipes, Gestores e Lideranças - Simone Moura",
       },
       cta: {
         label: "Quero falar sobre minha empresa",
@@ -78,9 +79,9 @@ export const servicosByLocale = {
         },
       ],
       hero: {
-        title: "Oficinas & Workshops Corporativos Customizados",
+        title: "Workshops Corporativos para Equipes, Gestores e Lideranças",
         description:
-          "Oficinas práticas de 4 horas focadas em comunicação, propósito e vendas pela ótica da neurociência.",
+          "Cultura com propósito, criação de valor real para o cliente, posicionamento por JTBD e técnicas de neurovendas para equipes e lideranças.",
       },
       sections: [
         {
@@ -103,9 +104,10 @@ export const servicosByLocale = {
       slug: "imersao-corporativa",
       number: "2",
       title: "2. Imersão Corporativa",
-      excerpt: "Imersão de 2 dias em transformação digital, cultura analítica e neurovendas para gestores.",
+      excerpt:
+        "Como o cérebro humano entende o que a sua marca fala! Neurociência aplicada ao consumo e à tomada de decisão.",
       description:
-        "- Transformação digital não é apenas tecnologia. Introdução à cultura analítica para compreender e adotar a mentalidade digital na organização. Aplicação de metodologias ágeis e estudos de caso reais, criados por Simone Moura, para levar sua empresa ao futuro.\n\n- Vendas sob a ótica da neurociência: seu time comercial e de atendimento compreende como o cérebro do cliente reage durante a tomada de decisão de compra.",
+        "Como o cérebro humano entende o que a sua marca fala! - neurociência aplicada ao comportamento de consumo e ao processo de tomada de decisão na jornada de compras – Seu time pode se diferenciar no atendimento de seu cliente – (apresentação de estudos de caso e dinâmicas em grupo (pelo preceito da economia comportamental e pela neurociência comportamental).",
       image: {
         src: "/images/servicos/servico-3.png",
         alt: "Imersão Corporativa - Simone Moura",
@@ -140,7 +142,7 @@ export const servicosByLocale = {
       hero: {
         title: "Imersão Corporativa",
         description:
-          "Imersão de 2 dias em transformação digital, cultura analítica e neurovendas para gestores.",
+          "Como o cérebro humano entende o que a sua marca fala! Neurociência aplicada ao comportamento de consumo e ao processo de tomada de decisão na jornada de compras.",
       },
       sections: [
         {
@@ -162,11 +164,11 @@ export const servicosByLocale = {
       id: "mentoria",
       slug: "mentoria-estrategica",
       number: "3",
-      title: "3. Mentoria estratégica",
+      title: "3. Mentoria Estratégica",
       excerpt:
-        "Mentoria personalizada para negócios e empreendedores focada em crescimento consistente e sustentável.",
+        "Mentoria personalizada para microempreendedores e pequenos negócios focada em diagnóstico, DNA e posicionamento de mercado.",
       description:
-        "Para negócios e empreendedores, cada empresa é única. A estratégia transforma.\n\nMentoria personalizada que une diagnóstico, fortalecimento do core business, posicionamento de mercado e comunicação baseada na neurociência para gerar crescimento consistente e sustentável.",
+        "Mentoria personalizada para microempreendedores e pequenos negócios que une diagnóstico de negócios, estruturação do DNA da empresa incluindo core business, valores e propósito, segmentação de produtos e serviços e construção de posicionamento de mercado.",
       image: {
         src: "/images/servicos/servico-4.png",
         alt: "Mentoria Estratégica - Simone Moura",
@@ -202,9 +204,9 @@ export const servicosByLocale = {
         },
       ],
       hero: {
-        title: "Mentoria estratégica",
+        title: "Mentoria Estratégica",
         description:
-          "Mentoria personalizada que une diagnóstico, fortalecimento do core business, posicionamento de mercado e comunicação baseada na neurociência para gerar crescimento consistente e sustentável.",
+          "Mentoria personalizada para microempreendedores e pequenos negócios que une diagnóstico de negócios, estruturação do DNA da empresa e construção de posicionamento de mercado.",
       },
       sections: [
         {
@@ -226,13 +228,14 @@ export const servicosByLocale = {
       id: "branding",
       slug: "branding-e-marketing-estrategico",
       number: "4",
-      title: "4. Branding e Marketing Estratégico (Gestão de Marca)",
-      excerpt: "Reposicionamento real de empresas que querem crescer com consistência.",
+      title: "4. Projeto de Branding Estratégico e Posicionamento de Mercado e de Comunicação",
+      excerpt:
+        "Planejamento de posicionamento de marca e comunicação estratégica com foco no DNA da marca e cultura organizacional.",
       description:
-        "Reposicionamento real de empresas que querem crescer com consistência. Um olhar para dentro da organização a fim de ressignificar seus caminhos.\n\nProjeto de branding e marketing estratégico com foco no DNA da marca, no reposicionamento e na ressignificação de estratégias para produtos e serviços alinhados à cultura e à essência da organização.",
+        "Projeto que contempla a construção de um planejamento de posicionamento de marca e de comunicação estratégica com foco no D.N.A da marca e da cultura organizacional. Construção do brand voice da marca, descoberta de propósito que vende e aplicação de metodologias para posicionar produtos e serviços.",
       image: {
         src: "/images/servicos/servico-1.png",
-        alt: "Branding e Marketing Estratégico - Simone Moura",
+        alt: "Projeto de Branding Estratégico e Posicionamento de Mercado e de Comunicação - Simone Moura",
       },
       cta: {
         label: "Quero falar sobre minha empresa",
@@ -262,9 +265,9 @@ export const servicosByLocale = {
         },
       ],
       hero: {
-        title: "Branding e Marketing Estratégico (Gestão de Marca)",
+        title: "Projeto de Branding Estratégico e Posicionamento de Mercado e de Comunicação",
         description:
-          "Reposicionamento real de empresas que querem crescer com consistência. Um olhar por dentro da organização para ressignificar seus caminhos.",
+          "Planejamento de posicionamento de marca e comunicação estratégica com foco no DNA da marca e cultura organizacional.",
       },
       sections: [
         {

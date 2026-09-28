@@ -92,21 +92,21 @@ export const empresas = [
     foundingDate: "2010",
     description:
       "Primeira empresa do Nordeste do Brasil focada em gestão de marcas e comunicação pela neurociência. Mais de 700 projetos entregues em todo o país.",
-    url: "",
+    url: "https://www.pingpongestrategia.com.br",
   },
   {
     name: "Caza Futuro",
     foundingDate: "2020",
     description:
       "Criação de produtos digitais sob a ótica da metodologia Jobs to Be Done e desenvolvimento de novos modelos de negócio para empresas em transformação digital.",
-    url: "",
+    url: "https://www.cazafuturo.com.br",
   },
   {
     name: "Medeiros 365",
-    foundingDate: "2023",
+    foundingDate: "2024",
     description:
       "Ecossistema 100% digital para compras B2B, conectando indústrias de alimentos e bebidas a empreendedores do Maranhão e do Piauí.",
-    url: "",
+    url: "https://www.medeiros365.com.br",
   },
 ];
 

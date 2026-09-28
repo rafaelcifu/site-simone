@@ -5,9 +5,9 @@ export const homeContentByLocale = {
     hero: {
       title: "Simone Moura",
       subtitle: {
-        part1: "“Eu crio ",
-        highlight1: "estratégias para empresas com foco na transformação",
-        part2: " das pessoas e dos mercados. Sem desperdícios, sem distrações e com propósito verdadeiro.”",
+        part1: "“Posiciono empresas para ocupar espaços relevantes no mercado.\n",
+        highlight1: "Estratégia, comunicação e negócios para transformar marcas, pessoas e mercados",
+        part2: " — sem desperdícios, sem distrações e com\u00A0propósito.”",
       },
       primaryCta: {
         label: "Quero falar sobre minha empresa",
@@ -29,14 +29,14 @@ export const homeContentByLocale = {
       description:
         "Muitas empresas estão perdendo suas melhores pessoas e a oportunidade de se posicionar de maneira clara e atitudinal porque se distraem com o que não vale a pena. Mais do que perder dinheiro, estão tomando decisões desconectadas do propósito organizacional.",
       image: {
-        src: "/slide-hero-1-pt.png",
-        mobileSrc: "/banner-mob-simone-pt.png",
+        src: "/novos banners/slide-hero-1 pt.png",
+        mobileSrc: "/novos banners/banner-mob-simone-pt.png",
         alt: "Manifesto Simone Moura",
       },
       slides: [
         {
-          src: "/slide-hero-1-pt.png",
-          mobileSrc: "/banner-mob-simone-pt.png",
+          src: "/novos banners/slide-hero-1 pt.png",
+          mobileSrc: "/novos banners/banner-mob-simone-pt.png",
           alt: "Manifesto Simone Moura",
         },
       ],
@@ -219,7 +219,7 @@ export const homeContentByLocale = {
           quote:
             "Ver sua forma de trabalhar e ouvir suas explicações e exemplos é simplesmente magnético. Sua fala talvez seja um dos segredos de seu sucesso profissional, pois ela tem uma forma encantadora de prender você ao conteúdo e despertar o desejo de crescer ainda mais.",
           author: "Vanessa Nunes",
-          role: "Gerente de RH do Laboratório Clementino Fraga",
+          role: "Grupo TB Hub",
           image: "/clementino-fraga-nova.png",
           stars: 4,
         },
@@ -231,16 +231,16 @@ export const homeContentByLocale = {
     finalCta: {
       title: "A sua marca já sabe quem ela é. O problema é que o mercado ainda não.",
       cta: { label: "Quero falar sobre minha empresa", href: "/contato" },
-      image: { src: "/simone-cta-cutout.png", alt: "Simone Moura" },
+      image: { src: "/simone-footer-nova-foto.png", alt: "Simone Moura" },
     },
   },
   en: {
     hero: {
       title: "Simone Moura",
       subtitle: {
-        part1: "I build ",
-        highlight1: "strategies for companies focused on people, innovation, and market transformation",
-        part2: ". Want my support to unlock your growth and your company's growth?",
+        part1: "“I position companies to occupy relevant spaces in the market.\n",
+        highlight1: "Strategy, communication, and business to transform brands, people, and markets",
+        part2: " — no waste, no distractions, and with\u00A0purpose.”",
       },
       primaryCta: { label: "Discover my journey", href: "/en/sobre" },
       image: { src: "/simone-headset-hero.png", alt: "Simone Moura" },
@@ -260,14 +260,14 @@ export const homeContentByLocale = {
       description:
         "Many companies are losing their best people and the opportunity to position themselves clearly because they are distracted by what doesn't matter. Far beyond losing money, they are making decisions outside organizational purpose.",
       image: {
-        src: "/slide-hero-1-ingles.png",
-        mobileSrc: "/banner-mob-simone-ingles.png",
+        src: "/novos banners/slide-hero-1-ingles.png",
+        mobileSrc: "/novos banners/banner-mob-simone-eng.png",
         alt: "Simone Moura Manifesto",
       },
       slides: [
         {
-          src: "/slide-hero-1-ingles.png",
-          mobileSrc: "/banner-mob-simone-ingles.png",
+          src: "/novos banners/slide-hero-1-ingles.png",
+          mobileSrc: "/novos banners/banner-mob-simone-eng.png",
           alt: "Simone Moura Manifesto",
         },
       ],
@@ -443,7 +443,7 @@ export const homeContentByLocale = {
           quote:
             "Watching her work, listening to her explanations and examples is simply magnetic. Her communication is perhaps one of the secrets to her professional success — she has an enchanting way of keeping you engaged and making you want to grow even more.",
           author: "Vanessa Nunes",
-          role: "HR Manager at Laboratório Clementino Fraga",
+          role: "Grupo TB Hub",
           image: "/clementino-fraga-nova.png",
           stars: 4,
         },
@@ -455,16 +455,16 @@ export const homeContentByLocale = {
     finalCta: {
       title: "Your brand already knows who it is. The problem is that the market doesn't yet.",
       cta: { label: "Get in touch with Simone", href: "/en/contato" },
-      image: { src: "/simone-cta-cutout.png", alt: "Simone Moura" },
+      image: { src: "/simone-footer-nova-foto.png", alt: "Simone Moura" },
     },
   },
   es: {
     hero: {
       title: "Simone Moura",
       subtitle: {
-        part1: "Yo creo ",
-        highlight1: "estrategias para empresas con foco en las personas, la innovación y la transformación de mercados",
-        part2: ". ¿Quieres mi apoyo para desbloquear el crecimiento de tu empresa?",
+        part1: "“Posiciono empresas para ocupar espacios relevantes en el mercado.\n",
+        highlight1: "Estrategia, comunicación y negocios para transformar marcas, personas y mercados",
+        part2: " — sin desperdicios, sin distracciones y con\u00A0propósito.”",
       },
       primaryCta: { label: "Conoce mi trayectoria", href: "/es/sobre" },
       image: { src: "/simone-headset-hero.png", alt: "Simone Moura" },
@@ -484,14 +484,14 @@ export const homeContentByLocale = {
       description:
         "Muchas empresas están perdiendo a sus mejores personas y la oportunidad de posicionarse claramente por distraerse con lo que no importa. Más allá de perder dinero, están tomando decisiones fuera del propósito organizacional.",
       image: {
-        src: "/slide-hero-1-espanhol.png",
-        mobileSrc: "/banner-mob-simone-espanhol.png",
+        src: "/novos banners/slide-hero-1-espanhol.png",
+        mobileSrc: "/novos banners/banner-mob-simone-esp.png",
         alt: "Manifiesto Simone Moura",
       },
       slides: [
         {
-          src: "/slide-hero-1-espanhol.png",
-          mobileSrc: "/banner-mob-simone-espanhol.png",
+          src: "/novos banners/slide-hero-1-espanhol.png",
+          mobileSrc: "/novos banners/banner-mob-simone-esp.png",
           alt: "Manifiesto Simone Moura",
         },
       ],
@@ -667,7 +667,7 @@ export const homeContentByLocale = {
           quote:
             "Ver su forma de trabajar es simplemente magnético. Tiene una forma encantadora de mantenerte involucrado en el contenido y con deseos de crecer mucho más.",
           author: "Vanessa Nunes",
-          role: "Gerente de RR.HH. del Laboratorio Clementino Fraga",
+          role: "Grupo TB Hub",
           image: "/clementino-fraga-nova.png",
           stars: 4,
         },
@@ -679,7 +679,7 @@ export const homeContentByLocale = {
     finalCta: {
       title: "Tu marca ya sabe quién es. El problema es que el mercado todavía no.",
       cta: { label: "Habla con Simone", href: "/es/contato" },
-      image: { src: "/simone-cta-cutout.png", alt: "Simone Moura" },
+      image: { src: "/simone-footer-nova-foto.png", alt: "Simone Moura" },
     },
   },
 };

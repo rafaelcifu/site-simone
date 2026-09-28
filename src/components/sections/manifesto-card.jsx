@@ -25,8 +25,8 @@ export function ManifestoCard({ data }) {
       ? [data.image]
       : [
           {
-            src: "/slide-hero-1.png",
-            mobileSrc: "/banner-mob-simone.png",
+            src: "/novos banners/slide-hero-1 pt.png",
+            mobileSrc: "/novos banners/banner-mob-simone-pt.png",
             alt: "Manifesto Simone Moura",
           },
         ];
