@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
 
 export default async function ContatoPage({ params }) {
   const { locale } = await params;
-  const { contatoPage, contatoUi, horarios } = getContatoContent(locale);
+  const { contatoPage, contatoUi, formFields, horarios } = getContatoContent(locale);
   const pageSeo = getPageSeo(locale);
 
   const pageGraph = graph(

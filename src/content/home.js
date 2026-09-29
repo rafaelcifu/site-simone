@@ -150,7 +150,7 @@ export const homeContentByLocale = {
           ctaLabel: "Saber mais",
           title: "Imersão corporativa",
           description:
-            "Como o cérebro humano entende o que a sua marca diz - neurociência aplicada ao branding, marketing e ao processo de tomada de decisão na jornada de compras - estudos de caso e dinâmicas em grupo. (pelo preceito da economia comportamental e pela neurociência)",
+            "Como o cérebro humano entende o que a sua marca fala! - neurociência aplicada ao comportamento de consumo e ao processo de tomada de decisão na jornada de compras – Seu time pode se diferenciar no atendimento de seu cliente – (apresentação de estudos de caso e dinâmicas em grupo (pelo preceito da economia comportamental e pela neurociência comportamental).",
           duration: "Duração: 2 dias",
         },
         {
@@ -160,7 +160,7 @@ export const homeContentByLocale = {
           ctaLabel: "Saber mais",
           title: "Mentoria estratégica",
           description:
-            "Mentoria personalizada para negócios e empreendedores que une diagnóstico, fortalecimento do core business, posicionamento de mercado e comunicação baseada na neurociência para gerar crescimento consistente e sustentável.",
+            "Mentoria personalizada para microempreendedores e pequenos negócios que une diagnóstico de negócios, estruturação do DNA da empresa incluindo core business, valores e propósito, segmentação de produtos e serviços e construção de posicionamento de mercado.",
           duration: "Duração: 7 encontros ao vivo (Google Meet)",
         },
         {
@@ -168,9 +168,9 @@ export const homeContentByLocale = {
           slug: "branding-e-marketing-estrategico",
           href: "/servicos#branding-e-marketing-estrategico",
           ctaLabel: "Saber mais",
-          title: "Projeto de Branding Estratégico e Posicionamento de Mercado",
+          title: "Projeto de Branding Estratégico e Posicionamento de Mercado e de Comunicação",
           description:
-            "Reposicionamento de marcas e produtos com foco na descoberta do DNA, da essência da marca e da cultura organizacional.",
+            "Projeto que contempla a construção de um planejamento de posicionamento de marca e de comunicação estratégica com foco no D.N.A da marca e da cultura organizacional. Construção do brand voice da marca, descoberta de propósito que vende e aplicação de metodologias para posicionar produtos e serviços.",
           duration: "Duração: 6 meses dentro da organização",
         },
       ],
